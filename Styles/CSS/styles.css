@@ -1,25 +1,68 @@
 header {
-  position: fixed;
+  background-color: #FFFFFF;
+  position: sticky;
   display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
   column-count: 4;
+  padding: 0.5rem 0;
+  box-shadow: 0 0.1px 5px 0px gray;
 }
-header .hamburguer {
-  width: 8.45%;
+header .hamburguer-container {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin: 0.5rem 1rem 0 0rem;
+}
+header .hamburguer-container .hamburguer {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+header .hamburguer-container .close-icon {
+  width: 0.9rem;
+  margin-top: 0.1rem;
+  margin-left: 0.1rem;
+}
+header .title-container {
+  display: flex;
+  justify-content: center;
+  width: 10rem;
+  column-count: 2;
+  padding-right: 5rem;
 }
 header .title-container .web-icon-container {
-  margin-left: 60%;
-  width: 50%;
-  height: auto;
+  margin-right: 1rem;
+  width: 2rem;
+  height: 2rem;
   box-shadow: 0px 14px 24px 0px rgba(139, 139, 139, 0.2509803922);
 }
 header .title-container .web-icon-container img {
-  margin: 0.6rem 0.9rem;
-}
-header .title-container {
-  column-count: 2;
+  margin: 0.6rem 0.6rem;
 }
 header .title-container .web-title-container {
   break-inside: avoid;
+}
+header .title-container .web-title-container {
+  padding-top: 0.5rem;
+}
+header .account-search-container {
+  break-inside: avoid;
+}
+header .account-search-container img {
+  padding: 0.5rem;
+}
+
+.menu-extended {
+  background-color: #FFFFFF;
+  display: none;
+  height: 15rem;
+  width: 15rem;
+  text-align: left;
+  margin: 2rem;
+}
+.menu-extended .menu-link {
+  font-family: "Archivo";
+  font-weight: 600;
+  margin: 1rem;
 }
 
 html, * {

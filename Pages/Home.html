@@ -7,23 +7,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hotel Miranda</title>
     <link rel="stylesheet" href="./../Styles/CSS/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <img class="hamburguer" src="./../Images/hamburguer.svg" />
+        <div class="hamburguer-container">
+            <img class="hamburguer" src="./../Images/hamburguer.svg" />
+        </div>
+        
         <div class="title-container">
             <div class="web-icon-container">
                 <img src="./../Images/web-icon.svg" />
             </div>
             <div class="web-title-container">
-                <p>HOTEL</p>
-                <p>MIRANDA</p>
+                <img src="./../Images/hotel-miranda.svg" />
             </div>
         </div>
-        <img src="./../Images/account-icon.svg" />
-        <img src="./../Images/search-icon.svg" />
+        <div class="account-search-container">
+            <img src="./../Images/account-icon.svg" />
+            <img src="./../Images/search-icon.svg" />
+        </div>
     </header>
+    <div class="menu-extended">
+        <div class="menu-link">
+            <p>About Us</p>
+        </div>
+        <div class="menu-link">
+            <p>Rooms</p>
+        </div>
+        <div class="menu-link">
+            <p>Offers</p>
+        </div>
+        <div class="menu-link">
+            <p>Contact</p>
+        </div>
+    </div>
+
+    <script src="./../js/script.js" type="module"></script>
 </body>
 
 </html>
