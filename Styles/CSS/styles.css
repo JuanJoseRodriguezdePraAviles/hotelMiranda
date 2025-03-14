@@ -1,0 +1,35 @@
+header {
+  position: fixed;
+  display: flex;
+  column-count: 4;
+}
+header .hamburguer {
+  width: 8.45%;
+}
+header .title-container .web-icon-container {
+  margin-left: 60%;
+  width: 50%;
+  height: auto;
+  box-shadow: 0px 14px 24px 0px rgba(139, 139, 139, 0.2509803922);
+}
+header .title-container .web-icon-container img {
+  margin: 0.6rem 0.9rem;
+}
+header .title-container {
+  column-count: 2;
+}
+header .title-container .web-title-container {
+  break-inside: avoid;
+}
+
+html, * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+}
+
+/*# sourceMappingURL=styles.css.map */
