@@ -52,17 +52,79 @@ header .account-search-container img {
 }
 
 .menu-extended {
+  position: absolute;
+  top: 1.5rem;
+  left: -2rem;
   background-color: #FFFFFF;
   display: none;
   height: 15rem;
-  width: 15rem;
+  width: 100%;
   text-align: left;
   margin: 2rem;
+  z-index: 1;
+  overflow: visible;
+  visibility: visible;
 }
 .menu-extended .menu-link {
   font-family: "Archivo";
   font-weight: 600;
   margin: 1rem;
+}
+.menu-extended .menu-link p a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.perfect-base-container {
+  background-color: #333333;
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 1rem;
+}
+.perfect-base-container .ultimate-luxury-container {
+  width: 70%;
+  height: 2rem;
+  margin: 0.6rem 0;
+}
+.perfect-base-container .ultimate-luxury-container h2 {
+  font-family: "Archivo";
+  font-size: 0.75rem;
+  color: #FFFFFF;
+  letter-spacing: 2.8px;
+}
+.perfect-base-container .title-container {
+  width: 95%;
+  height: 7.5rem;
+  margin: 1rem 0;
+}
+.perfect-base-container .title-container h1 {
+  color: #FFFFFF;
+  font-family: "Old Standard TT";
+  font-size: 3.4rem;
+  font-weight: 400;
+  letter-spacing: -1.2px;
+}
+.perfect-base-container .tour-learn-btn-container {
+  margin: 2rem 0 0 0;
+}
+.perfect-base-container .tour-learn-btn-container button {
+  width: 60%;
+  height: 3.75rem;
+}
+.perfect-base-container .tour-learn-btn-container .btn-tour {
+  font-family: "Archivo";
+  background-color: #BEAD8E;
+  border: none;
+  margin-bottom: 0.7rem;
+  color: #FFFFFF;
+}
+.perfect-base-container .tour-learn-btn-container .btn-learn {
+  font-family: "Archivo";
+  border: solid;
+  background-color: transparent;
+  border-color: #6e6e6e;
+  margin-top: 0.7rem;
+  color: #FFFFFF;
 }
 
 html, * {
