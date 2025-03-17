@@ -1,0 +1,15 @@
+@import 'commons/btn';
+@import 'commons/data-btn-container';
+.restaurant {
+    @include data-btn-container;
+    .btn-book-now {
+        @include btn;
+        @include btn("light");
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    p {
+        padding-right: 2.5rem;
+    }
+}

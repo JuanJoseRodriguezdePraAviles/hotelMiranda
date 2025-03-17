@@ -1,5 +1,9 @@
 @use 'header';
 @use 'perfect-base-container';
+@use 'calendar';
+@use 'about-us-section';
+@use 'about-us-page';
+
 
 html, * {
     box-sizing: border-box;
@@ -7,3 +11,7 @@ html, * {
     padding: 0;
 }
 body { min-width: 320px }
+a {
+    text-decoration: none;
+    color: inherit;
+}
