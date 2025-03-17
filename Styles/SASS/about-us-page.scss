@@ -1,14 +1,27 @@
 @import 'commons/btn';
 @import 'commons/data-btn-container';
+@import 'commons/page-title';
+
+.about-us-title {
+    background-color: #333333;
+    display: flex;
+    flex-direction: column;
+    padding: 8rem 1rem 0rem 1rem;
+    @include page-title;
+}
+
 .restaurant {
     @include data-btn-container;
+
     .btn-book-now {
         @include btn;
         @include btn("light");
     }
+
     h2 {
         font-size: 2.5rem;
     }
+
     p {
         padding-right: 2.5rem;
     }

@@ -1,0 +1,28 @@
+@mixin room-card($theme: null) {
+    .room-card {
+        padding: 1rem 0;
+        & .image-container {
+            & img {
+                height: 13.625rem;
+            }
+            & .room-features {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: white;
+                width: 15rem;
+                height: 2.5rem;
+                & img {
+                    width: 1rem;
+                    height: 1rem;
+                    margin: 0 0.5rem;
+                }
+            }
+        }
+        & .image-description {
+            & h2 {
+                font-family: 'Old Standard TT';
+            }
+        }
+    }
+}

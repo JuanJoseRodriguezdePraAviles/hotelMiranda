@@ -1,12 +1,8 @@
-@import 'commons/btn';
 @import 'commons/page-title';
-
-.perfect-base-container {
+.contact-title {
     background-color: #333333;
     display: flex;
     flex-direction: column;
-    padding: 8rem 1rem 5rem 1rem;
+    padding: 8rem 1rem 0rem 1rem;
     @include page-title;
-
-    
 }
