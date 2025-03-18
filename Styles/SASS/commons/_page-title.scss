@@ -49,16 +49,16 @@
         justify-content: center;
         align-items: center;
         background-color: #FFFFFF;
-        width: 40%;
+        width: 50%;
         height: 3rem;
-        margin: 0 1rem 0 60%;
+        margin: 0 1rem 0 50%;
 
         & p {
             font-family: 'Archivo';
             font-weight: 700;
-
             & span {
                 color: #BEAD8E;
+                padding-left: 0 0.5rem;
             }
         }
 

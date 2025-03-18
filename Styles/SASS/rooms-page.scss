@@ -1,5 +1,111 @@
 @import 'commons/page-title';
 @import 'commons/room-card';
+@import 'commons/hotel-resume';
+
+html, * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body { min-width: 320px }
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    column-count: 4;
+    padding: 0.4rem 0rem;
+    box-shadow: 0 0.1px 5px 0px gray;
+    z-index: 2;
+    width: 100%;
+
+    & .hamburguer-container {
+        width: 1.2rem;
+        height: 1.2rem;
+        margin: 0.5rem 2rem 0 0rem;
+
+        & .hamburguer {
+            width: 1.2rem;
+            height: 1.2rem;
+        }
+
+        & .close-icon {
+            width: 0.9rem;
+            margin-top: 0.1rem;
+            margin-left: 0.1rem;
+        }
+
+    }
+
+
+    & .title-container {
+        display: flex;
+        justify-content: center;
+        width: 10rem;
+        column-count: 2;
+        padding-right: 5rem;
+
+        & .web-icon-container {
+            margin-right: 1rem;
+            width: 2rem;
+            height: 2rem;
+            box-shadow: 0px 14px 24px 0px #8B8B8B40;
+
+            img {
+                margin: 0.6rem 0.6rem;
+            }
+        }
+
+        & .web-title-container {
+            break-inside: avoid;
+
+        }
+
+        & .web-title-container {
+            padding-top: 0.5rem;
+        }
+    }
+
+    & .account-search-container {
+        break-inside: avoid;
+
+        & img {
+            padding: 0.5rem;
+        }
+    }
+
+}
+
+.menu-extended {
+    position: fixed;
+    top: 1.5rem;
+    left: -2rem;
+    background-color: #FFFFFF;
+    display: none;
+    height: auto;
+    width: 100%;
+    text-align: left;
+    margin: 2rem;
+    z-index: 10;
+    overflow: visible;
+    visibility: visible;
+    padding: 0.5rem 0;
+
+    & .menu-link {
+        font-family: 'Archivo';
+        font-weight: 600;
+        margin: 1.5rem;
+
+
+    }
+}
 .rooms-title {
     background-color: #333333;
     display: flex;
@@ -7,15 +113,73 @@
     padding: 8rem 1rem 0rem 1rem;
     @include page-title;
 }
-.rooms-container {
+
+
+
+.swiper {
+    width: 100%;
+    height: auto;
+
+    & .rooms-container {
+        @include room-card("bottom");
+    }
+
+    & .swiper-pagination {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & .swiper-pagination-bullet {
+            font-family: 'Oswald';
+            width: 2.5rem;
+            height: 2.5rem;
+            background-color: white;
+            color: black;
+            font-size: 1rem;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0;
+            opacity: 1;
+            padding-top: 0.5rem;
+        }
+
+        & .swiper-pagination-bullet-active {
+            background-color: #BEAD8E;
+            color: white;
+        }
+    }
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@include hotel-resume;
+
+footer {
+    background-color: #F8F8F8;
     padding: 1rem;
-    @include room-card;
-    & .room-card {
-        & .image-container {
-            & .room-features {
-                position: relative;
-                top: -1.5rem;
-                left: 12.5%;
+    & .footer-line {
+        & p {
+            font-family: 'Roboto';
+            font-weight: 700;
+            padding: 0.5rem 0;
+            & span {
+                padding: 0 0.5rem;
             }
         }
     }

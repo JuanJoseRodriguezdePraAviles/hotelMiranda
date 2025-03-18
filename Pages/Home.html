@@ -6,7 +6,7 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hotel Miranda</title>
-    <link rel="stylesheet" href="./../Styles/CSS/styles.css">
+    <link rel="stylesheet" href="./../Styles/CSS/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -22,6 +22,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -100,12 +101,169 @@
 
     <div class="about-us">
         <h6>ABOUT US</p>
-        <h2>Discover Our Underground.</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <button class="btn-book-now">BOOK NOW</button>
+            <h2>Discover Our Underground.</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.</p>
+            <button class="btn-book-now">BOOK NOW</button>
     </div>
 
+    <div class="picked-rooms">
+        <h6>ROOMS</h6>
+        <h2>Hand Picked Rooms</h2>
+        <div class="swiper mySwiper sliderWrapper">
+            <div class="rooms-container swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="room-card">
+                        <div class="image-container">
+                            <img src="./../Images/room9.jpg" />
+                            <div class="room-features">
+                                <img src="./../Images/icon1.svg" />
+                                <img src="./../Images/icon2.svg" />
+                                <img src="./../Images/icon3.svg" />
+                                <img src="./../Images/icon4.svg" />
+                                <img src="./../Images/icon5.svg" />
+                                <img src="./../Images/icon6.svg" />
+                                <img src="./../Images/icon7.svg" />
+                            </div>
+                        </div>
+                        <div class="image-description">
+                            <h2>Minimal Duplex Room</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore.</p>
+                            <div>
+                                <p class="room-price">$345<span>/Night</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="room-card">
+                        <div class="image-container">
+                            <img src="./../Images/room12.jpg" />
+                            <div class="room-features">
+                                <img src="./../Images/icon1.svg" />
+                                <img src="./../Images/icon2.svg" />
+                                <img src="./../Images/icon3.svg" />
+                                <img src="./../Images/icon4.svg" />
+                                <img src="./../Images/icon5.svg" />
+                                <img src="./../Images/icon6.svg" />
+                                <img src="./../Images/icon7.svg" />
+                            </div>
+                        </div>
+                        <div class="image-description">
+                            <h2>Minimal Duplex Room</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore.</p>
+                            <div>
+                                <p class="room-price">$345<span>/Night</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+
+    <div class="hotel-resume">
+        <div class="hotel-title-icon-container">
+            <div class="web-icon-container">
+                <p>H</p>
+            </div>
+            <div class="web-title-container">
+                <img src="./../Images/hotel-miranda.svg" />
+            </div>
+        </div>
+        <p class="hotel-description">
+            Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed doing eius mod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat ion ullamco laboris nisi.
+        </p>
+        <div class="social-links">
+            <img src="./../Images/facebook-icon.svg" />
+            <div class="link-container">
+                <img src="./../Images/twitter-icon.svg" />
+            </div>
+            <img src="./../Images/be-icon.svg" />
+            <img src="./../Images/linkedin-icon.svg" />
+            <img src="./../Images/youtube-icon.svg" />
+        </div>
+        <div class="services-container">
+            <h2>Services</h2>
+            <div class="services-list">
+                <p>+ Restaurant & Bar</p>
+                <p>+ Swimming Pool</p>
+                <p>+ Wellness & Spa</p>
+                <p>+ Restaurant</p>
+                <p>+ Conference Room</p>
+                <p>+ Coctail Party House</p>
+                <p>+ Gaming Zone</p>
+                <p>+ Marriage Party</p>
+                <p>+ Party Planning</p>
+                <p>+ Tour Consultancy</p>
+            </div>
+        </div>
+        <div class="contact-us-container">
+            <h2>Contact Us</h2>
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <img src="./../Images/phone.svg" />
+                    <div class="field-container">
+                        <h6>Phone Number</h6>
+                        <p>+987 876 765 76 577</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <img src="./../Images/email.svg" />
+                    <div class="field-container">
+                        <h6>Email</h6>
+                        <p>info@webmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <img src="./../Images/location.svg" />
+                    <div class="field-container">
+                        <h6>Hotel Address</h6>
+                        <p>19/A, Cirikon City hall Tower New York, NYC</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-line">
+            <p>Copyright By@Example - 2020</p>
+        </div>
+        <div class="footer-line">
+            <p>Terms of Use<span>|</span>Privacy Environmental Policy</p>
+        </div>
+    </footer>
+
     <script src="./../js/script.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        window.onload = function () {
+            const swiper = new Swiper(".mySwiper", {
+                spaceBetween: 30,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                    renderBullet: function (index, className) {
+                        return `<span class="${className}">${index + 1}</span>`;
+                    },
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+        }
+    </script>
 </body>
 
 </html>

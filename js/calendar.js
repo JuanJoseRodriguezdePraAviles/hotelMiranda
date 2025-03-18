@@ -21,11 +21,11 @@ function formatDate(dateString) {
     return `${day}${getDaySuffix(day)} ${month} ${year}`;
 }
 
-document.getElementById("arrival-date-input").addEventListener("change", function () {
+document.getElementById("arrival-date-input") && document.getElementById("arrival-date-input").addEventListener("change", function () {
     const formattedDate = formatDate(this.value);
     document.getElementById("arrival-formatted-date").textContent = formattedDate;
 });
-document.getElementById("return-date-input").addEventListener("change", function () {
+document.getElementById("return-date-input") && document.getElementById("return-date-input").addEventListener("change", function () {
     const formattedDate = formatDate(this.value);
     document.getElementById("return-formatted-date").textContent = formattedDate;
 });
