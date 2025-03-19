@@ -467,6 +467,101 @@ header {
     }
 }
 
+.core-features {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    h6 {
+        font-family: 'Archivo';
+        color: #777777; 
+        font-size: 1rem;
+        letter-spacing: 2.8px;
+    }
+    h2 {
+        font-family: 'Old Standard TT';
+        font-weight: 400;
+        font-size: 3rem;
+        padding: 1rem 0;
+    }
+    p {
+        font-family: 'Archivo';
+        color: #777777;
+        line-height: 24px;
+        font-size: 1rem;
+    }
+    & .swiper {
+        break-inside: avoid;
+        padding-bottom: 2rem;
+        & .swiper-wrapper {
+            
+            & .swiper-slide {
+                & .hotel-feature {
+                    & img {
+                        padding: 3rem 0 2rem 1rem;
+                    }
+                    & .field-container {
+                        & h2 {
+                            font-family: 'Old Standard TT';
+                            font-size: 1.8rem;
+                        }
+                    }
+                }
+                & .bg-1 {
+                    margin-right: 1.5rem;
+                    background-image: url('./../../Images/01.svg');
+                    background-size: 9rem;
+                    background-repeat: no-repeat;
+                    background-position: top right;
+                }
+                & .bg-2 {
+                    margin-right: 1.5rem;
+                    background-image: url('./../../Images/02.png');
+                    background-size: 9rem;
+                    background-repeat: no-repeat;
+                    background-position: top right;
+                }
+                & .bg-3 {
+                    margin-right: 1.5rem;
+                    background-image: url('./../../Images/03.svg');
+                    background-size: 9rem;
+                    background-repeat: no-repeat;
+                    background-position: top right;
+                }
+                & .bg-4 {
+                    margin-right: 1.5rem;
+                    background-image: url('./../../Images/04.svg');
+                    background-size: 9rem;
+                    background-repeat: no-repeat;
+                    background-position: top right;
+                }
+                & .bg-5 {
+                    margin-right: 1.5rem;
+                    background-image: url('./../../Images/05.svg');
+                    background-size: 9rem;
+                    background-repeat: no-repeat;
+                    background-position: top right;
+                }
+                & .bg-6 {
+                    margin-right: 1.5rem;
+                    background-image: url('./../../Images/06.svg');
+                    background-size: 9rem;
+                    background-repeat: no-repeat;
+                    background-position: top right;
+                }
+            }
+        }
+        & .swiper-pagination {
+            position:relative;
+            top: 2rem;
+
+            & .swiper-pagination-bullet-active {
+                background-color: #BEAD8E;
+                color: white;
+            }
+        }
+    }
+}
+
 @include hotel-resume;
 
 footer {

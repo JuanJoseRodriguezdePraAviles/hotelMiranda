@@ -5,8 +5,12 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://www.google.com;">
+    <meta http-equiv="Content-Security-Policy" 
+    content="default-src 'self'; 
+             frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://www.google.com; 
+             style-src 'self' https://fonts.googleapis.com https://cdn.jsdelivr.net 'unsafe-inline'; 
+             font-src 'self' https://fonts.gstatic.com data:; 
+             script-src 'self' https://cdn.jsdelivr.net 'unsafe-inline';">
 
     <title>Hotel Miranda</title>
 
@@ -189,7 +193,6 @@
             <div class="swiper-button-prev"></div>
         </div>
     </div>
-
     <div class="intro-video-container">
         <h6>INTRO VIDEO</h6>
         <h2>Meet With Our Luxury Place.</h2>
@@ -202,6 +205,70 @@
             frameborder="0">
         </iframe>
         <button class="btn-book-now">BOOK NOW</button>
+    </div>
+
+    <div class="core-features">
+        <h6>FACILITIES</h6>
+        <h2>Core Features</h2>
+        <div class="swiper mySwiper sliderWrapper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="hotel-feature bg-1">
+                        <img src="./../Images/rating.svg" />
+                        <div class="field-container">
+                            <h2>Have High Rating</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna..</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="hotel-feature bg-2">
+                        <img src="./../Images/hour.svg" />
+                        <div class="field-container">
+                            <h2>Quiet Hours</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna..</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="hotel-feature bg-3">
+                        <img src="./../Images/location-icon.svg" />
+                        <div class="field-container">
+                            <h2>Quiet Hours</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna..</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="hotel-feature bg-4">
+                        <img src="./../Images/no-hour.svg" />
+                        <div class="field-container">
+                            <h2>Quiet Hours</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna..</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="hotel-feature bg-5">
+                        <img src="./../Images/credit-card.svg" />
+                        <div class="field-container">
+                            <h2>Quiet Hours</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna..</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="hotel-feature bg-6">
+                        <img src="./../Images/percent.svg" />
+                        <div class="field-container">
+                            <h2>Quiet Hours</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna..</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
     </div>
 
     <div class="hotel-resume">
@@ -291,7 +358,7 @@
                     el: ".swiper-pagination",
                     clickable: true,
                     renderBullet: function (index, className) {
-                        return `<span class="${className}">${index + 1}</span>`;
+                        return `<span class="${className}"></span>`;
                     },
                 },
                 navigation: {
