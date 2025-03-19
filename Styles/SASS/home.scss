@@ -495,6 +495,7 @@ header {
     & .swiper-core-features {
         break-inside: avoid;
         padding-bottom: 2rem;
+        overflow: hidden;
 
         & .swiper-wrapper {
 
@@ -609,7 +610,7 @@ header {
     & .swiper-menu {
         break-inside: avoid;
         padding-bottom: 2rem;
-
+        overflow: hidden;
         & .swiper-wrapper {
 
             & .swiper-slide {
@@ -682,6 +683,34 @@ header {
         & .swiper-button-next::after,
         & .swiper-button-prev::after {
             font-size: 0.8rem;
+        }
+    }
+}
+
+.images {
+    & .swiper-images {
+        break-inside: avoid;
+        padding-bottom: 2rem;
+        overflow: hidden;
+        & .swiper-wrapper {
+            & .swiper-slide {
+                & img {
+                    padding: 1rem;
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        & .swiper-pagination-images {
+            position: relative;
+            top: 2rem;
+            transform: translateX(35%);
+
+            & .swiper-pagination-bullet-active {
+                background-color: #BEAD8E;
+                color: white;
+            }
         }
     }
 }

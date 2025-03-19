@@ -328,6 +328,23 @@
         </div>
     </div>
 
+    <div class="images">
+        <div class="swiper-images mySwiper-images sliderWrapper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./../Images/food7.jpg"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./../Images/food8.jpg"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./../Images/food9.jpg"/>
+                </div>
+            </div>
+            <div class="swiper-pagination-images"></div>
+        </div>
+    </div>
+
     <div class="hotel-resume">
         <div class="hotel-title-icon-container">
             <div class="web-icon-container">
@@ -409,10 +426,10 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         window.onload = function () {
-            const swiperCoreFacilities = new Swiper(".mySwiper-core-facilities", {
+            const swiper = new Swiper(".mySwiper", {
                 spaceBetween: 30,
                 pagination: {
-                    el: ".swiper-pagination-core-facilities",
+                    el: ".swiper-pagination",
                     clickable: true,
                     renderBullet: function (index, className) {
                         return `<span class="${className}"></span>`;
@@ -422,6 +439,16 @@
                     nextEl: ".swiper-button-next",
                     prevEl: ".swiper-button-prev",
                 },
+            });
+            const swiperCoreFacilities = new Swiper(".mySwiper-core-facilities", {
+                spaceBetween: 30,
+                pagination: {
+                    el: ".swiper-pagination-core-facilities",
+                    clickable: true,
+                    renderBullet: function (index, className) {
+                        return `<span class="${className}"></span>`;
+                    },
+                }
             });
             const swiperMenu = new Swiper(".mySwiper-menu", {
                 spaceBetween: 30,
@@ -436,6 +463,16 @@
                     nextEl: ".swiper-button-next",
                     prevEl: ".swiper-button-prev",
                 },
+            });
+            const swiperImages = new Swiper(".mySwiper-images", {
+                spaceBetween: 30,
+                pagination: {
+                    el: ".swiper-pagination-images",
+                    clickable: true,
+                    renderBullet: function (index, className) {
+                        return `<span class="${className}"></span>`;
+                    },
+                }
             });
         }
     </script>

@@ -673,6 +673,7 @@ header .account-search-container img {
 .core-features .swiper-core-features {
   break-inside: avoid;
   padding-bottom: 2rem;
+  overflow: hidden;
 }
 .core-features .swiper-core-features .swiper-wrapper .swiper-slide .hotel-feature img {
   padding: 3rem 0 2rem 1rem;
@@ -763,6 +764,7 @@ header .account-search-container img {
 .menu .swiper-menu {
   break-inside: avoid;
   padding-bottom: 2rem;
+  overflow: hidden;
 }
 .menu .swiper-menu .swiper-wrapper .swiper-slide .food-page {
   display: flex;
@@ -819,6 +821,27 @@ header .account-search-container img {
 }
 .menu .swiper-menu .swiper-button-next::after, .menu .swiper-menu .swiper-button-prev::after {
   font-size: 0.8rem;
+}
+
+.images .swiper-images {
+  break-inside: avoid;
+  padding-bottom: 2rem;
+  overflow: hidden;
+}
+.images .swiper-images .swiper-wrapper .swiper-slide img {
+  padding: 1rem;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.images .swiper-images .swiper-pagination-images {
+  position: relative;
+  top: 2rem;
+  transform: translateX(35%);
+}
+.images .swiper-images .swiper-pagination-images .swiper-pagination-bullet-active {
+  background-color: #BEAD8E;
+  color: white;
 }
 
 .hotel-resume {
