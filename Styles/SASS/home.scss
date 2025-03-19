@@ -21,7 +21,6 @@ a {
 }
 
 header {
-    position: fixed;
     top: 0;
     background-color: #FFFFFF;
     display: flex;
@@ -471,34 +470,40 @@ header {
     flex-direction: column;
     align-items: center;
     padding: 1rem;
+
     h6 {
         font-family: 'Archivo';
-        color: #777777; 
+        color: #777777;
         font-size: 1rem;
         letter-spacing: 2.8px;
     }
+
     h2 {
         font-family: 'Old Standard TT';
         font-weight: 400;
         font-size: 3rem;
         padding: 1rem 0;
     }
+
     p {
         font-family: 'Archivo';
         color: #777777;
         line-height: 24px;
         font-size: 1rem;
     }
-    & .swiper {
+
+    & .swiper-core-features {
         break-inside: avoid;
         padding-bottom: 2rem;
+
         & .swiper-wrapper {
-            
+
             & .swiper-slide {
                 & .hotel-feature {
                     & img {
                         padding: 3rem 0 2rem 1rem;
                     }
+
                     & .field-container {
                         & h2 {
                             font-family: 'Old Standard TT';
@@ -506,6 +511,7 @@ header {
                         }
                     }
                 }
+
                 & .bg-1 {
                     margin-right: 1.5rem;
                     background-image: url('./../../Images/01.svg');
@@ -513,6 +519,7 @@ header {
                     background-repeat: no-repeat;
                     background-position: top right;
                 }
+
                 & .bg-2 {
                     margin-right: 1.5rem;
                     background-image: url('./../../Images/02.png');
@@ -520,6 +527,7 @@ header {
                     background-repeat: no-repeat;
                     background-position: top right;
                 }
+
                 & .bg-3 {
                     margin-right: 1.5rem;
                     background-image: url('./../../Images/03.svg');
@@ -527,6 +535,7 @@ header {
                     background-repeat: no-repeat;
                     background-position: top right;
                 }
+
                 & .bg-4 {
                     margin-right: 1.5rem;
                     background-image: url('./../../Images/04.svg');
@@ -534,6 +543,7 @@ header {
                     background-repeat: no-repeat;
                     background-position: top right;
                 }
+
                 & .bg-5 {
                     margin-right: 1.5rem;
                     background-image: url('./../../Images/05.svg');
@@ -541,6 +551,7 @@ header {
                     background-repeat: no-repeat;
                     background-position: top right;
                 }
+
                 & .bg-6 {
                     margin-right: 1.5rem;
                     background-image: url('./../../Images/06.svg');
@@ -550,14 +561,127 @@ header {
                 }
             }
         }
-        & .swiper-pagination {
-            position:relative;
+
+        & .swiper-pagination-core-facilities {
+            position: relative;
             top: 2rem;
+            transform: translateX(35%);
 
             & .swiper-pagination-bullet-active {
                 background-color: #BEAD8E;
                 color: white;
             }
+        }
+    }
+}
+
+.menu {
+    flex-direction: column;
+    align-items: center;
+    padding: 6rem 1rem 1rem 1rem;
+
+    background-image: url('./../../Images/donut.svg');
+    background-size: 5rem;
+    background-repeat: no-repeat;
+    background-position: top right;
+
+    h6 {
+        font-family: 'Archivo';
+        color: #777777;
+        font-size: 1rem;
+        letter-spacing: 2.8px;
+    }
+
+    h2 {
+        font-family: 'Old Standard TT';
+        font-weight: 400;
+        font-size: 3rem;
+        padding: 1rem 0;
+    }
+
+    p {
+        font-family: 'Archivo';
+        color: #777777;
+        line-height: 24px;
+        font-size: 1rem;
+    }
+
+    & .swiper-menu {
+        break-inside: avoid;
+        padding-bottom: 2rem;
+
+        & .swiper-wrapper {
+
+            & .swiper-slide {
+                & .food-page {
+                    display: flex;
+                    flex-direction: row;
+                    padding: 0.5rem 0;
+                    & img {
+                        padding-right: 1rem;
+                        object-fit: cover;
+                        width: 8rem;
+                        height: 8rem;
+
+                    }
+
+                    & .field-container {
+                        padding-right: 1rem;
+                        & h2 {
+                            font-family: 'Old Standard TT';
+                            font-size: 1.5rem;
+                            padding: 0.5rem 0;
+                        }
+
+                        & p {
+                            color: #222222;
+                        }
+                    }
+                }
+
+                & .bg-1 {
+                    margin-right: 1.5rem;
+                }
+            }
+        }
+
+        & .swiper-pagination {
+            position: relative;
+            top: 2rem;
+            width: auto;
+
+            & .swiper-pagination-bullet-active {
+                background-color: #BEAD8E;
+                color: white;
+            }
+        }
+
+        & .swiper-button-next,
+        .swiper-button-prev {
+            display: hidden;
+            width: 2.5rem;
+            position: relative;
+        }
+
+        & .swiper-button-next {
+            background-color: #BDAC8D;
+            color: #FFFFFF;
+            background-image: none;
+            left: 19rem;
+            top: 1rem;
+
+        }
+
+        & .swiper-button-prev {
+            background-color: #F8F8F8;
+            color: black;
+            left: 15.5rem;
+            top: -0.4rem;
+        }
+
+        & .swiper-button-next::after,
+        & .swiper-button-prev::after {
+            font-size: 0.8rem;
         }
     }
 }

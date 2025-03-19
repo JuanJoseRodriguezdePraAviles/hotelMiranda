@@ -210,7 +210,7 @@
     <div class="core-features">
         <h6>FACILITIES</h6>
         <h2>Core Features</h2>
-        <div class="swiper mySwiper sliderWrapper">
+        <div class="swiper-core-features mySwiper-core-facilities sliderWrapper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="hotel-feature bg-1">
@@ -267,7 +267,64 @@
                     </div>
                 </div>
             </div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination-core-facilities"></div>
+        </div>
+    </div>
+
+    <div class="menu">
+        <h6>MENU</h6>
+        <h2>Our Foods Menu</h2>
+        <div class="swiper-menu mySwiper-menu sliderWrapper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="food-page">
+                        <img src="./../Images/food1.jpg" />
+                        <div class="field-container">
+                            <h2>Eggs & Bacon</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
+                        </div>
+                    </div>
+                    <div class="food-page">
+                        <img src="./../Images/food2.jpg" />
+                        <div class="field-container">
+                            <h2>Tea or Coffe</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
+                        </div>
+                    </div>
+                    <div class="food-page">
+                        <img src="./../Images/food3.jpg" />
+                        <div class="field-container">
+                            <h2>Chia Oatmeal</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="food-page">
+                        <img src="./../Images/food4.jpeg" />
+                        <div class="field-container">
+                            <h2>Eggs & Bacon</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
+                        </div>
+                    </div>
+                    <div class="food-page">
+                        <img src="./../Images/food5.jpg" />
+                        <div class="field-container">
+                            <h2>Tea or Coffe</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
+                        </div>
+                    </div>
+                    <div class="food-page">
+                        <img src="./../Images/food6.jpg" />
+                        <div class="field-container">
+                            <h2>Chia Oatmeal</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </div>
 
@@ -352,7 +409,21 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         window.onload = function () {
-            const swiper = new Swiper(".mySwiper", {
+            const swiperCoreFacilities = new Swiper(".mySwiper-core-facilities", {
+                spaceBetween: 30,
+                pagination: {
+                    el: ".swiper-pagination-core-facilities",
+                    clickable: true,
+                    renderBullet: function (index, className) {
+                        return `<span class="${className}"></span>`;
+                    },
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+            const swiperMenu = new Swiper(".mySwiper-menu", {
                 spaceBetween: 30,
                 pagination: {
                     el: ".swiper-pagination",

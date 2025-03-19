@@ -15,7 +15,6 @@ a {
 }
 
 header {
-  position: fixed;
   top: 0;
   background-color: #FFFFFF;
   display: flex;
@@ -671,66 +670,155 @@ header .account-search-container img {
   line-height: 24px;
   font-size: 1rem;
 }
-.core-features .swiper {
+.core-features .swiper-core-features {
   break-inside: avoid;
   padding-bottom: 2rem;
 }
-.core-features .swiper .swiper-wrapper .swiper-slide .hotel-feature img {
+.core-features .swiper-core-features .swiper-wrapper .swiper-slide .hotel-feature img {
   padding: 3rem 0 2rem 1rem;
 }
-.core-features .swiper .swiper-wrapper .swiper-slide .hotel-feature .field-container h2 {
+.core-features .swiper-core-features .swiper-wrapper .swiper-slide .hotel-feature .field-container h2 {
   font-family: "Old Standard TT";
   font-size: 1.8rem;
 }
-.core-features .swiper .swiper-wrapper .swiper-slide .bg-1 {
+.core-features .swiper-core-features .swiper-wrapper .swiper-slide .bg-1 {
   margin-right: 1.5rem;
   background-image: url("./../../Images/01.svg");
   background-size: 9rem;
   background-repeat: no-repeat;
   background-position: top right;
 }
-.core-features .swiper .swiper-wrapper .swiper-slide .bg-2 {
+.core-features .swiper-core-features .swiper-wrapper .swiper-slide .bg-2 {
   margin-right: 1.5rem;
   background-image: url("./../../Images/02.png");
   background-size: 9rem;
   background-repeat: no-repeat;
   background-position: top right;
 }
-.core-features .swiper .swiper-wrapper .swiper-slide .bg-3 {
+.core-features .swiper-core-features .swiper-wrapper .swiper-slide .bg-3 {
   margin-right: 1.5rem;
   background-image: url("./../../Images/03.svg");
   background-size: 9rem;
   background-repeat: no-repeat;
   background-position: top right;
 }
-.core-features .swiper .swiper-wrapper .swiper-slide .bg-4 {
+.core-features .swiper-core-features .swiper-wrapper .swiper-slide .bg-4 {
   margin-right: 1.5rem;
   background-image: url("./../../Images/04.svg");
   background-size: 9rem;
   background-repeat: no-repeat;
   background-position: top right;
 }
-.core-features .swiper .swiper-wrapper .swiper-slide .bg-5 {
+.core-features .swiper-core-features .swiper-wrapper .swiper-slide .bg-5 {
   margin-right: 1.5rem;
   background-image: url("./../../Images/05.svg");
   background-size: 9rem;
   background-repeat: no-repeat;
   background-position: top right;
 }
-.core-features .swiper .swiper-wrapper .swiper-slide .bg-6 {
+.core-features .swiper-core-features .swiper-wrapper .swiper-slide .bg-6 {
   margin-right: 1.5rem;
   background-image: url("./../../Images/06.svg");
   background-size: 9rem;
   background-repeat: no-repeat;
   background-position: top right;
 }
-.core-features .swiper .swiper-pagination {
+.core-features .swiper-core-features .swiper-pagination-core-facilities {
   position: relative;
   top: 2rem;
+  transform: translateX(35%);
 }
-.core-features .swiper .swiper-pagination .swiper-pagination-bullet-active {
+.core-features .swiper-core-features .swiper-pagination-core-facilities .swiper-pagination-bullet-active {
   background-color: #BEAD8E;
   color: white;
+}
+
+.menu {
+  flex-direction: column;
+  align-items: center;
+  padding: 6rem 1rem 1rem 1rem;
+  background-image: url("./../../Images/donut.svg");
+  background-size: 5rem;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.menu h6 {
+  font-family: "Archivo";
+  color: #777777;
+  font-size: 1rem;
+  letter-spacing: 2.8px;
+}
+.menu h2 {
+  font-family: "Old Standard TT";
+  font-weight: 400;
+  font-size: 3rem;
+  padding: 1rem 0;
+}
+.menu p {
+  font-family: "Archivo";
+  color: #777777;
+  line-height: 24px;
+  font-size: 1rem;
+}
+.menu .swiper-menu {
+  break-inside: avoid;
+  padding-bottom: 2rem;
+}
+.menu .swiper-menu .swiper-wrapper .swiper-slide .food-page {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem 0;
+}
+.menu .swiper-menu .swiper-wrapper .swiper-slide .food-page img {
+  padding-right: 1rem;
+  object-fit: cover;
+  width: 8rem;
+  height: 8rem;
+}
+.menu .swiper-menu .swiper-wrapper .swiper-slide .food-page .field-container {
+  padding-right: 1rem;
+}
+.menu .swiper-menu .swiper-wrapper .swiper-slide .food-page .field-container h2 {
+  font-family: "Old Standard TT";
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+}
+.menu .swiper-menu .swiper-wrapper .swiper-slide .food-page .field-container p {
+  color: #222222;
+}
+.menu .swiper-menu .swiper-wrapper .swiper-slide .bg-1 {
+  margin-right: 1.5rem;
+}
+.menu .swiper-menu .swiper-pagination {
+  position: relative;
+  top: 2rem;
+  width: auto;
+}
+.menu .swiper-menu .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #BEAD8E;
+  color: white;
+}
+.menu .swiper-menu .swiper-button-next,
+.menu .swiper-menu .swiper-button-prev {
+  display: hidden;
+  width: 2.5rem;
+  position: relative;
+}
+.menu .swiper-menu .swiper-button-next {
+  background-color: #BDAC8D;
+  color: #FFFFFF;
+  background-image: none;
+  left: 19rem;
+  top: 1rem;
+}
+.menu .swiper-menu .swiper-button-prev {
+  background-color: #F8F8F8;
+  color: black;
+  left: 15.5rem;
+  top: -0.4rem;
+}
+.menu .swiper-menu .swiper-button-next::after, .menu .swiper-menu .swiper-button-prev::after {
+  font-size: 0.8rem;
 }
 
 .hotel-resume {
