@@ -1,4 +1,5 @@
-html, * {
+html,
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -239,14 +240,13 @@ header .account-search-container img {
 }
 
 .about-us {
-  margin: 4rem 1rem;
+  padding: 4rem 1rem;
 }
 .about-us h6 {
   font-family: "Archivo";
   letter-spacing: 2.8px;
   font-size: 0.8rem;
   font-weight: 700;
-  color: #777777;
   padding: 1rem 0;
 }
 .about-us h2 {
@@ -260,8 +260,13 @@ header .account-search-container img {
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 24px;
-  color: #777777;
   padding: 1rem 0;
+}
+.about-us h6 {
+  color: #777777;
+}
+.about-us p {
+  color: #777777;
 }
 .about-us .btn-book-now {
   min-width: 60%;
@@ -343,6 +348,79 @@ header .account-search-container img {
   font-weight: 700;
   color: #BDBDBD;
   padding: 0 1rem;
+}
+
+.benefit-cards .benefit-card {
+  padding: 3rem 15%;
+}
+.benefit-cards .benefit-card img {
+  width: 100%;
+}
+.benefit-cards .benefit-card .benefit-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("./../../Images/bg-team.svg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  margin-top: 2rem;
+}
+.benefit-cards .benefit-card .benefit-description img {
+  width: 25%;
+  padding: 0rem 0;
+}
+.benefit-cards .benefit-card .benefit-description h2 {
+  font-family: "Old Standard TT";
+  font-weight: 400;
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+.benefit-cards .benefit-card .benefit-description p {
+  font-family: "Roboto";
+  line-height: 22px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 0rem 1.4rem;
+}
+.benefit-cards .benefit-card--black {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 15%;
+}
+.benefit-cards .benefit-card--black img {
+  width: 100%;
+}
+.benefit-cards .benefit-card--black .benefit-description {
+  background-color: #222222;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: right top;
+  padding: 2rem 0;
+}
+.benefit-cards .benefit-card--black .benefit-description img {
+  width: 20%;
+  padding: 0rem 0;
+}
+.benefit-cards .benefit-card--black .benefit-description h2 {
+  color: #FFFFFF;
+  font-family: "Old Standard TT";
+  font-weight: 400;
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+.benefit-cards .benefit-card--black .benefit-description p {
+  color: #FFFFFF;
+  font-family: "Roboto";
+  line-height: 22px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 0rem 1.4rem;
 }
 
 .picked-rooms {
@@ -480,7 +558,8 @@ header .account-search-container img {
   background-color: #BEAD8E;
   color: white;
 }
-.picked-rooms .swiper .swiper-button-next, .picked-rooms .swiper .swiper-button-prev {
+.picked-rooms .swiper .swiper-button-next,
+.picked-rooms .swiper .swiper-button-prev {
   display: hidden;
   width: 2.5rem;
   position: relative;
@@ -515,6 +594,58 @@ header .account-search-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.intro-video-container {
+  background-color: #222222;
+  padding: 4rem 1rem;
+}
+.intro-video-container h6 {
+  color: #BDAC8D;
+}
+.intro-video-container h2 {
+  color: #FFFFFF;
+  font-size: 3rem;
+  padding-right: 4rem;
+}
+.intro-video-container p {
+  color: #C2C2C2;
+}
+.intro-video-container iframe {
+  pointer-events: none;
+  margin-bottom: 2rem;
+}
+.intro-video-container h6 {
+  font-family: "Archivo";
+  letter-spacing: 2.8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 1rem 0;
+}
+.intro-video-container h2 {
+  font-family: "Old Standard TT";
+  letter-spacing: -1.2px;
+  font-weight: 400;
+  line-height: 60px;
+}
+.intro-video-container p {
+  font-family: "Archivo";
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 1rem 0;
+}
+.intro-video-container .btn-book-now {
+  min-width: 60%;
+  width: auto;
+  height: 3.75rem;
+  font-family: "Archivo";
+  padding: 1rem 2rem;
+  background-color: #BEAD8E;
+  border: none;
+  margin-bottom: 0.7rem;
+  color: #FFFFFF;
+  letter-spacing: 2.8px;
 }
 
 .hotel-resume {

@@ -422,6 +422,10 @@ header .account-search-container img {
   padding: 0 1rem;
 }
 
+.benefit-cards .benefit-card .benefit-description img {
+  width: 80%;
+}
+
 .picked-rooms {
   display: flex;
   flex-direction: column;
