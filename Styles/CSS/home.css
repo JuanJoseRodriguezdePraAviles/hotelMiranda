@@ -844,6 +844,47 @@ header .account-search-container img {
   color: white;
 }
 
+.achievements {
+  background-color: #222222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4rem 0;
+  padding: 2rem;
+}
+.achievements .achievement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.achievements .achievement img {
+  padding: 1rem 0;
+  width: 4rem;
+}
+.achievements .achievement .value {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+}
+.achievements .achievement .value h2 {
+  font-family: "Roboto";
+  font-weight: 700;
+  color: #FFFFFF;
+  font-size: 3.5rem;
+}
+.achievements .achievement .value p {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  height: 100%;
+  padding-bottom: 0.5rem;
+}
+.achievements .achievement p {
+  font-family: "Roboto";
+  font-weight: 700;
+  color: #999999;
+}
+
 .hotel-resume {
   background-image: url("./../../../Images/bg-resume.png");
   display: flex;
