@@ -125,14 +125,12 @@ header .account-search-container img {
 }
 .about-us-title .tour-learn-btn-container button {
   min-width: 60%;
-  width: auto;
   height: 3.75rem;
   font-family: "Archivo";
   padding: 1rem 2rem;
 }
 .about-us-title .tour-learn-btn-container button.btn--light {
   min-width: 60%;
-  width: auto;
   height: 3.75rem;
   font-family: "Archivo";
   padding: 1rem 2rem;
@@ -144,7 +142,6 @@ header .account-search-container img {
 }
 .about-us-title .tour-learn-btn-container button.btn--dark {
   min-width: 60%;
-  width: auto;
   height: 3.75rem;
   font-family: "Archivo";
   padding: 1rem 2rem;
@@ -215,6 +212,12 @@ header .account-search-container img {
 .restaurant {
   padding: 4rem 1rem;
 }
+.restaurant .restaurant-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .restaurant h6 {
   font-family: "Archivo";
   letter-spacing: 2.8px;
@@ -237,12 +240,10 @@ header .account-search-container img {
 }
 .restaurant .btn-book-now {
   min-width: 60%;
-  width: auto;
   height: 3.75rem;
   font-family: "Archivo";
   padding: 1rem 2rem;
   min-width: 60%;
-  width: auto;
   height: 3.75rem;
   font-family: "Archivo";
   padding: 1rem 2rem;
@@ -257,6 +258,159 @@ header .account-search-container img {
 }
 .restaurant p {
   padding-right: 2.5rem;
+}
+
+.core-features {
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: #222222;
+  text-align: center;
+}
+.core-features h6 {
+  font-family: "Archivo";
+  color: #777777;
+  font-size: 1rem;
+  letter-spacing: 2.8px;
+  color: #FFFFFF;
+}
+.core-features h2 {
+  font-family: "Old Standard TT";
+  font-weight: 400;
+  font-size: 3rem;
+  padding: 1rem 0;
+  color: #FFFFFF;
+}
+.core-features p {
+  font-family: "Archivo";
+  color: #777777;
+  line-height: 24px;
+  font-size: 1rem;
+}
+.core-features .swiper-core-features {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  break-inside: avoid;
+  padding-bottom: 2rem;
+  overflow: hidden;
+}
+.core-features .swiper-core-features .swiper-wrapper .swiper-slide {
+  background-color: #292929;
+  padding: 1rem;
+}
+.core-features .swiper-core-features .swiper-wrapper .swiper-slide .hotel-feature img {
+  padding: 3rem 0 2rem 1rem;
+}
+.core-features .swiper-core-features .swiper-wrapper .swiper-slide .hotel-feature .field-container h2 {
+  font-family: "Old Standard TT";
+  font-size: 1.8rem;
+}
+.core-features .swiper-core-features .swiper-wrapper .swiper-slide .bg-1 {
+  margin-right: 1.5rem;
+  background-image: url("./../../Images/01-dark.svg");
+  background-size: 9rem;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.core-features .swiper-core-features .swiper-wrapper .swiper-slide .bg-2 {
+  margin-right: 1.5rem;
+  background-image: url("./../../Images/02-dark.svg");
+  background-size: 9rem;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.core-features .swiper-core-features .swiper-wrapper .swiper-slide .bg-3 {
+  margin-right: 1.5rem;
+  background-image: url("./../../Images/03-dark.svg");
+  background-size: 9rem;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.core-features .swiper-core-features .swiper-wrapper .swiper-slide .bg-4 {
+  margin-right: 1.5rem;
+  background-image: url("./../../Images/04-dark.svg");
+  background-size: 9rem;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.core-features .swiper-core-features .swiper-wrapper .swiper-slide .bg-5 {
+  margin-right: 1.5rem;
+  background-image: url("./../../Images/05-dark.svg");
+  background-size: 9rem;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.core-features .swiper-core-features .swiper-wrapper .swiper-slide .bg-6 {
+  margin-right: 1.5rem;
+  background-image: url("./../../Images/06-dark.svg");
+  background-size: 9rem;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.core-features .swiper-core-features .swiper-pagination-core-facilities {
+  position: relative;
+  top: 2rem;
+  transform: translateX(35%);
+}
+.core-features .swiper-core-features .swiper-pagination-core-facilities .swiper-pagination-bullet-active {
+  background-color: #BEAD8E;
+  color: white;
+}
+
+.fun-facts-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 1rem;
+}
+.fun-facts-container h6 {
+  font-family: "Archivo";
+}
+.fun-facts-container h2 {
+  font-family: "Old Standqard TT";
+  font-weight: 400;
+  font-size: 3rem;
+  padding-right: 3rem;
+}
+.fun-facts-container .fun-facts .fun-fact {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  justify-content: space-evenly;
+}
+.fun-facts-container .fun-facts .fun-fact img {
+  padding: 0 1rem;
+}
+.fun-facts-container .fun-facts .fun-fact .fun-fact-data {
+  width: 50%;
+}
+.fun-facts-container .fun-facts .fun-fact .fun-fact-data h2 {
+  font-family: "Old Standard TT";
+}
+.fun-facts-container .fun-facts .fun-fact .fun-fact-data P {
+  font-family: "Roboto";
+  color: #777777;
+}
+.fun-facts-container .images .swiper-images {
+  break-inside: avoid;
+  padding-bottom: 2rem;
+  overflow: hidden;
+}
+.fun-facts-container .images .swiper-images .swiper-wrapper .swiper-slide img {
+  padding: 1rem;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.fun-facts-container .images .swiper-images .swiper-pagination-images {
+  position: relative;
+  top: 2rem;
+  transform: translateX(35%);
+}
+.fun-facts-container .images .swiper-images .swiper-pagination-images .swiper-pagination-bullet-active {
+  background-color: #BEAD8E;
+  color: white;
 }
 
 .hotel-resume {

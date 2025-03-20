@@ -1,4 +1,5 @@
-html, * {
+html,
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -124,14 +125,12 @@ header .account-search-container img {
 }
 .room-title .tour-learn-btn-container button {
   min-width: 60%;
-  width: auto;
   height: 3.75rem;
   font-family: "Archivo";
   padding: 1rem 2rem;
 }
 .room-title .tour-learn-btn-container button.btn--light {
   min-width: 60%;
-  width: auto;
   height: 3.75rem;
   font-family: "Archivo";
   padding: 1rem 2rem;
@@ -143,7 +142,6 @@ header .account-search-container img {
 }
 .room-title .tour-learn-btn-container button.btn--dark {
   min-width: 60%;
-  width: auto;
   height: 3.75rem;
   font-family: "Archivo";
   padding: 1rem 2rem;
@@ -172,15 +170,202 @@ header .account-search-container img {
   padding-left: 0 0.5rem;
 }
 
+.room-info {
+  padding: 1rem;
+  width: 100%;
+}
+.room-info h6 {
+  font-family: "Archivo";
+  letter-spacing: 2.8px;
+  color: #777777;
+}
+.room-info h2 {
+  font-family: "Old Standard TT";
+  font-weight: 400;
+}
+.room-info .price-container {
+  display: flex;
+  flex-direction: row;
+}
+.room-info .price-container .price {
+  font-family: "Roboto";
+  font-weight: 700;
+  color: #BEAD8E;
+  font-size: 1.4rem;
+}
+.room-info .price-container .night {
+  font-family: "Roboto";
+  font-weight: 700;
+  color: #BEAD8E;
+  font-size: 0.8rem;
+  padding-top: 2%;
+}
+.room-info img {
+  padding: 1rem;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.calendar-container {
+  padding: 1rem 2rem;
+}
+.calendar-container .calendar-label-icon-input-container {
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.calendar-container .calendar-label-icon-input-container label {
+  font-family: "Archivo";
+  font-weight: 700;
+  padding: 1rem 0;
+}
+.calendar-container .calendar-label-icon-input-container .icon-input-container {
+  background-color: #F8F8F8;
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+}
+.calendar-container .calendar-label-icon-input-container .icon-input-container input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: transparent;
+  border-top: 0;
+  border: none;
+  outline: none;
+  color: #BEAD8E;
+  direction: rtl;
+  position: relative;
+  top: 1rem;
+  padding: 0;
+  opacity: 0;
+  visibility: visible;
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+}
+.calendar-container .calendar-label-icon-input-container input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  width: 100%;
+}
+.calendar-container .calendar-label-icon-input-container img {
+  width: 1rem;
+}
+.calendar-container .calendar-label-icon-input-container #arrival-formatted-date,
+.calendar-container .calendar-label-icon-input-container #return-formatted-date {
+  color: #686868;
+}
+.calendar-container .btn-availability {
+  min-width: 60%;
+  height: 3.75rem;
+  font-family: "Archivo";
+  padding: 1rem 2rem;
+  min-width: 60%;
+  height: 3.75rem;
+  font-family: "Archivo";
+  padding: 1rem 2rem;
+  background-color: #BEAD8E;
+  border: none;
+  margin-bottom: 0.7rem;
+  color: #FFFFFF;
+  letter-spacing: 2.8px;
+  width: 100%;
+}
+
+.extra-info {
+  font-family: "Roboto";
+  font-weight: 400;
+  padding: 1rem;
+  line-height: 24px;
+  font-size: 0.9rem;
+  color: #777777;
+}
+
+.amenities {
+  padding: 1rem;
+}
+.amenities h2 {
+  font-family: "Old Standard TT";
+  font-weight: 400;
+  font-size: 1.75rem;
+  margin: 3rem 0;
+  border-bottom: 1px solid #F1F1F1;
+}
+.amenities .list-amenities {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.amenities .list-amenities .amenity {
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+}
+.amenities .list-amenities .amenity img {
+  display: block;
+  padding: 0 0.5rem;
+}
+.amenities .list-amenities .amenity p {
+  font-family: "Roboto";
+  font-size: 0.5rem;
+}
+
+.founder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+.founder img {
+  width: 48%;
+}
+.founder .check {
+  position: relative;
+  top: -9.5rem;
+  left: 3.5rem;
+  background-color: #BDAC8D;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  border: 4px solid white;
+}
+.founder .check img {
+  padding: 0rem;
+  width: 1rem;
+}
+.founder h2 {
+  font-family: "Old Standard TT";
+  font-weight: 400;
+  font-size: 2rem;
+  padding: 0.5rem 0;
+}
+.founder h3 {
+  font-family: "Archivo";
+  color: #BDAC8D;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 2.8px;
+  padding: 1rem 0;
+}
+.founder p {
+  font-family: "Archivo";
+  color: #777777;
+  line-height: 24px;
+}
+
 .cancellation {
-  margin: 4rem 1rem;
+  padding: 4rem 1rem;
 }
 .cancellation h6 {
   font-family: "Archivo";
   letter-spacing: 2.8px;
   font-size: 0.8rem;
   font-weight: 700;
-  color: #777777;
   padding: 1rem 0;
 }
 .cancellation h2 {
@@ -194,17 +379,14 @@ header .account-search-container img {
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 24px;
-  color: #777777;
   padding: 1rem 0;
 }
 .cancellation .btn-book-now {
   min-width: 60%;
-  width: auto;
   height: 3.75rem;
   font-family: "Archivo";
   padding: 1rem 2rem;
   min-width: 60%;
-  width: auto;
   height: 3.75rem;
   font-family: "Archivo";
   padding: 1rem 2rem;
@@ -220,6 +402,177 @@ header .account-search-container img {
 }
 .cancellation p {
   padding-right: 2.5rem;
+}
+
+.related-rooms {
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.related-rooms h2 {
+  font-family: "Old Standard TT";
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: left;
+  padding: 1rem;
+}
+.related-rooms .swiper {
+  width: 100%;
+  height: auto;
+  padding: 0 1rem;
+}
+.related-rooms .swiper .rooms-container .room-card {
+  padding: 1rem 0;
+}
+.related-rooms .swiper .rooms-container .room-card .image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.related-rooms .swiper .rooms-container .room-card .image-container img {
+  height: 13.625rem;
+}
+.related-rooms .swiper .rooms-container .room-card .image-container .room-features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 15rem;
+  height: 2.5rem;
+  position: relative;
+  left: 0rem;
+  top: -1.5rem;
+}
+.related-rooms .swiper .rooms-container .room-card .image-container .room-features img {
+  width: 1rem;
+  height: 1rem;
+  margin: 0 0.5rem;
+}
+.related-rooms .swiper .rooms-container .room-card .image-description {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+.related-rooms .swiper .rooms-container .room-card .image-description h2 {
+  font-family: "Old Standard TT";
+  font-weight: 400;
+  font-size: 1.5rem;
+  padding: 0rem 0 0.5rem 0;
+}
+.related-rooms .swiper .rooms-container .room-card .image-description p {
+  font-family: "Roboto";
+  font-size: 0.9rem;
+  color: #777777;
+  padding: 0.5rem 0;
+}
+.related-rooms .swiper .rooms-container .room-card .image-description div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.related-rooms .swiper .rooms-container .room-card .image-description .room-price {
+  font-weight: 700;
+  color: #BEAD8E;
+  padding: 0 1rem;
+}
+.related-rooms .swiper .rooms-container .room-card .image-description .room-status {
+  font-weight: 700;
+  color: #BDBDBD;
+  padding: 0 1rem;
+}
+.related-rooms .swiper .rooms-container .room-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.related-rooms .swiper .rooms-container .room-card .image-container {
+  width: 100%;
+}
+.related-rooms .swiper .rooms-container .room-card .image-description {
+  background-color: #FFFFFF;
+  width: 90%;
+  position: relative;
+  top: 0rem;
+  padding: 0.5rem;
+}
+.related-rooms .swiper .rooms-container .room-card .image-description h2 {
+  font-size: 1.8rem;
+}
+.related-rooms .swiper .rooms-container .room-card .image-description p {
+  padding: 0 1rem;
+}
+.related-rooms .swiper .rooms-container .room-card .image-description div .room-price {
+  padding: 1rem;
+  font-size: 1rem;
+}
+.related-rooms .swiper .rooms-container .room-card .image-description div .room-price span {
+  font-size: 1rem;
+}
+.related-rooms .swiper .rooms-container .room-card .image-description div .room-status {
+  padding: 1rem;
+}
+.related-rooms .swiper .swiper-pagination {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.related-rooms .swiper .swiper-pagination .swiper-pagination-bullet {
+  font-family: "Oswald";
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: white;
+  color: black;
+  font-size: 1rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  opacity: 1;
+  padding-top: 1rem;
+}
+.related-rooms .swiper .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #BEAD8E;
+  color: white;
+}
+.related-rooms .swiper .swiper-button-next,
+.related-rooms .swiper .swiper-button-prev {
+  display: hidden;
+  width: 2.5rem;
+  position: relative;
+}
+.related-rooms .swiper .swiper-button-next {
+  background-color: #BDAC8D;
+  color: #FFFFFF;
+  background-image: none;
+  left: 17.5rem;
+  top: -22rem;
+}
+.related-rooms .swiper .swiper-button-prev {
+  background-color: #FFFFFF;
+  color: black;
+  left: -0.5rem;
+  top: -23.4rem;
+}
+.related-rooms .swiper .swiper-button-next::after, .related-rooms .swiper .swiper-button-prev::after {
+  font-size: 0.8rem;
+}
+.related-rooms .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+.related-rooms .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hotel-resume {
