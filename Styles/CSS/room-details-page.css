@@ -423,7 +423,7 @@ header .account-search-container img {
   padding: 0 1rem;
 }
 .related-rooms .swiper .rooms-container .room-card {
-  padding: 1rem 0;
+  padding: 0;
 }
 .related-rooms .swiper .rooms-container .room-card .image-container {
   display: flex;
