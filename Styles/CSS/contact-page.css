@@ -1,4 +1,5 @@
-html, * {
+html,
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -124,14 +125,12 @@ header .account-search-container img {
 }
 .contact-title .tour-learn-btn-container button {
   min-width: 60%;
-  width: auto;
   height: 3.75rem;
   font-family: "Archivo";
   padding: 1rem 2rem;
 }
 .contact-title .tour-learn-btn-container button.btn--light {
   min-width: 60%;
-  width: auto;
   height: 3.75rem;
   font-family: "Archivo";
   padding: 1rem 2rem;
@@ -143,7 +142,6 @@ header .account-search-container img {
 }
 .contact-title .tour-learn-btn-container button.btn--dark {
   min-width: 60%;
-  width: auto;
   height: 3.75rem;
   font-family: "Archivo";
   padding: 1rem 2rem;
@@ -214,6 +212,54 @@ header .account-search-container img {
   background-image: url("./../../Images/03.png");
   background-repeat: no-repeat;
   background-position: right;
+}
+
+.map {
+  padding: 1rem;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-form {
+  padding: 1rem;
+}
+.contact-form input {
+  width: 100%;
+  border: none;
+  background-color: #F8F8F8;
+  padding: 1rem 0 1rem 3rem;
+}
+.contact-form img {
+  position: relative;
+  top: -2rem;
+  left: 5%;
+}
+.contact-form .message-input {
+  height: 10rem;
+  padding-bottom: 8rem;
+}
+.contact-form .icon-message {
+  position: relative;
+  top: -9rem;
+}
+.contact-form .btn-send {
+  min-width: 60%;
+  height: 3.75rem;
+  font-family: "Archivo";
+  padding: 1rem 2rem;
+  min-width: 60%;
+  height: 3.75rem;
+  font-family: "Archivo";
+  padding: 1rem 2rem;
+  background-color: #BEAD8E;
+  border: none;
+  margin-bottom: 0.7rem;
+  color: #FFFFFF;
+  letter-spacing: 2.8px;
+  width: 80%;
+  margin: 2rem;
 }
 
 .hotel-resume {
