@@ -80,6 +80,27 @@ header .account-search-container img {
   width: 100%;
   text-align: left;
   margin: 2rem;
+  z-index: 1;
+  overflow: visible;
+  visibility: visible;
+  padding: 0.5rem 0;
+}
+.menu-extended .menu-link {
+  font-family: "Archivo";
+  font-weight: 600;
+  margin: 1.5rem;
+}
+
+.menu-extended {
+  position: fixed;
+  top: 1.5rem;
+  left: -2rem;
+  background-color: #FFFFFF;
+  display: none;
+  height: auto;
+  width: 100%;
+  text-align: left;
+  margin: 2rem;
   z-index: 10;
   overflow: visible;
   visibility: visible;

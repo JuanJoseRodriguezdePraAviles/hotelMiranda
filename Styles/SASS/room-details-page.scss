@@ -3,6 +3,8 @@
 @import 'commons/data-btn-container';
 @import 'commons/hotel-resume';
 @import 'commons/room-card';
+@import 'commons/header';
+@import 'commons/calendar';
 
 html,
 * {
@@ -19,100 +21,7 @@ a {
     text-decoration: none;
     color: inherit;
 }
-
-header {
-    position: fixed;
-    top: 0;
-    background-color: #FFFFFF;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    column-count: 4;
-    padding: 0.4rem 0rem;
-    box-shadow: 0 0.1px 5px 0px gray;
-    z-index: 2;
-    width: 100%;
-
-    & .hamburguer-container {
-        width: 1.2rem;
-        height: 1.2rem;
-        margin: 0.5rem 2rem 0 0rem;
-
-        & .hamburguer {
-            width: 1.2rem;
-            height: 1.2rem;
-        }
-
-        & .close-icon {
-            width: 0.9rem;
-            margin-top: 0.1rem;
-            margin-left: 0.1rem;
-        }
-
-    }
-
-
-    & .title-container {
-        display: flex;
-        justify-content: center;
-        width: 10rem;
-        column-count: 2;
-        padding-right: 5rem;
-
-        & .web-icon-container {
-            margin-right: 1rem;
-            width: 2rem;
-            height: 2rem;
-            box-shadow: 0px 14px 24px 0px #8B8B8B40;
-
-            img {
-                margin: 0.6rem 0.6rem;
-            }
-        }
-
-        & .web-title-container {
-            break-inside: avoid;
-
-        }
-
-        & .web-title-container {
-            padding-top: 0.5rem;
-        }
-    }
-
-    & .account-search-container {
-        break-inside: avoid;
-
-        & img {
-            padding: 0.5rem;
-        }
-    }
-
-}
-
-.menu-extended {
-    position: fixed;
-    top: 1.5rem;
-    left: -2rem;
-    background-color: #FFFFFF;
-    display: none;
-    height: auto;
-    width: 100%;
-    text-align: left;
-    margin: 2rem;
-    z-index: 10;
-    overflow: visible;
-    visibility: visible;
-    padding: 0.5rem 0;
-
-    & .menu-link {
-        font-family: 'Archivo';
-        font-weight: 600;
-        margin: 1.5rem;
-
-
-    }
-}
+@include header;
 
 .room-title {
     background-color: #333333;
@@ -165,69 +74,7 @@ header {
     }
 }
 
-.calendar-container {
-    padding: 1rem 2rem;
-
-    & .calendar-label-icon-input-container {
-        padding-bottom: 1rem;
-        display: flex;
-        flex-direction: column;
-
-        & label {
-            font-family: 'Archivo';
-            font-weight: 700;
-            padding: 1rem 0;
-        }
-
-        & .icon-input-container {
-            background-color: #F8F8F8;
-            display: flex;
-            flex-direction: row;
-            padding: 1rem;
-
-            & input {
-                appearance: none;
-                -webkit-appearance: none;
-                -moz-appearance: none;
-                background-color: transparent;
-                border-top: 0;
-                border: none;
-                outline: none;
-                color: #BEAD8E;
-                direction: rtl;
-                position: relative;
-                top: 1rem;
-                padding: 0;
-                opacity: 0;
-                visibility: visible;
-                width: 100%;
-                height: 10px;
-                cursor: pointer;
-            }
-        }
-
-        input[type="date"]::-webkit-calendar-picker-indicator {
-            opacity: 0;
-            width: 100%;
-        }
-
-        & img {
-            width: 1rem;
-        }
-
-        & #arrival-formatted-date,
-        #return-formatted-date {
-            color: #686868;
-        }
-    }
-
-    & .btn-availability {
-        @include btn;
-        @include btn("light");
-        width: 100%;
-
-    }
-}
+@include calendar("light");
 
 .extra-info {
     font-family: 'Roboto';

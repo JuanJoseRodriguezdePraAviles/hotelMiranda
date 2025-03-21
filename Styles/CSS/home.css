@@ -15,6 +15,7 @@ a {
 }
 
 header {
+  position: fixed;
   top: 0;
   background-color: #FFFFFF;
   display: flex;
@@ -79,6 +80,27 @@ header .account-search-container img {
   width: 100%;
   text-align: left;
   margin: 2rem;
+  z-index: 1;
+  overflow: visible;
+  visibility: visible;
+  padding: 0.5rem 0;
+}
+.menu-extended .menu-link {
+  font-family: "Archivo";
+  font-weight: 600;
+  margin: 1.5rem;
+}
+
+.menu-extended {
+  position: fixed;
+  top: 1.5rem;
+  left: -2rem;
+  background-color: #FFFFFF;
+  display: none;
+  height: auto;
+  width: 100%;
+  text-align: left;
+  margin: 2rem;
   z-index: 10;
   overflow: visible;
   visibility: visible;
@@ -124,14 +146,12 @@ header .account-search-container img {
 }
 .perfect-base-container .tour-learn-btn-container button {
   min-width: 60%;
-  width: auto;
   height: 3.75rem;
   font-family: "Archivo";
   padding: 1rem 2rem;
 }
 .perfect-base-container .tour-learn-btn-container button.btn--light {
   min-width: 60%;
-  width: auto;
   height: 3.75rem;
   font-family: "Archivo";
   padding: 1rem 2rem;
@@ -143,7 +163,6 @@ header .account-search-container img {
 }
 .perfect-base-container .tour-learn-btn-container button.btn--dark {
   min-width: 60%;
-  width: auto;
   height: 3.75rem;
   font-family: "Archivo";
   padding: 1rem 2rem;
@@ -210,7 +229,6 @@ header .account-search-container img {
   cursor: pointer;
 }
 .calendar-container .calendar-label-icon-input-container input[type=date]::-webkit-calendar-picker-indicator {
-  opacity: 0;
   width: 100%;
 }
 .calendar-container .calendar-label-icon-input-container img {
@@ -222,12 +240,10 @@ header .account-search-container img {
 }
 .calendar-container .btn-availability {
   min-width: 60%;
-  width: auto;
   height: 3.75rem;
   font-family: "Archivo";
   padding: 1rem 2rem;
   min-width: 60%;
-  width: auto;
   height: 3.75rem;
   font-family: "Archivo";
   padding: 1rem 2rem;
@@ -269,12 +285,10 @@ header .account-search-container img {
 }
 .about-us .btn-book-now {
   min-width: 60%;
-  width: auto;
   height: 3.75rem;
   font-family: "Archivo";
   padding: 1rem 2rem;
   min-width: 60%;
-  width: auto;
   height: 3.75rem;
   font-family: "Archivo";
   padding: 1rem 2rem;
@@ -288,9 +302,6 @@ header .account-search-container img {
   font-size: 3.5rem;
 }
 
-.room-card {
-  padding: 1rem 0;
-}
 .room-card .image-container {
   display: flex;
   flex-direction: column;
@@ -319,7 +330,7 @@ header .account-search-container img {
   display: flex;
   text-align: center;
   flex-direction: column;
-  padding: 0 1rem;
+  padding: 2rem 1rem;
 }
 .room-card .image-description h2 {
   font-family: "Old Standard TT";
@@ -350,6 +361,8 @@ header .account-search-container img {
 }
 
 .benefit-cards .benefit-card {
+  display: flex;
+  flex-direction: column;
   padding: 3rem 15%;
 }
 .benefit-cards .benefit-card img {
@@ -361,13 +374,12 @@ header .account-search-container img {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url("./../../Images/bg-team.svg");
   background-repeat: no-repeat;
   background-position: right top;
-  margin-top: 2rem;
+  padding: 2rem 0;
 }
 .benefit-cards .benefit-card .benefit-description img {
-  width: 25%;
+  width: 20%;
   padding: 0rem 0;
 }
 .benefit-cards .benefit-card .benefit-description h2 {
@@ -383,43 +395,26 @@ header .account-search-container img {
   font-weight: 400;
   padding: 0rem 1.4rem;
 }
-.benefit-cards .benefit-card--black {
-  display: flex;
-  flex-direction: column;
-  padding: 3rem 15%;
-}
-.benefit-cards .benefit-card--black img {
-  width: 100%;
-}
 .benefit-cards .benefit-card--black .benefit-description {
   background-color: #222222;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-repeat: no-repeat;
-  background-position: right top;
-  padding: 2rem 0;
-}
-.benefit-cards .benefit-card--black .benefit-description img {
-  width: 20%;
-  padding: 0rem 0;
 }
 .benefit-cards .benefit-card--black .benefit-description h2 {
   color: #FFFFFF;
-  font-family: "Old Standard TT";
-  font-weight: 400;
-  font-size: 1.8rem;
-  padding: 1rem 0;
 }
-.benefit-cards .benefit-card--black .benefit-description p {
+.benefit-cards .benefit-card--black .benefit-description P {
   color: #FFFFFF;
-  font-family: "Roboto";
-  line-height: 22px;
-  font-size: 0.9rem;
-  font-weight: 400;
-  padding: 0rem 1.4rem;
+}
+.benefit-cards .benefit-card--light .benefit-card {
+  padding: 3rem 15%;
+}
+.benefit-cards .benefit-card--light .benefit-card img {
+  width: 100%;
+}
+.benefit-cards .benefit-card--light .benefit-card .benefit-description h2 {
+  color: black;
+}
+.benefit-cards .benefit-card--light .benefit-description {
+  background-image: url("./../../Images/bg-team.svg");
 }
 
 .picked-rooms {
@@ -444,9 +439,6 @@ header .account-search-container img {
 .picked-rooms .swiper {
   width: 100%;
   height: auto;
-}
-.picked-rooms .swiper .rooms-container .room-card {
-  padding: 1rem 0;
 }
 .picked-rooms .swiper .rooms-container .room-card .image-container {
   display: flex;
@@ -476,7 +468,7 @@ header .account-search-container img {
   display: flex;
   text-align: center;
   flex-direction: column;
-  padding: 0 1rem;
+  padding: 2rem 1rem;
 }
 .picked-rooms .swiper .rooms-container .room-card .image-description h2 {
   font-family: "Old Standard TT";
@@ -636,7 +628,6 @@ header .account-search-container img {
 }
 .intro-video-container .btn-book-now {
   min-width: 60%;
-  width: auto;
   height: 3.75rem;
   font-family: "Archivo";
   padding: 1rem 2rem;
