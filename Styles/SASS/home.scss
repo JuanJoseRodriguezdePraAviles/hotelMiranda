@@ -5,24 +5,10 @@
 @import 'commons/hotel-resume';
 @import 'commons/header';
 @import 'commons/calendar';
+@import 'commons/body';
 
-html,
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    min-width: 320px
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
+@include body;
 @include header;
-
 
 .perfect-base-container {
     background-color: #333333;
@@ -542,7 +528,7 @@ a {
         & .swiper-pagination-images {
             position: relative;
             top: 2rem;
-            transform: translateX(35%);
+            transform: translateX(42%);
 
             & .swiper-pagination-bullet-active {
                 background-color: #BEAD8E;

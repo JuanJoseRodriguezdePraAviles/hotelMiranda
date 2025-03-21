@@ -1,5 +1,4 @@
 function formatDate(dateString) {
-    console.log("Handle format");
     if(!dateString) return "Select a date";
     const date = new Date(dateString);
     const day = date.getDate();
@@ -17,9 +16,9 @@ function formatDate(dateString) {
             default: return "th";
         }
     }
-
     return `${day}${getDaySuffix(day)} ${month} ${year}`;
 }
+
 
 document.getElementById("arrival-date-input") && document.getElementById("arrival-date-input").addEventListener("change", function () {
     const formattedDate = formatDate(this.value);
@@ -30,15 +29,12 @@ document.getElementById("return-date-input") && document.getElementById("return-
     document.getElementById("return-formatted-date").textContent = formattedDate;
 });
 
-console.log("js executed");
-document.getElementById("icon-arrival-input-container").addEventListener('click', ()=> {
-    console.log("PRUEBA");
+document.getElementById("icon-arrival-input-container") && document.getElementById("icon-arrival-input-container").addEventListener('click', ()=> {
     const input = document.getElementById("arrival-date-input");
     input.focus();
     input.showPicker?.();
 });
-document.getElementById("icon-return-input-container").addEventListener('click', ()=> {
-    console.log("PRUEBA");
+document.getElementById("icon-return-input-container") && document.getElementById("icon-return-input-container").addEventListener('click', ()=> {
     const input = document.getElementById("return-date-input");
     input.focus();
     input.showPicker?.();

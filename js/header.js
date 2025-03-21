@@ -10,10 +10,12 @@ menuIcon.addEventListener('click', () => {
         isLocal? menuIcon.setAttribute('src', '/Images/close-menu.svg') : menuIcon.setAttribute('src', '/hotelMiranda/Images/close-menu.svg');
         menuIcon.setAttribute("class", "close-icon");
         menuLinkContainer.style.display="inline-block";
+        document.body.setAttribute("class", "stop-scrolling");
     } else {
         menuState = false;
         isLocal? menuIcon.setAttribute('src', '/Images/hamburguer.svg') : menuIcon.setAttribute('src', '/hotelMiranda/Images/hamburguer.svg');
         menuIcon.setAttribute("class", "hamburguer");
         menuLinkContainer.style.display="none";
+        document.body.setAttribute("class", "");
     }
 });

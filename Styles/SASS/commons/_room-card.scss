@@ -1,6 +1,9 @@
 @mixin room-card($theme: null) {
     .room-card {
-        //margin: 1rem 0;
+        @if $theme == 'top' {
+            padding-top: 1rem;
+        }
+        
 
         & .image-container {
             display: flex;

@@ -14,7 +14,15 @@ a {
   color: inherit;
 }
 
-header {
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
+.header __comfortable {
+  display: none;
+}
+.header__menu {
   position: fixed;
   top: 0;
   background-color: #FFFFFF;
@@ -27,46 +35,46 @@ header {
   z-index: 2;
   width: 100%;
 }
-header .hamburguer-container {
+.header__menu .hamburguer-container {
   width: 1.2rem;
   height: 1.2rem;
   margin: 0.5rem 2rem 0 0rem;
 }
-header .hamburguer-container .hamburguer {
+.header__menu .hamburguer-container .hamburguer {
   width: 1.2rem;
   height: 1.2rem;
 }
-header .hamburguer-container .close-icon {
+.header__menu .hamburguer-container .close-icon {
   width: 0.9rem;
   margin-top: 0.1rem;
   margin-left: 0.1rem;
 }
-header .title-container {
+.header__menu .title-container {
   display: flex;
   justify-content: center;
   width: 10rem;
   column-count: 2;
   padding-right: 5rem;
 }
-header .title-container .web-icon-container {
+.header__menu .title-container .web-icon-container {
   margin-right: 1rem;
   width: 2rem;
   height: 2rem;
   box-shadow: 0px 14px 24px 0px rgba(139, 139, 139, 0.2509803922);
 }
-header .title-container .web-icon-container img {
+.header__menu .title-container .web-icon-container img {
   margin: 0.6rem 0.6rem;
 }
-header .title-container .web-title-container {
+.header__menu .title-container .web-title-container {
   break-inside: avoid;
 }
-header .title-container .web-title-container {
+.header__menu .title-container .web-title-container {
   padding-top: 0.5rem;
 }
-header .account-search-container {
+.header__menu .account-search-container {
   break-inside: avoid;
 }
-header .account-search-container img {
+.header__menu .account-search-container img {
   padding: 0.5rem;
 }
 
@@ -306,6 +314,9 @@ header .account-search-container img {
   font-size: 3.5rem;
 }
 
+.room-card {
+  padding-top: 1rem;
+}
 .room-card .image-container {
   display: flex;
   flex-direction: column;
@@ -443,6 +454,9 @@ header .account-search-container img {
 .picked-rooms .swiper {
   width: 100%;
   height: auto;
+}
+.picked-rooms .swiper .rooms-container .room-card {
+  padding-top: 1rem;
 }
 .picked-rooms .swiper .rooms-container .room-card .image-container {
   display: flex;
@@ -832,7 +846,7 @@ header .account-search-container img {
 .images .swiper-images .swiper-pagination-images {
   position: relative;
   top: 2rem;
-  transform: translateX(35%);
+  transform: translateX(42%);
 }
 .images .swiper-images .swiper-pagination-images .swiper-pagination-bullet-active {
   background-color: #BEAD8E;

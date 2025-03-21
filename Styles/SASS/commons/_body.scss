@@ -1,0 +1,22 @@
+@mixin body($theme: null) {
+
+    html,
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        min-width: 320px
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    .stop-scrolling {
+        height: 100%;
+        overflow: hidden;
+      }
+}
