@@ -4,16 +4,16 @@ const menuIcon = document.querySelector('img.hamburguer');
 const menuLinkContainer = document.querySelector('div.menu-extended');
 
 menuIcon.addEventListener('click', () => {
+    const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
     if(!menuState){
         menuState = true;
-        menuIcon.setAttribute('src', '/hotelMiranda/Images/close-menu.svg');
+        isLocal? menuIcon.setAttribute('src', '/Images/close-menu.svg') : menuIcon.setAttribute('src', '/hotelMiranda/Images/close-menu.svg');
         menuIcon.setAttribute("class", "close-icon");
         menuLinkContainer.style.display="inline-block";
     } else {
         menuState = false;
-        menuIcon.setAttribute('src', '/hotelMiranda/Images/hamburguer.svg');
+        isLocal? menuIcon.setAttribute('src', '/Images/hamburguer.svg') : menuIcon.setAttribute('src', '/hotelMiranda/Images/hamburguer.svg');
         menuIcon.setAttribute("class", "hamburguer");
         menuLinkContainer.style.display="none";
     }
 });
-

@@ -204,10 +204,13 @@ header .account-search-container img {
   font-family: "Roboto";
   color: #FFFFFF;
 }
-.calendar-container .calendar-label-icon-input-container .icon-input-container {
+.calendar-container .calendar-label-icon-input-container #icon-arrival-input-container, .calendar-container .calendar-label-icon-input-container #icon-return-input-container {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem;
   border-bottom: 2px solid #BEAD8E;
 }
-.calendar-container .calendar-label-icon-input-container .icon-input-container input {
+.calendar-container .calendar-label-icon-input-container #icon-arrival-input-container input, .calendar-container .calendar-label-icon-input-container #icon-return-input-container input {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -224,7 +227,7 @@ header .account-search-container img {
   padding: 0;
   opacity: 0;
   visibility: visible;
-  width: 100%;
+  width: 1rem;
   height: 10px;
   cursor: pointer;
 }
@@ -233,6 +236,7 @@ header .account-search-container img {
 }
 .calendar-container .calendar-label-icon-input-container img {
   width: 1rem;
+  padding: 0rem 0;
 }
 .calendar-container .calendar-label-icon-input-container #arrival-formatted-date,
 .calendar-container .calendar-label-icon-input-container #return-formatted-date {

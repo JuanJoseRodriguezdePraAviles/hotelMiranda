@@ -29,3 +29,18 @@ document.getElementById("return-date-input") && document.getElementById("return-
     const formattedDate = formatDate(this.value);
     document.getElementById("return-formatted-date").textContent = formattedDate;
 });
+
+console.log("js executed");
+document.getElementById("icon-arrival-input-container").addEventListener('click', ()=> {
+    console.log("PRUEBA");
+    const input = document.getElementById("arrival-date-input");
+    input.focus();
+    input.showPicker?.();
+});
+document.getElementById("icon-return-input-container").addEventListener('click', ()=> {
+    console.log("PRUEBA");
+    const input = document.getElementById("return-date-input");
+    input.focus();
+    input.showPicker?.();
+});
+

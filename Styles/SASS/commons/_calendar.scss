@@ -15,7 +15,10 @@
                 color: #FFFFFF;
             }
 
-            & .icon-input-container {
+            & #icon-arrival-input-container, #icon-return-input-container {
+                display: flex;
+                flex-direction: row;
+                padding: 0.5rem;
                 @if $theme== 'dark' {
                     border-bottom: 2px solid #BEAD8E;
                 }
@@ -41,7 +44,7 @@
                     padding: 0;
                     opacity: 0;
                     visibility: visible;
-                    width: 100%;
+                    width: 1rem;
                     height: 10px;
                     cursor: pointer;
                 }
@@ -54,6 +57,11 @@
 
             & img {
                 width: 1rem;
+                padding: 0rem 0;
+                @if $theme=='light' {
+                    position: relative;
+                    left: 90%;
+                }
             }
 
             & #arrival-formatted-date,
