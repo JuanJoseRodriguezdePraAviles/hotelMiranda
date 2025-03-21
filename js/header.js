@@ -6,7 +6,7 @@ const menuLinkContainer = document.querySelector('div.menu-extended');
 menuIcon.addEventListener('click', () => {
     if(!menuState){
         menuState = true;
-        menuIcon.setAttribute('src', './../Images/close-menu.svg');
+        menuIcon.setAttribute('src', 'hotelMiranda/../Images/close-menu.svg');
         menuIcon.setAttribute("class", "close-icon");
         menuLinkContainer.style.display="inline-block";
     } else {
