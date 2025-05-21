@@ -1,11 +1,16 @@
 @mixin header($theme: null) {
     .header {
-        & __comfortable {
+        height: 0rem;
+        width: 100%;
+        background-color: #000000;
+        position: fixed;
+
+        &__comfortable {
             display: none;
         }
 
+
         &__menu {
-            position: fixed;
             top: 0;
             background-color: #FFFFFF;
             display: flex;
@@ -62,6 +67,10 @@
                 & .web-title-container {
                     padding-top: 0.5rem;
                 }
+            }
+
+            & .links {
+                display: none;
             }
 
             & .account-search-container {
@@ -124,5 +133,70 @@
         }
     }
 
-    @media screen and (min-width: 1000px) {}
+    @media screen and (min-width: 1000px) {
+        .header {
+            height: 5rem;
+            padding: 0 10%;
+            
+            &__comfortable {
+                display: block;
+                color:#FFFFFF;
+                font-family: 'Roboto';
+            }
+            &__menu {
+                justify-content: flex-start;
+                gap: 10%;
+                & .hamburguer-container {
+                    display: none;
+                }
+
+                & .title-container {
+                    justify-content: flex-start;
+                    margin-left: 1rem;
+                    width: 20rem;
+                    & .web-icon-container {
+                        width: 5rem;
+                        height: 5rem;
+
+                        & img {
+                            width: 1.94rem;
+                            margin: 1.5rem;
+                        }
+                    }
+                    & .web-title-container {
+                        & img {
+                            width: 8.56rem;
+                            margin: 1rem;
+                        }
+                    }
+                }
+
+                & .links {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 1rem;
+                    align-items: center;
+
+                    & .menu-link {
+                        font-family: 'Archivo';
+                    }
+                }
+
+                & .account-search-container {
+                    display: flex;
+                    flex-direction: row;
+                    margin-left: auto;
+                    height: 3rem;
+                    margin-top: auto;
+                    margin-bottom: auto;
+
+                    & .account-container, & .search-container {
+                        border: 1px solid #8585854D;
+                        margin: 0 0.5rem;
+                    }
+                }
+            }
+        }
+
+    }
 }
