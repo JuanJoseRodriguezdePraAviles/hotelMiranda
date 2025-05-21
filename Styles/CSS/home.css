@@ -24,6 +24,7 @@ a {
   width: 100%;
   background-color: #000000;
   position: fixed;
+  z-index: 1;
 }
 .header__comfortable {
   display: none;
@@ -81,6 +82,8 @@ a {
 }
 .header__menu .account-search-container {
   break-inside: avoid;
+  display: flex;
+  flex-direction: row;
 }
 .header__menu .account-search-container img {
   padding: 0.5rem;
