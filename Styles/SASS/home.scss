@@ -268,33 +268,36 @@
 .intro-video-container {
     background-color: #222222;
 
-    & h6 {
-        color: #BDAC8D;
+    & .video-description {
+        & h6 {
+            color: #BDAC8D;
+        }
+
+        & h2 {
+            color: #FFFFFF;
+            font-size: 3rem;
+            padding-right: 4rem;
+        }
+
+        & p {
+            color: #C2C2C2;
+        }
+
+
+        & iframe {
+            pointer-events: none;
+            margin-bottom: 2rem;
+        }
+
+
+
+        @include data-btn-container;
+
+        .btn-book-now {
+            @include btn("light");
+        }
     }
 
-    & h2 {
-        color: #FFFFFF;
-        font-size: 3rem;
-        padding-right: 4rem;
-    }
-
-    & p {
-        color: #C2C2C2;
-    }
-
-
-    & iframe {
-        pointer-events: none;
-        margin-bottom: 2rem;
-    }
-
-
-
-    @include data-btn-container;
-
-    .btn-book-now {
-        @include btn("light");
-    }
 }
 
 .core-features {
@@ -672,8 +675,7 @@ footer {
 
             & .rooms-container {
                 & .room-card {
-                    & .image-container {
-                    }
+                    & .image-container {}
                 }
             }
 
@@ -681,7 +683,7 @@ footer {
                 background-color: #BDAC8D;
                 color: #FFFFFF;
                 background-image: none;
-                left: 65rem;
+                left: 75rem;
                 top: -20rem;
 
             }
@@ -689,8 +691,40 @@ footer {
             & .swiper-button-prev {
                 background-color: #FFFFFF;
                 color: black;
-                left: 22.5rem;
+                left: 27.5rem;
                 top: -21.4rem;
+            }
+        }
+    }
+
+    .intro-video-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 0 0 10rem;
+        align-items: center;
+        position: relative;
+
+        & .video-description {
+            & p {
+                width: 30rem;
+            }
+            padding: 1rem;
+        }
+
+        & .background-side {
+            background-color: #BEAD8E;
+            width: 30%;
+            height: 30.5rem;
+            display: flex;
+            align-items: center;
+            
+            & iframe {
+                width: 35.625rem;
+                height: 24.75rem;
+
+                position:relative;
+                right: 15rem;
             }
         }
     }

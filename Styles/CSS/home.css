@@ -747,44 +747,46 @@ a {
 
 .intro-video-container {
   background-color: #222222;
+}
+.intro-video-container .video-description {
   padding: 4rem 1rem;
 }
-.intro-video-container h6 {
+.intro-video-container .video-description h6 {
   color: #BDAC8D;
 }
-.intro-video-container h2 {
+.intro-video-container .video-description h2 {
   color: #FFFFFF;
   font-size: 3rem;
   padding-right: 4rem;
 }
-.intro-video-container p {
+.intro-video-container .video-description p {
   color: #C2C2C2;
 }
-.intro-video-container iframe {
+.intro-video-container .video-description iframe {
   pointer-events: none;
   margin-bottom: 2rem;
 }
-.intro-video-container h6 {
+.intro-video-container .video-description h6 {
   font-family: "Archivo";
   letter-spacing: 2.8px;
   font-size: 0.8rem;
   font-weight: 700;
   padding: 1rem 0;
 }
-.intro-video-container h2 {
+.intro-video-container .video-description h2 {
   font-family: "Old Standard TT";
   letter-spacing: -1.2px;
   font-weight: 400;
   line-height: 60px;
 }
-.intro-video-container p {
+.intro-video-container .video-description p {
   font-family: "Archivo";
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 24px;
   padding: 1rem 0;
 }
-.intro-video-container .btn-book-now {
+.intro-video-container .video-description .btn-book-now {
   min-width: 60%;
   height: 3.75rem;
   font-family: "Archivo";
@@ -796,7 +798,7 @@ a {
   letter-spacing: 2.8px;
 }
 @media screen and (min-width: 1000px) {
-  .intro-video-container .btn-book-now {
+  .intro-video-container .video-description .btn-book-now {
     margin: 0 1rem;
     min-width: 20%;
   }
@@ -1199,14 +1201,41 @@ footer .footer-line p span {
     background-color: #BDAC8D;
     color: #FFFFFF;
     background-image: none;
-    left: 65rem;
+    left: 75rem;
     top: -20rem;
   }
   .picked-rooms .swiper .swiper-button-prev {
     background-color: #FFFFFF;
     color: black;
-    left: 22.5rem;
+    left: 27.5rem;
     top: -21.4rem;
+  }
+  .intro-video-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 0 0 10rem;
+    align-items: center;
+    position: relative;
+  }
+  .intro-video-container .video-description {
+    padding: 1rem;
+  }
+  .intro-video-container .video-description p {
+    width: 30rem;
+  }
+  .intro-video-container .background-side {
+    background-color: #BEAD8E;
+    width: 30%;
+    height: 30.5rem;
+    display: flex;
+    align-items: center;
+  }
+  .intro-video-container .background-side iframe {
+    width: 35.625rem;
+    height: 24.75rem;
+    position: relative;
+    right: 15rem;
   }
 }
 
