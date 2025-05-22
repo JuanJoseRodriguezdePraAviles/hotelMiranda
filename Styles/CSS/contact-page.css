@@ -24,7 +24,7 @@ a {
   width: 100%;
   background-color: #000000;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
 }
 .header__comfortable {
   display: none;
@@ -364,29 +364,29 @@ a {
   flex-direction: column;
   padding: 3rem 1rem 1rem 1rem;
 }
-.hotel-resume .hotel-title-icon-container {
+.hotel-resume .hotel-info-container .hotel-title-icon-container {
   display: flex;
   flex-direction: row;
   padding-bottom: 1rem;
 }
-.hotel-resume .hotel-title-icon-container .web-icon-container {
+.hotel-resume .hotel-info-container .hotel-title-icon-container .web-icon-container {
   padding: 1rem 1.5rem;
   background-color: #BEAD8E;
   height: 4.5rem;
 }
-.hotel-resume .hotel-title-icon-container .web-icon-container P {
+.hotel-resume .hotel-info-container .hotel-title-icon-container .web-icon-container P {
   color: #FFFFFF;
   font-family: "Archivo";
   font-weight: 700;
   font-size: 2.5rem;
 }
-.hotel-resume .web-title-container {
+.hotel-resume .hotel-info-container .web-title-container {
   padding: 1rem 2rem;
 }
-.hotel-resume .web-title-container img {
+.hotel-resume .hotel-info-container .web-title-container img {
   width: 8rem;
 }
-.hotel-resume .hotel-description {
+.hotel-resume .hotel-info-container .hotel-description {
   font-family: "Archivo";
   font-size: 1rem;
   font-weight: 400;
@@ -394,21 +394,22 @@ a {
   line-height: 26px;
   padding: 1rem 1rem 1rem 0;
 }
-.hotel-resume .social-links {
+.hotel-resume .hotel-info-container .social-links {
   width: 75%;
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
 }
-.hotel-resume .social-links .link-container {
+.hotel-resume .hotel-info-container .social-links .link-container {
   background-color: #BEAD8E;
   padding: 0.5rem;
 }
-.hotel-resume .social-links img {
+.hotel-resume .hotel-info-container .social-links img {
   width: 1.5rem;
 }
 .hotel-resume .services-container {
   padding: 2rem 0;
+  width: 10rem;
 }
 .hotel-resume .services-container h2 {
   font-family: "Old Standard TT";
@@ -448,6 +449,19 @@ a {
   color: #777777;
 }
 
+@media screen and (min-width: 1000px) {
+  .hotel-resume {
+    padding: 5rem 5%;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .hotel-resume .hotel-info-container {
+    width: 40%;
+  }
+  .hotel-resume .services-container {
+    width: 20rem;
+  }
+}
 footer {
   background-color: #F8F8F8;
   padding: 1rem;
