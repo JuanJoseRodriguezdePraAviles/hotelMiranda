@@ -77,4 +77,29 @@
 
         }
     }
+
+    @media screen and (min-width: 1000px) {
+        .calendar-container {
+            display: flex;
+            flex-direction: row;
+            padding: 1rem 20% 1rem 20%;
+            justify-content: flex-start;
+            padding: 5rem 5rem;
+
+            & .calendar-label-icon-input-container {
+                width: 25%;
+                margin-right: 2rem;
+
+                & #icon-arrival-input-container, #icon-return-input-container {
+                    height: 2rem;
+                    & img {
+                        height: 1rem;
+                    }
+                }
+            }
+            & .btn-availability {
+                margin-left: auto;
+            }
+        }
+    }
 }

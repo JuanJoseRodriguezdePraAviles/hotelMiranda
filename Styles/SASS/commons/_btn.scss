@@ -20,5 +20,9 @@
         color: #FFFFFF;
         letter-spacing: 2.8px;
     }
-    
+    @media screen and (min-width: 1000px) {
+        margin: 0 1rem;
+        min-width: 20%; 
+
+    }
 }

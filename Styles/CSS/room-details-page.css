@@ -225,6 +225,12 @@ a {
   font-family: "Archivo";
   padding: 1rem 2rem;
 }
+@media screen and (min-width: 1000px) {
+  .room-title .tour-learn-btn-container button {
+    margin: 0 1rem;
+    min-width: 20%;
+  }
+}
 .room-title .tour-learn-btn-container button.btn--light {
   min-width: 60%;
   height: 3.75rem;
@@ -235,6 +241,12 @@ a {
   margin-bottom: 0.7rem;
   color: #FFFFFF;
   letter-spacing: 2.8px;
+}
+@media screen and (min-width: 1000px) {
+  .room-title .tour-learn-btn-container button.btn--light {
+    margin: 0 1rem;
+    min-width: 20%;
+  }
 }
 .room-title .tour-learn-btn-container button.btn--dark {
   min-width: 60%;
@@ -247,6 +259,12 @@ a {
   margin-top: 0.7rem;
   color: #FFFFFF;
   letter-spacing: 2.8px;
+}
+@media screen and (min-width: 1000px) {
+  .room-title .tour-learn-btn-container button.btn--dark {
+    margin: 0 1rem;
+    min-width: 20%;
+  }
 }
 .room-title .breadcrumb {
   display: flex;
@@ -264,6 +282,17 @@ a {
 .room-title .breadcrumb p span {
   color: #BEAD8E;
   padding-left: 0 0.5rem;
+}
+@media screen and (min-width: 1000px) {
+  .room-title .ultimate-luxury-container h2 {
+    font-size: 1rem;
+  }
+  .room-title .luxury-title-container {
+    height: auto;
+  }
+  .room-title .luxury-title-container h1 {
+    font-size: 7.5rem;
+  }
 }
 
 .room-info {
@@ -371,7 +400,41 @@ a {
   color: #FFFFFF;
   letter-spacing: 2.8px;
 }
+@media screen and (min-width: 1000px) {
+  .calendar-container .btn-availability {
+    margin: 0 1rem;
+    min-width: 20%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .calendar-container .btn-availability {
+    margin: 0 1rem;
+    min-width: 20%;
+  }
+}
 
+@media screen and (min-width: 1000px) {
+  .calendar-container {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 20% 1rem 20%;
+    justify-content: flex-start;
+    padding: 5rem 5rem;
+  }
+  .calendar-container .calendar-label-icon-input-container {
+    width: 25%;
+    margin-right: 2rem;
+  }
+  .calendar-container .calendar-label-icon-input-container #icon-arrival-input-container, .calendar-container .calendar-label-icon-input-container #icon-return-input-container {
+    height: 2rem;
+  }
+  .calendar-container .calendar-label-icon-input-container #icon-arrival-input-container img, .calendar-container .calendar-label-icon-input-container #icon-return-input-container img {
+    height: 1rem;
+  }
+  .calendar-container .btn-availability {
+    margin-left: auto;
+  }
+}
 .extra-info {
   font-family: "Roboto";
   font-weight: 400;
@@ -494,6 +557,18 @@ a {
   margin-bottom: 0.7rem;
   color: #FFFFFF;
   letter-spacing: 2.8px;
+}
+@media screen and (min-width: 1000px) {
+  .cancellation .btn-book-now {
+    margin: 0 1rem;
+    min-width: 20%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .cancellation .btn-book-now {
+    margin: 0 1rem;
+    min-width: 20%;
+  }
 }
 .cancellation h2 {
   font-size: 2.5rem;

@@ -225,6 +225,12 @@ a {
   font-family: "Archivo";
   padding: 1rem 2rem;
 }
+@media screen and (min-width: 1000px) {
+  .contact-title .tour-learn-btn-container button {
+    margin: 0 1rem;
+    min-width: 20%;
+  }
+}
 .contact-title .tour-learn-btn-container button.btn--light {
   min-width: 60%;
   height: 3.75rem;
@@ -235,6 +241,12 @@ a {
   margin-bottom: 0.7rem;
   color: #FFFFFF;
   letter-spacing: 2.8px;
+}
+@media screen and (min-width: 1000px) {
+  .contact-title .tour-learn-btn-container button.btn--light {
+    margin: 0 1rem;
+    min-width: 20%;
+  }
 }
 .contact-title .tour-learn-btn-container button.btn--dark {
   min-width: 60%;
@@ -247,6 +259,12 @@ a {
   margin-top: 0.7rem;
   color: #FFFFFF;
   letter-spacing: 2.8px;
+}
+@media screen and (min-width: 1000px) {
+  .contact-title .tour-learn-btn-container button.btn--dark {
+    margin: 0 1rem;
+    min-width: 20%;
+  }
 }
 .contact-title .breadcrumb {
   display: flex;
@@ -264,6 +282,17 @@ a {
 .contact-title .breadcrumb p span {
   color: #BEAD8E;
   padding-left: 0 0.5rem;
+}
+@media screen and (min-width: 1000px) {
+  .contact-title .ultimate-luxury-container h2 {
+    font-size: 1rem;
+  }
+  .contact-title .luxury-title-container {
+    height: auto;
+  }
+  .contact-title .luxury-title-container h1 {
+    font-size: 7.5rem;
+  }
 }
 
 .hotel-data {
@@ -356,6 +385,18 @@ a {
   letter-spacing: 2.8px;
   width: 80%;
   margin: 2rem;
+}
+@media screen and (min-width: 1000px) {
+  .contact-form .btn-send {
+    margin: 0 1rem;
+    min-width: 20%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .contact-form .btn-send {
+    margin: 0 1rem;
+    min-width: 20%;
+  }
 }
 
 .hotel-resume {

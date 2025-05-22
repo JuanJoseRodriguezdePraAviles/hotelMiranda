@@ -225,6 +225,12 @@ a {
   font-family: "Archivo";
   padding: 1rem 2rem;
 }
+@media screen and (min-width: 1000px) {
+  .perfect-base-container .tour-learn-btn-container button {
+    margin: 0 1rem;
+    min-width: 20%;
+  }
+}
 .perfect-base-container .tour-learn-btn-container button.btn--light {
   min-width: 60%;
   height: 3.75rem;
@@ -235,6 +241,12 @@ a {
   margin-bottom: 0.7rem;
   color: #FFFFFF;
   letter-spacing: 2.8px;
+}
+@media screen and (min-width: 1000px) {
+  .perfect-base-container .tour-learn-btn-container button.btn--light {
+    margin: 0 1rem;
+    min-width: 20%;
+  }
 }
 .perfect-base-container .tour-learn-btn-container button.btn--dark {
   min-width: 60%;
@@ -247,6 +259,12 @@ a {
   margin-top: 0.7rem;
   color: #FFFFFF;
   letter-spacing: 2.8px;
+}
+@media screen and (min-width: 1000px) {
+  .perfect-base-container .tour-learn-btn-container button.btn--dark {
+    margin: 0 1rem;
+    min-width: 20%;
+  }
 }
 .perfect-base-container .breadcrumb {
   display: flex;
@@ -264,6 +282,17 @@ a {
 .perfect-base-container .breadcrumb p span {
   color: #BEAD8E;
   padding-left: 0 0.5rem;
+}
+@media screen and (min-width: 1000px) {
+  .perfect-base-container .ultimate-luxury-container h2 {
+    font-size: 1rem;
+  }
+  .perfect-base-container .luxury-title-container {
+    height: auto;
+  }
+  .perfect-base-container .luxury-title-container h1 {
+    font-size: 7.5rem;
+  }
 }
 
 .calendar-container {
@@ -332,37 +361,71 @@ a {
   color: #FFFFFF;
   letter-spacing: 2.8px;
 }
+@media screen and (min-width: 1000px) {
+  .calendar-container .btn-availability {
+    margin: 0 1rem;
+    min-width: 20%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .calendar-container .btn-availability {
+    margin: 0 1rem;
+    min-width: 20%;
+  }
+}
 
-.about-us {
+@media screen and (min-width: 1000px) {
+  .calendar-container {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 20% 1rem 20%;
+    justify-content: flex-start;
+    padding: 5rem 5rem;
+  }
+  .calendar-container .calendar-label-icon-input-container {
+    width: 25%;
+    margin-right: 2rem;
+  }
+  .calendar-container .calendar-label-icon-input-container #icon-arrival-input-container, .calendar-container .calendar-label-icon-input-container #icon-return-input-container {
+    height: 2rem;
+  }
+  .calendar-container .calendar-label-icon-input-container #icon-arrival-input-container img, .calendar-container .calendar-label-icon-input-container #icon-return-input-container img {
+    height: 1rem;
+  }
+  .calendar-container .btn-availability {
+    margin-left: auto;
+  }
+}
+.discover-section .about-us {
   padding: 4rem 1rem;
 }
-.about-us h6 {
+.discover-section .about-us h6 {
   font-family: "Archivo";
   letter-spacing: 2.8px;
   font-size: 0.8rem;
   font-weight: 700;
   padding: 1rem 0;
 }
-.about-us h2 {
+.discover-section .about-us h2 {
   font-family: "Old Standard TT";
   letter-spacing: -1.2px;
   font-weight: 400;
   line-height: 60px;
 }
-.about-us p {
+.discover-section .about-us p {
   font-family: "Archivo";
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 24px;
   padding: 1rem 0;
 }
-.about-us h6 {
+.discover-section .about-us h6 {
   color: #777777;
 }
-.about-us p {
+.discover-section .about-us p {
   color: #777777;
 }
-.about-us .btn-book-now {
+.discover-section .about-us .btn-book-now {
   min-width: 60%;
   height: 3.75rem;
   font-family: "Archivo";
@@ -377,22 +440,33 @@ a {
   color: #FFFFFF;
   letter-spacing: 2.8px;
 }
-.about-us h2 {
+@media screen and (min-width: 1000px) {
+  .discover-section .about-us .btn-book-now {
+    margin: 0 1rem;
+    min-width: 20%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .discover-section .about-us .btn-book-now {
+    margin: 0 1rem;
+    min-width: 20%;
+  }
+}
+.discover-section .about-us h2 {
   font-size: 3.5rem;
 }
-
-.room-card {
+.discover-section .room-card {
   padding-top: 1rem;
 }
-.room-card .image-container {
+.discover-section .room-card .image-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.room-card .image-container img {
+.discover-section .room-card .image-container img {
   height: 13.625rem;
 }
-.room-card .image-container .room-features {
+.discover-section .room-card .image-container .room-features {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -403,54 +477,53 @@ a {
   top: -15rem;
   left: 0;
 }
-.room-card .image-container .room-features img {
+.discover-section .room-card .image-container .room-features img {
   width: 1rem;
   height: 1rem;
   margin: 0 0.5rem;
 }
-.room-card .image-description {
+.discover-section .room-card .image-description {
   display: flex;
   text-align: center;
   flex-direction: column;
   padding: 2rem 1rem;
 }
-.room-card .image-description h2 {
+.discover-section .room-card .image-description h2 {
   font-family: "Old Standard TT";
   font-weight: 400;
   font-size: 1.5rem;
   padding: 0rem 0 0.5rem 0;
 }
-.room-card .image-description p {
+.discover-section .room-card .image-description p {
   font-family: "Roboto";
   font-size: 0.9rem;
   color: #777777;
   padding: 0.5rem 0;
 }
-.room-card .image-description div {
+.discover-section .room-card .image-description div {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-.room-card .image-description .room-price {
+.discover-section .room-card .image-description .room-price {
   font-weight: 700;
   color: #BEAD8E;
   padding: 0 1rem;
 }
-.room-card .image-description .room-status {
+.discover-section .room-card .image-description .room-status {
   font-weight: 700;
   color: #BDBDBD;
   padding: 0 1rem;
 }
-
-.benefit-cards .benefit-card {
+.discover-section .benefit-cards .benefit-card {
   display: flex;
   flex-direction: column;
   padding: 3rem 15%;
 }
-.benefit-cards .benefit-card img {
+.discover-section .benefit-cards .benefit-card img {
   width: 100%;
 }
-.benefit-cards .benefit-card .benefit-description {
+.discover-section .benefit-cards .benefit-card .benefit-description {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -460,42 +533,42 @@ a {
   background-position: right top;
   padding: 2rem 0;
 }
-.benefit-cards .benefit-card .benefit-description img {
+.discover-section .benefit-cards .benefit-card .benefit-description img {
   width: 20%;
   padding: 0rem 0;
 }
-.benefit-cards .benefit-card .benefit-description h2 {
+.discover-section .benefit-cards .benefit-card .benefit-description h2 {
   font-family: "Old Standard TT";
   font-weight: 400;
   font-size: 1.8rem;
   padding: 1rem 0;
 }
-.benefit-cards .benefit-card .benefit-description p {
+.discover-section .benefit-cards .benefit-card .benefit-description p {
   font-family: "Roboto";
   line-height: 22px;
   font-size: 0.9rem;
   font-weight: 400;
   padding: 0rem 1.4rem;
 }
-.benefit-cards .benefit-card--black .benefit-description {
+.discover-section .benefit-cards .benefit-card--black .benefit-description {
   background-color: #222222;
 }
-.benefit-cards .benefit-card--black .benefit-description h2 {
+.discover-section .benefit-cards .benefit-card--black .benefit-description h2 {
   color: #FFFFFF;
 }
-.benefit-cards .benefit-card--black .benefit-description P {
+.discover-section .benefit-cards .benefit-card--black .benefit-description P {
   color: #FFFFFF;
 }
-.benefit-cards .benefit-card--light .benefit-card {
+.discover-section .benefit-cards .benefit-card--light .benefit-card {
   padding: 3rem 15%;
 }
-.benefit-cards .benefit-card--light .benefit-card img {
+.discover-section .benefit-cards .benefit-card--light .benefit-card img {
   width: 100%;
 }
-.benefit-cards .benefit-card--light .benefit-card .benefit-description h2 {
+.discover-section .benefit-cards .benefit-card--light .benefit-card .benefit-description h2 {
   color: black;
 }
-.benefit-cards .benefit-card--light .benefit-description {
+.discover-section .benefit-cards .benefit-card--light .benefit-description {
   background-image: url("./../../Images/bg-team.svg");
 }
 
@@ -721,6 +794,12 @@ a {
   margin-bottom: 0.7rem;
   color: #FFFFFF;
   letter-spacing: 2.8px;
+}
+@media screen and (min-width: 1000px) {
+  .intro-video-container .btn-book-now {
+    margin: 0 1rem;
+    min-width: 20%;
+  }
 }
 
 .core-features {
@@ -1076,6 +1155,43 @@ footer .footer-line p {
 }
 footer .footer-line p span {
   padding: 0 0.5rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .perfect-base-container {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+  .discover-section {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 10rem 10%;
+  }
+  .discover-section .about-us {
+    width: 50%;
+  }
+  .discover-section .benefit-cards .benefit-card {
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: row;
+  }
+  .discover-section .benefit-cards .benefit-card img {
+    width: 15rem;
+  }
+  .discover-section .benefit-cards .benefit-card .benefit-description {
+    width: 28rem;
+  }
+  .discover-section .benefit-cards .benefit-card--light {
+    flex-direction: row-reverse;
+  }
+  .discover-section .benefit-cards .benefit-card--light .benefit-description {
+    margin-right: 1rem;
+  }
+  .discover-section .benefit-cards .benefit-card--black .benefit-description {
+    margin-top: 1rem;
+    margin-left: 1rem;
+  }
 }
 
 /*# sourceMappingURL=home.css.map */

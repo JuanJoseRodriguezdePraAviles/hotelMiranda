@@ -20,102 +20,110 @@
 
 @include calendar("dark");
 
-.about-us {
-    @include data-btn-container;
+.discover-section {
+    .about-us {
+        @include data-btn-container;
 
-    & h6 {
-        color: #777777;
-    }
-
-    & p {
-        color: #777777;
-    }
-
-    .btn-book-now {
-        @include btn;
-        @include btn("light");
-    }
-
-    h2 {
-        font-size: 3.5rem;
-    }
-}
-
-@include room-card("top");
-
-
-.benefit-cards {
-    & .benefit-card {
-        display: flex;
-        flex-direction: column;
-        padding: 3rem 15%;
-
-        & img {
-            width: 100%;
+        & h6 {
+            color: #777777;
         }
 
-        & .benefit-description {
+        & p {
+            color: #777777;
+        }
+
+        .btn-book-now {
+            @include btn;
+            @include btn("light");
+        }
+
+        h2 {
+            font-size: 3.5rem;
+        }
+    }
+
+    @include room-card("top");
+
+
+    .benefit-cards {
+        & .benefit-card {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background-repeat: no-repeat;
-            background-position: right top;
-            padding: 2rem 0;
+            padding: 3rem 15%;
 
             & img {
-                width: 20%;
-                padding: 0rem 0;
+                width: 100%;
             }
 
-            & h2 {
-                font-family: 'Old Standard TT';
-                font-weight: 400;
-                font-size: 1.8rem;
-                padding: 1rem 0;
-            }
-
-            & p {
-                font-family: 'Roboto';
-                line-height: 22px;
-                font-size: 0.9rem;
-                font-weight: 400;
-                padding: 0rem 1.4rem;
-            }
-        }
-        &--black {
             & .benefit-description {
-                background-color: #222222;
-                & h2 {
-                    color: #FFFFFF;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                background-repeat: no-repeat;
+                background-position: right top;
+                padding: 2rem 0;
+
+                & img {
+                    width: 20%;
+                    padding: 0rem 0;
                 }
-                & P {
-                    color: #FFFFFF;
+
+                & h2 {
+                    font-family: 'Old Standard TT';
+                    font-weight: 400;
+                    font-size: 1.8rem;
+                    padding: 1rem 0;
+                }
+
+                & p {
+                    font-family: 'Roboto';
+                    line-height: 22px;
+                    font-size: 0.9rem;
+                    font-weight: 400;
+                    padding: 0rem 1.4rem;
                 }
             }
-        }
-        &--light {
-            & .benefit-card {
-                padding: 3rem 15%;
-        
-                & img {
-                    width: 100%;
-                }
-        
+
+            &--black {
                 & .benefit-description {
+                    background-color: #222222;
+
                     & h2 {
-                        color: black;
+                        color: #FFFFFF;
+                    }
+
+                    & P {
+                        color: #FFFFFF;
                     }
                 }
             }
-            & .benefit-description {
-                background-image: url('./../../Images/bg-team.svg');
+
+            &--light {
+                & .benefit-card {
+                    padding: 3rem 15%;
+
+                    & img {
+                        width: 100%;
+                    }
+
+                    & .benefit-description {
+                        & h2 {
+                            color: black;
+                        }
+                    }
+                }
+
+                & .benefit-description {
+                    background-image: url('./../../Images/bg-team.svg');
+                }
             }
+
         }
-            
-    }   
+    }
 }
+
 
 .picked-rooms {
     display: flex;
@@ -434,6 +442,7 @@
         break-inside: avoid;
         padding-bottom: 2rem;
         overflow: hidden;
+
         & .swiper-wrapper {
 
             & .swiper-slide {
@@ -441,6 +450,7 @@
                     display: flex;
                     flex-direction: row;
                     padding: 0.5rem 0;
+
                     & img {
                         padding-right: 1rem;
                         object-fit: cover;
@@ -451,6 +461,7 @@
 
                     & .field-container {
                         padding-right: 1rem;
+
                         & h2 {
                             font-family: 'Old Standard TT';
                             font-size: 1.5rem;
@@ -515,6 +526,7 @@
         break-inside: avoid;
         padding-bottom: 2rem;
         overflow: hidden;
+
         & .swiper-wrapper {
             & .swiper-slide {
                 & img {
@@ -525,6 +537,7 @@
                 }
             }
         }
+
         & .swiper-pagination-images {
             position: relative;
             top: 2rem;
@@ -546,6 +559,7 @@
     align-items: center;
     margin: 4rem 0 0 0;
     padding: 2rem;
+
     & .achievement {
         display: flex;
         flex-direction: column;
@@ -555,16 +569,19 @@
             padding: 1rem 0;
             width: 4rem;
         }
+
         & .value {
             display: flex;
             flex-direction: row;
             align-items: end;
+
             & h2 {
                 font-family: 'Roboto';
                 font-weight: 700;
                 color: #FFFFFF;
                 font-size: 3.5rem;
             }
+
             & p {
                 font-size: 1rem;
                 font-weight: 700;
@@ -573,6 +590,7 @@
                 padding-bottom: 0.5rem;
             }
         }
+
         & p {
             font-family: 'Roboto';
             font-weight: 700;
@@ -598,4 +616,53 @@ footer {
             }
         }
     }
+}
+
+@media screen and (min-width: 1000px) {
+    .perfect-base-container {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
+    .discover-section {
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 10rem 10%;
+        & .about-us {
+            width: 50%;
+        }
+
+        & .benefit-cards {
+            & .benefit-card {
+                padding-top: 0;
+                padding-bottom: 0;
+                display: flex;
+                flex-direction: row;
+
+                & img {
+                    width: 15rem;
+                }
+
+                & .benefit-description {
+                    width: 28rem;
+                }
+            }
+
+            & .benefit-card--light {
+                flex-direction: row-reverse;
+
+                & .benefit-description {
+                    margin-right: 1rem;
+                }
+            }
+
+            & .benefit-card--black {
+                & .benefit-description {
+                    margin-top: 1rem;
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+
 }
