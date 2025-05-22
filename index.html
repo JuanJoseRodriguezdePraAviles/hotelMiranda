@@ -157,7 +157,6 @@
         </div>
     </div>
 
-
     <div class="picked-rooms">
         <h6>ROOMS</h6>
         <h2>Hand Picked Rooms</h2>
@@ -494,6 +493,8 @@
     <script>
         window.onload = function () {
             const swiper = new Swiper(".mySwiper", {
+                slidesPerView: 1,
+                centeredSlides: true,
                 spaceBetween: 30,
                 pagination: {
                     el: ".swiper-pagination",
@@ -506,6 +507,11 @@
                     nextEl: ".swiper-button-next",
                     prevEl: ".swiper-button-prev",
                 },
+                breakpoints: {
+                    1000: {
+                        slidesPerView: 2.5
+                    }
+                }
             });
             const swiperCoreFacilities = new Swiper(".mySwiper-core-facilities", {
                 spaceBetween: 30,

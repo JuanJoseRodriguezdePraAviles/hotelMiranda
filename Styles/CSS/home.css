@@ -717,7 +717,7 @@ a {
   background-color: #BDAC8D;
   color: #FFFFFF;
   background-image: none;
-  left: 19rem;
+  left: 24rem;
   top: -22rem;
 }
 .picked-rooms .swiper .swiper-button-prev {
@@ -1191,6 +1191,22 @@ footer .footer-line p span {
   .discover-section .benefit-cards .benefit-card--black .benefit-description {
     margin-top: 1rem;
     margin-left: 1rem;
+  }
+  .picked-rooms .swiper {
+    width: 100%;
+  }
+  .picked-rooms .swiper .swiper-button-next {
+    background-color: #BDAC8D;
+    color: #FFFFFF;
+    background-image: none;
+    left: 65rem;
+    top: -20rem;
+  }
+  .picked-rooms .swiper .swiper-button-prev {
+    background-color: #FFFFFF;
+    color: black;
+    left: 22.5rem;
+    top: -21.4rem;
   }
 }
 
