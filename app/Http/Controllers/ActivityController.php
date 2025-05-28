@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Activity;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ActivityController extends Controller
@@ -29,19 +30,29 @@ class ActivityController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
-        $validated = $request->validate([
-            'type' => 'required|in:surf,windsurf,kayak,atv,hot air balloon',
-            'userId' => 'required|exists:users,id',
-            'datetime' => 'required|date',
-            'paid' => 'boolean',
-            'notes' => 'required|string',
-            'satisfaction' => 'nullable|integer|min:0|max:10'
-        ]);
-        $validated['userId'] = 1;
-        $validated['paid'] = $request->has('paid');
-        Activity::create($validated);
-        return redirect()->route('activities.index')->with('success', 'Created activity');
+        try {
+            $validated = $request->validate([
+                'type' => 'required|in:surf,windsurf,kayak,atv,hot air balloon',
+                'datetime' => 'required|date',
+                'paid' => 'boolean',
+                'notes' => 'required|string',
+                'satisfaction' => 'nullable|integer|min:0|max:10'
+            ]);
+            
+            $validated['userId'] = 1;
+            $validated['paid'] = $request->has('paid');
+            $validated['datetime'] = date('Y-m-d H:i:s', strtotime($validated['datetime']));
+            \Log::info('Validated:', $validated);
+            $user = \DB::table('users')->where('id', 1)->first();
+            if (!User::find($validated['userId'])) {
+                return back()->withErrors(['userId' => 'El usuario no existe en la base de datos.']);
+            }
+            Activity::create($validated);
+            return redirect()->route('activities.index')->with('success', 'Created activity');
+        } catch(\Throwable $err) {
+            report($err);
+            return back()->withErrors(['error' => $err->getMessage()]);
+        }
     }
 
     /**

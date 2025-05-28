@@ -9,10 +9,10 @@ class Activity extends Model
 {
     protected $table = 'activity';
 
-    protected $fillable = ['type', 'userId', 'datetime', 'paid', 'notes', 'satisfaction'];
+    protected $fillable = ['type', 'datetime', 'paid', 'notes', 'satisfaction', 'userId'];
 
     public function user(): BelongsTo {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'userId');
     }
 
     public $timestamps = true;
