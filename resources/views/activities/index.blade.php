@@ -11,7 +11,11 @@
     @if(count($activities) > 0)
         <ul>
             @foreach($activities as $activity)
-                <li>{{ $activity->type }} - {{ $activity->datetime }}</li>
+                <li>
+                    {{ $activity->type }} - {{ $activity->dateTime }}
+                    <a href="{{ route('activities.show', $activity->id) }}">Details</a>
+                    <a href="{{ route('activities.edit', $activity->id) }}">Edit</a>
+                </li>
             @endforeach
         </ul>
     @else
