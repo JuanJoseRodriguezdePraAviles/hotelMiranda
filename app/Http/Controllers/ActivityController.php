@@ -106,6 +106,6 @@ class ActivityController extends Controller
         $activity = Activity::findOrFail($id);
         $activity->delete();
 
-        return response()->json(['message' => 'Activity deleted']);
+        return redirect()->route('activities.index')->with('success', 'Activity deleted succesfully');
     }
 }

@@ -1,6 +1,6 @@
 
 <h1>Crear Actividad</h1>
-<form action="{{ route('activity.store') }}" method="POST">
+<form action="{{ route('activities.store') }}" method="POST">
     @csrf
      <label for="type">Type:</label>
         <select name="type" id="type" required>
