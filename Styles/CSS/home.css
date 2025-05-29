@@ -730,13 +730,15 @@ a {
   font-size: 0.8rem;
 }
 .picked-rooms .swiper-slide {
+  background: #eee;
   text-align: center;
-  font-size: 18px;
-  background: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: auto;
+  box-sizing: border-box;
 }
 .picked-rooms .swiper-slide img {
   display: block;
@@ -1236,6 +1238,9 @@ footer .footer-line p span {
     height: 24.75rem;
     position: relative;
     right: 15rem;
+  }
+  .core-features h6, .core-features h2 {
+    text-align: center;
   }
 }
 

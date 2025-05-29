@@ -248,13 +248,15 @@
     }
 
     .swiper-slide {
+        background: #eee;
         text-align: center;
-        font-size: 18px;
-        background: #fff;
+        padding: 20px;
+        border: 1px solid #ccc;
+        height: auto;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: auto;
+        box-sizing: border-box;
     }
 
     .swiper-slide img {
@@ -673,12 +675,6 @@ footer {
         & .swiper {
             width: 100%;
 
-            & .rooms-container {
-                & .room-card {
-                    & .image-container {}
-                }
-            }
-
             & .swiper-button-next {
                 background-color: #BDAC8D;
                 color: #FFFFFF;
@@ -709,6 +705,7 @@ footer {
             & p {
                 width: 30rem;
             }
+
             padding: 1rem;
         }
 
@@ -718,14 +715,20 @@ footer {
             height: 30.5rem;
             display: flex;
             align-items: center;
-            
+
             & iframe {
                 width: 35.625rem;
                 height: 24.75rem;
 
-                position:relative;
+                position: relative;
                 right: 15rem;
             }
+        }
+    }
+
+    .core-features {
+        & h6, h2 {
+            text-align: center;
         }
     }
 

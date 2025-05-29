@@ -517,7 +517,14 @@
                     }
                 }
             });
+
             const swiperCoreFacilities = new Swiper(".mySwiper-core-facilities", {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+                grid: {
+                    rows: 2,
+                    fill: 'row'
+                },
                 spaceBetween: 30,
                 pagination: {
                     el: ".swiper-pagination-core-facilities",
@@ -525,8 +532,25 @@
                     renderBullet: function (index, className) {
                         return `<span class="${className}"></span>`;
                     },
+                },
+                breakpoints: {
+                    0: {
+                        slidesPerView: 1,
+                        slidesPerGroup: 1,
+                        grid: {
+                            rows: 1,
+                        },
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        slidesPerGroup: 3,
+                        grid: {
+                            rows: 2,
+                        },
+                    },
                 }
             });
+
             const swiperMenu = new Swiper(".mySwiper-menu", {
                 spaceBetween: 30,
                 pagination: {
@@ -540,6 +564,13 @@
                     nextEl: ".swiper-button-next",
                     prevEl: ".swiper-button-prev",
                 },
+                breakpoints: {
+                    1000: {
+                        slidesPerView: 3,
+                        grid: { rows: 2 }
+                    }
+                }
+
             });
             const swiperImages = new Swiper(".mySwiper-images", {
                 spaceBetween: 30,
