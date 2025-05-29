@@ -78,19 +78,24 @@ class ActivityController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $activity = Activity::findOeFail($id);
+        $activity = Activity::findOrFail($id);
 
         $validated = $request->validate([
-            'type' => 'sometimes|required|in:surf,windsurf,kayak,atv,hot air ballon',
+            'type' => 'sometimes|required|in:surf,windsurf,kayak,atv,hot air balloon',
             'userId' => 'sometimes|required|exists:users,id',
             'datetime' => 'sometimes|required|date',
-            'paid' => 'sometimes|boolean',
+            'paid' => 'nullable',
             'notes' => 'sometimes|required|string',
             'satisfaction' => 'nullable|integer|min:0|max:10'
         ]);
 
+        $validated['paid'] = $request->has('paid');
+        $validated['datetime'] = date('Y-m-d H:i:s', strtotime($validated['datetime']));
+
+        \Log::info('Updating activity:', $validated);
         $activity->update($validated);
-        return response()->json($activity);
+
+        return redirect()->route('activities.index')->with('success', 'Activity updated succesfully');
     }
 
     /**
