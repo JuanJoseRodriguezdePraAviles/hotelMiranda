@@ -924,6 +924,10 @@ a {
   break-inside: avoid;
   padding-bottom: 2rem;
   overflow: hidden;
+  height: auto;
+}
+.menu .swiper-menu .swiper-wrapper {
+  height: auto;
 }
 .menu .swiper-menu .swiper-wrapper .swiper-slide .food-page {
   display: flex;
@@ -1239,8 +1243,13 @@ footer .footer-line p span {
     position: relative;
     right: 15rem;
   }
-  .core-features h6, .core-features h2 {
+  .core-features h6,
+  .core-features h2 {
     text-align: center;
+  }
+  .menu {
+    background-image: url("./../../Images/donut2.svg");
+    background-position: top left;
   }
 }
 

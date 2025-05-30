@@ -306,7 +306,7 @@
     <div class="menu">
         <h6>MENU</h6>
         <h2>Our Foods Menu</h2>
-        <div class="swiper-menu mySwiper-menu sliderWrapper">
+        <div class="mySwiper-menu swiper-menu">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="food-page">
@@ -316,6 +316,8 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
                         </div>
                     </div>
+                </div>
+                <div class="swiper-slide">
                     <div class="food-page">
                         <img src="./Images/food2.jpg" />
                         <div class="field-container">
@@ -323,6 +325,8 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
                         </div>
                     </div>
+                </div>
+                <div class="swiper-slide">
                     <div class="food-page">
                         <img src="./Images/food3.jpg" />
                         <div class="field-container">
@@ -339,6 +343,8 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
                         </div>
                     </div>
+                </div>
+                <div class="swiper-slide">
                     <div class="food-page">
                         <img src="./Images/food5.jpg" />
                         <div class="field-container">
@@ -346,6 +352,8 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
                         </div>
                     </div>
+                </div>
+                <div class="swiper-slide">
                     <div class="food-page">
                         <img src="./Images/food6.jpg" />
                         <div class="field-container">
@@ -355,6 +363,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
         </div>
@@ -541,7 +550,7 @@
                             rows: 1,
                         },
                     },
-                    1024: {
+                    1000: {
                         slidesPerView: 3,
                         slidesPerGroup: 3,
                         grid: {
@@ -556,9 +565,6 @@
                 pagination: {
                     el: ".swiper-pagination",
                     clickable: true,
-                    renderBullet: function (index, className) {
-                        return `<span class="${className}"></span>`;
-                    },
                 },
                 navigation: {
                     nextEl: ".swiper-button-next",
@@ -566,11 +572,14 @@
                 },
                 breakpoints: {
                     1000: {
-                        slidesPerView: 3,
-                        grid: { rows: 2 }
+                        slidesPerView: 2,
+                        slidesPerGroup: 6,
+                        grid: {
+                            rows: 3,
+                            fill: "row"
+                        }
                     }
                 }
-
             });
             const swiperImages = new Swiper(".mySwiper-images", {
                 spaceBetween: 30,
