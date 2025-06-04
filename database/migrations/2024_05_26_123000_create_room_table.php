@@ -16,7 +16,7 @@ return new class extends Migration {
             $table->text('photos');
             $table->boolean('offer')->default(false);
             $table->decimal('price', 8, 2);
-            $table->decimal('discount', 3, 2);
+            $table->decimal('discount', 5, 2);
             $table->text('cancellationPolicy');
             $table->enum('roomAmenities', ['3 Bed Space', '24 Hours Guard', 'Free Wifi', '2 Bathroom', 'Air Conditioner', 'Television']);
 

@@ -32,6 +32,7 @@ class BookingController extends Controller
     {
         try {
             $validated = $request->validate([
+                'roomId' => 'required|string',
                 'clientId' => 'required|string',
                 'clientName' => 'required|string',
                 'clientEmail' => 'required|string',
@@ -42,9 +43,11 @@ class BookingController extends Controller
                 'status' => 'required|in:Check In, Check Out, In Progress' 
             ]);
 
-            $validated['roomId'] = 1;
             \Log::info('Validated:', $validated);
             $room = \DB::table('room')->where('id', 1)->first();
+            if (!Room::find($validated['roomId'])) {
+                return back()->withErrors(['roomId' => 'Room doesn´t exists in database']);
+            }
         } catch(\Throwable $err) {
             report($err);
             return back()->withErrors(['error' =>getMessage()]);
@@ -54,9 +57,10 @@ class BookingController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Booking $booking)
+    public function show(string $id)
     {
-        //
+        $booking = Booking::with('booking')->findOrFail($id);
+        return view('bookings.show', compact('booking'));
     }
 
     /**
@@ -64,15 +68,32 @@ class BookingController extends Controller
      */
     public function edit(Booking $booking)
     {
-        //
+        $booking = Booking::findOrFail($id);
+        return view('bookings.edit', compact('booking'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Booking $booking)
+    public function update(Request $request, string $id)
     {
-        //
+        $booking = Booking::findOrFail($id);
+
+        $validated = $request->validate([
+                'roomId' => 'required|string',
+                'clientId' => 'required|string',
+                'clientName' => 'required|string',
+                'clientEmail' => 'required|string',
+                'clientPhone' => 'string',
+                'oderDate' => 'required|date',
+                'checkInDate' => 'required|date',
+                'checkOutDate' => 'required|date',
+                'status' => 'required|in:Check In, Check Out, In Progress' 
+        ]);
+        \Log::info('Updating booking:', $validated);
+        $booking->update($validated);
+
+        return redirect()->route('bookings.index')->with('success', 'Booking updated succesfully');
     }
 
     /**
@@ -80,6 +101,9 @@ class BookingController extends Controller
      */
     public function destroy(Booking $booking)
     {
-        //
+        $booking = Booking::findOrFail($id);
+        $booking->delete();
+
+        return redirect()->route('bookings.index')->with('success', 'Booking deleted succesfully');
     }
 }

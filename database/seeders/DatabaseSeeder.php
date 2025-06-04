@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\User;
 use App\Models\Activity;
+use App\Models\Room;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,6 +15,11 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // User::factory(10)->create();
+        Room::factory()->count(10)->create();
+
+        Booking::factory()->count(3)->create([
+            'roomId' => Room::inRandomOrder()->first()?->id ?? Room::factory(),
+        ]);
 
         $user = User::factory()->create([
             'name' => 'Test User',

@@ -44,7 +44,7 @@ class RoomController extends Controller
                 'roomAmenities' => 'in:3 Bed Space, 24 Hours Guard, Free Wifi, 2 Bathroom, Air Conditioner, Television'
             ]);
 
-            $validated['offer'] = $request-has('offer');
+            $validated['offer'] = $request->has('offer');
             \Log::info('Validated: ', $validated);
 
             Room::create($validated);
@@ -76,11 +76,12 @@ class RoomController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Room $room)
+    public function update(Request $request, string $id)
     {
         $room = Room::findOrFail($id);
 
         $validated = $request->validate([
+                'id' => 'required|string',
                 'roomName' => 'required|string',
                 'roomType' => 'required|in:Single Bed, Double Bed, Double Superior, Suite',
                 'roomFloor' => 'required|string',
