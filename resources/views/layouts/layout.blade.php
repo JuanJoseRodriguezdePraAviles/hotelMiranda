@@ -12,6 +12,8 @@
     <title>Hotel Miranda</title>
 
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/about-us-page.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/rooms-page.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -48,10 +50,10 @@
             </div>
             <div class="links">
                 <div class="menu-link">
-                    <p><a href="./Pages/About.html">About Us</a></p>
+                    <p><a href="./AboutUs/">About Us</a></p>
                 </div>
                 <div class="menu-link">
-                    <p><a href="./Pages/Rooms.html">Rooms</a></p>
+                    <p><a href="{{ route('rooms.list') }}">Rooms</a></p>
                 </div>
                 <div class="menu-link">
                     <p><a href="./Pages/Offers.html">Offers</a></p>
@@ -72,7 +74,7 @@
     </header>
     <div class="menu-extended">
         <div class="menu-link">
-            <p><a href="./Pages/About.html">About Us</a></p>
+            <p><a href="./AboutUs/">About Us</a></p>
         </div>
         <div class="menu-link">
             <p><a href="./Pages/Rooms.html">Rooms</a></p>

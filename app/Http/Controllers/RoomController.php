@@ -10,9 +10,12 @@ class RoomController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $rooms = Room::get();
+        $rooms = Room::all();
+        if($request->is('rooms/list')) {
+            return view('rooms.list', compact('rooms'));
+        }
         return view('rooms.index', compact('rooms'));
     }
 
@@ -60,7 +63,7 @@ class RoomController extends Controller
      */
     public function show(string $id)
     {
-        $room = Room::findOrFile($id);
+        $room = Room::findOrFail($id);
         return view('rooms.show', compact('room'));
     }
 

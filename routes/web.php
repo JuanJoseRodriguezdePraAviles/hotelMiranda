@@ -20,6 +20,8 @@ Route::get('/rooms', [RoomController::class, 'index'])->name('rooms.index');
 Route::get('/rooms/create', [RoomController::class, 'create'])->name('rooms.create');
 Route::post('/rooms', [RoomController::class, 'store'])->name('rooms.store');
 
+Route::get('/rooms/list', [RoomController::class, 'index'])->name('rooms.list');
+
 Route::resource('bookings', BookingController::class);
 Route::get('/bookings', [BookingController::class, 'index'])->name('bookings.index');
 Route::get('/bookings/create', [BookingController::class, 'create'])->name('bookings.create');
@@ -35,4 +37,6 @@ Route::get('/reviews', [ReviewController::class, 'index'])->name('reviews.index'
 Route::get('/reviews/create', [ReviewController::class, 'create'])->name('reviews.create');
 Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
 
-
+Route::get('/AboutUs', function () {
+    return view('aboutUs.index');
+})->name('aboutus');
