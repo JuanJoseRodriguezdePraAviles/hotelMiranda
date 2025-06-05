@@ -1,0 +1,23 @@
+@mixin data-btn-container($theme: null) {
+    padding: 4rem 1rem;
+    h6 {
+        font-family: 'Archivo';
+        letter-spacing: 2.8px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        padding: 1rem 0;
+    }
+    h2 {
+        font-family: 'Old Standard TT';
+        letter-spacing: -1.2px;
+        font-weight: 400;
+        line-height: 60px;
+    }
+    p {
+        font-family: 'Archivo';
+        font-size: 0.9rem;
+        font-weight: 400;
+        line-height: 24px;
+        padding: 1rem 0;
+    }
+}

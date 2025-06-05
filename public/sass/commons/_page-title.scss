@@ -1,0 +1,81 @@
+@import 'btn';
+@mixin page-title($theme: null) {
+    .ultimate-luxury-container {
+        width: 70%;
+        height: 2rem;
+        margin: 0.6rem 0;
+
+        & h2 {
+            font-family: 'Archivo';
+            font-size: 0.75rem;
+            color: #FFFFFF;
+            letter-spacing: 2.8px;
+        }
+    }
+
+    .luxury-title-container {
+        width: 95%;
+        height: 7.5rem;
+        margin: 1rem 0;
+
+        & h1 {
+            color: #FFFFFF;
+            font-family: 'Old Standard TT';
+            font-size: 3.4rem;
+            font-weight: 400;
+            letter-spacing: -1.2px;
+        }
+    }
+
+    .tour-learn-btn-container {
+        margin: 2rem 0 0 0;
+
+        & button {
+
+            @include btn;
+
+            &.btn--light {
+                @include btn("light");
+            }
+
+            &.btn--dark {
+                @include btn("dark");
+            }
+        }
+    }
+
+    .breadcrumb {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #FFFFFF;
+        width: 50%;
+        height: 3rem;
+        margin: 0 1rem 0 50%;
+
+        & p {
+            font-family: 'Archivo';
+            font-weight: 700;
+            & span {
+                color: #BEAD8E;
+                padding-left: 0 0.5rem;
+            }
+        }
+
+
+    }
+
+    @media screen and (min-width: 1000px) {
+        .ultimate-luxury-container {
+            & h2 {
+                font-size: 1rem;
+            }
+        }
+        .luxury-title-container {
+            height: auto;
+            & h1 {
+                font-size: 7.5rem;
+            }
+        }
+    }
+}

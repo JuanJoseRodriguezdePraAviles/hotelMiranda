@@ -1,0 +1,86 @@
+@mixin room-card($theme: null) {
+    .room-card {
+        @if $theme == 'top' {
+            padding-top: 1rem;
+        }
+        
+
+        & .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            & img {
+                height: 13.625rem;
+            }
+
+            & .room-features {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: white;
+                width: 15rem;
+                height: 2.5rem;
+
+                & img {
+                    width: 1rem;
+                    height: 1rem;
+                    margin: 0 0.5rem;
+                }
+
+                @if $theme=='top' {
+                    position: relative;
+                    top: -15rem;
+                    left: 0;
+                }
+                @if $theme=="bottom" {
+                    position: relative;
+                    left: 0rem;
+                    top: -1.5rem;
+                }
+
+
+            }
+        }
+
+        & .image-description {
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            padding: 2rem 1rem;
+
+            & h2 {
+                font-family: 'Old Standard TT';
+                font-weight: 400;
+                font-size: 1.5rem;
+                padding: 0rem 0 0.5rem 0;
+            }
+
+            & p {
+                font-family: 'Roboto';
+                font-size: 0.9rem;
+                color: #777777;
+                padding: 0.5rem 0;
+            }
+
+            & div {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            & .room-price {
+                font-weight: 700;
+                color: #BEAD8E;
+                padding: 0 1rem;
+            }
+
+            & .room-status {
+                font-weight: 700;
+                color: #BDBDBD;
+                padding: 0 1rem;
+            }
+        }
+
+    }
+}

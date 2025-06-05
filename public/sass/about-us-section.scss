@@ -1,0 +1,12 @@
+@import 'commons/btn';
+@import 'commons/data-btn-container';
+.about-us {
+    @include data-btn-container;
+    .btn-book-now {
+        @include btn;
+        @include btn("light");
+    }
+    h2 {
+        font-size: 3.5rem;
+    }
+}

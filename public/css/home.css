@@ -1,0 +1,1256 @@
+html,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
+.header {
+  height: 0rem;
+  width: 100%;
+  background-color: #000000;
+  position: fixed;
+  z-index: 2;
+}
+.header__comfortable {
+  display: none;
+}
+.header__menu {
+  top: 0;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  column-count: 4;
+  padding: 0.4rem 0rem;
+  box-shadow: 0 0.1px 5px 0px gray;
+  z-index: 2;
+  width: 100%;
+}
+.header__menu .hamburguer-container {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin: 0.5rem 2rem 0 0rem;
+}
+.header__menu .hamburguer-container .hamburguer {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.header__menu .hamburguer-container .close-icon {
+  width: 0.9rem;
+  margin-top: 0.1rem;
+  margin-left: 0.1rem;
+}
+.header__menu .title-container {
+  display: flex;
+  justify-content: center;
+  width: 10rem;
+  column-count: 2;
+  padding-right: 5rem;
+}
+.header__menu .title-container .web-icon-container {
+  margin-right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  box-shadow: 0px 14px 24px 0px rgba(139, 139, 139, 0.2509803922);
+}
+.header__menu .title-container .web-icon-container img {
+  margin: 0.6rem 0.6rem;
+}
+.header__menu .title-container .web-title-container {
+  break-inside: avoid;
+}
+.header__menu .title-container .web-title-container {
+  padding-top: 0.5rem;
+}
+.header__menu .links {
+  display: none;
+}
+.header__menu .account-search-container {
+  break-inside: avoid;
+  display: flex;
+  flex-direction: row;
+}
+.header__menu .account-search-container img {
+  padding: 0.5rem;
+}
+
+.menu-extended {
+  position: fixed;
+  top: 1.5rem;
+  left: -2rem;
+  background-color: #FFFFFF;
+  display: none;
+  height: auto;
+  width: 100%;
+  text-align: left;
+  margin: 2rem;
+  z-index: 1;
+  overflow: visible;
+  visibility: visible;
+  padding: 0.5rem 0;
+}
+.menu-extended .menu-link {
+  font-family: "Archivo";
+  font-weight: 600;
+  margin: 1.5rem;
+}
+
+.menu-extended {
+  position: fixed;
+  top: 1.5rem;
+  left: -2rem;
+  background-color: #FFFFFF;
+  display: none;
+  height: auto;
+  width: 100%;
+  text-align: left;
+  margin: 2rem;
+  z-index: 10;
+  overflow: visible;
+  visibility: visible;
+  padding: 0.5rem 0;
+}
+.menu-extended .menu-link {
+  font-family: "Archivo";
+  font-weight: 600;
+  margin: 1.5rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .header {
+    height: 5rem;
+    padding: 0 10%;
+  }
+  .header__comfortable {
+    display: block;
+    color: #FFFFFF;
+    font-family: "Roboto";
+  }
+  .header__menu {
+    justify-content: flex-start;
+    gap: 10%;
+  }
+  .header__menu .hamburguer-container {
+    display: none;
+  }
+  .header__menu .title-container {
+    justify-content: flex-start;
+    margin-left: 1rem;
+    width: 20rem;
+  }
+  .header__menu .title-container .web-icon-container {
+    width: 5rem;
+    height: 5rem;
+  }
+  .header__menu .title-container .web-icon-container img {
+    width: 1.94rem;
+    margin: 1.5rem;
+  }
+  .header__menu .title-container .web-title-container img {
+    width: 8.56rem;
+    margin: 1rem;
+  }
+  .header__menu .links {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+  }
+  .header__menu .links .menu-link {
+    font-family: "Archivo";
+  }
+  .header__menu .account-search-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    height: 3rem;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .header__menu .account-search-container .account-container, .header__menu .account-search-container .search-container {
+    border: 1px solid rgba(133, 133, 133, 0.3019607843);
+    margin: 0 0.5rem;
+  }
+}
+.perfect-base-container {
+  background-color: #333333;
+  display: flex;
+  flex-direction: column;
+  padding: 8rem 1rem 5rem 1rem;
+}
+.perfect-base-container .ultimate-luxury-container {
+  width: 70%;
+  height: 2rem;
+  margin: 0.6rem 0;
+}
+.perfect-base-container .ultimate-luxury-container h2 {
+  font-family: "Archivo";
+  font-size: 0.75rem;
+  color: #FFFFFF;
+  letter-spacing: 2.8px;
+}
+.perfect-base-container .luxury-title-container {
+  width: 95%;
+  height: 7.5rem;
+  margin: 1rem 0;
+}
+.perfect-base-container .luxury-title-container h1 {
+  color: #FFFFFF;
+  font-family: "Old Standard TT";
+  font-size: 3.4rem;
+  font-weight: 400;
+  letter-spacing: -1.2px;
+}
+.perfect-base-container .tour-learn-btn-container {
+  margin: 2rem 0 0 0;
+}
+.perfect-base-container .tour-learn-btn-container button {
+  min-width: 60%;
+  height: 3.75rem;
+  font-family: "Archivo";
+  padding: 1rem 2rem;
+}
+@media screen and (min-width: 1000px) {
+  .perfect-base-container .tour-learn-btn-container button {
+    margin: 0 1rem;
+    min-width: 20%;
+  }
+}
+.perfect-base-container .tour-learn-btn-container button.btn--light {
+  min-width: 60%;
+  height: 3.75rem;
+  font-family: "Archivo";
+  padding: 1rem 2rem;
+  background-color: #BEAD8E;
+  border: none;
+  margin-bottom: 0.7rem;
+  color: #FFFFFF;
+  letter-spacing: 2.8px;
+}
+@media screen and (min-width: 1000px) {
+  .perfect-base-container .tour-learn-btn-container button.btn--light {
+    margin: 0 1rem;
+    min-width: 20%;
+  }
+}
+.perfect-base-container .tour-learn-btn-container button.btn--dark {
+  min-width: 60%;
+  height: 3.75rem;
+  font-family: "Archivo";
+  padding: 1rem 2rem;
+  border: solid;
+  background-color: transparent;
+  border-color: #6e6e6e;
+  margin-top: 0.7rem;
+  color: #FFFFFF;
+  letter-spacing: 2.8px;
+}
+@media screen and (min-width: 1000px) {
+  .perfect-base-container .tour-learn-btn-container button.btn--dark {
+    margin: 0 1rem;
+    min-width: 20%;
+  }
+}
+.perfect-base-container .breadcrumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+  width: 50%;
+  height: 3rem;
+  margin: 0 1rem 0 50%;
+}
+.perfect-base-container .breadcrumb p {
+  font-family: "Archivo";
+  font-weight: 700;
+}
+.perfect-base-container .breadcrumb p span {
+  color: #BEAD8E;
+  padding-left: 0 0.5rem;
+}
+@media screen and (min-width: 1000px) {
+  .perfect-base-container .ultimate-luxury-container h2 {
+    font-size: 1rem;
+  }
+  .perfect-base-container .luxury-title-container {
+    height: auto;
+  }
+  .perfect-base-container .luxury-title-container h1 {
+    font-size: 7.5rem;
+  }
+}
+
+.calendar-container {
+  background-color: #222222;
+  padding: 1rem;
+}
+.calendar-container .calendar-label-icon-input-container {
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.calendar-container .calendar-label-icon-input-container label {
+  font-family: "Roboto";
+  color: #FFFFFF;
+}
+.calendar-container .calendar-label-icon-input-container #icon-arrival-input-container, .calendar-container .calendar-label-icon-input-container #icon-return-input-container {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem;
+  border-bottom: 2px solid #BEAD8E;
+}
+.calendar-container .calendar-label-icon-input-container #icon-arrival-input-container input, .calendar-container .calendar-label-icon-input-container #icon-return-input-container input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: transparent;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 0;
+  outline: none;
+  color: #BEAD8E;
+  direction: rtl;
+  position: relative;
+  top: 1rem;
+  padding: 0;
+  opacity: 0;
+  visibility: visible;
+  width: 1rem;
+  height: 10px;
+  cursor: pointer;
+}
+.calendar-container .calendar-label-icon-input-container input[type=date]::-webkit-calendar-picker-indicator {
+  width: 100%;
+}
+.calendar-container .calendar-label-icon-input-container img {
+  width: 1rem;
+  padding: 0rem 0;
+}
+.calendar-container .calendar-label-icon-input-container #arrival-formatted-date,
+.calendar-container .calendar-label-icon-input-container #return-formatted-date {
+  color: #686868;
+}
+.calendar-container .btn-availability {
+  min-width: 60%;
+  height: 3.75rem;
+  font-family: "Archivo";
+  padding: 1rem 2rem;
+  min-width: 60%;
+  height: 3.75rem;
+  font-family: "Archivo";
+  padding: 1rem 2rem;
+  background-color: #BEAD8E;
+  border: none;
+  margin-bottom: 0.7rem;
+  color: #FFFFFF;
+  letter-spacing: 2.8px;
+}
+@media screen and (min-width: 1000px) {
+  .calendar-container .btn-availability {
+    margin: 0 1rem;
+    min-width: 20%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .calendar-container .btn-availability {
+    margin: 0 1rem;
+    min-width: 20%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .calendar-container {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 20% 1rem 20%;
+    justify-content: flex-start;
+    padding: 5rem 5rem;
+  }
+  .calendar-container .calendar-label-icon-input-container {
+    width: 25%;
+    margin-right: 2rem;
+  }
+  .calendar-container .calendar-label-icon-input-container #icon-arrival-input-container, .calendar-container .calendar-label-icon-input-container #icon-return-input-container {
+    height: 2rem;
+  }
+  .calendar-container .calendar-label-icon-input-container #icon-arrival-input-container img, .calendar-container .calendar-label-icon-input-container #icon-return-input-container img {
+    height: 1rem;
+  }
+  .calendar-container .btn-availability {
+    margin-left: auto;
+  }
+}
+.discover-section .about-us {
+  padding: 4rem 1rem;
+}
+.discover-section .about-us h6 {
+  font-family: "Archivo";
+  letter-spacing: 2.8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 1rem 0;
+}
+.discover-section .about-us h2 {
+  font-family: "Old Standard TT";
+  letter-spacing: -1.2px;
+  font-weight: 400;
+  line-height: 60px;
+}
+.discover-section .about-us p {
+  font-family: "Archivo";
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 1rem 0;
+}
+.discover-section .about-us h6 {
+  color: #777777;
+}
+.discover-section .about-us p {
+  color: #777777;
+}
+.discover-section .about-us .btn-book-now {
+  min-width: 60%;
+  height: 3.75rem;
+  font-family: "Archivo";
+  padding: 1rem 2rem;
+  min-width: 60%;
+  height: 3.75rem;
+  font-family: "Archivo";
+  padding: 1rem 2rem;
+  background-color: #BEAD8E;
+  border: none;
+  margin-bottom: 0.7rem;
+  color: #FFFFFF;
+  letter-spacing: 2.8px;
+}
+@media screen and (min-width: 1000px) {
+  .discover-section .about-us .btn-book-now {
+    margin: 0 1rem;
+    min-width: 20%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .discover-section .about-us .btn-book-now {
+    margin: 0 1rem;
+    min-width: 20%;
+  }
+}
+.discover-section .about-us h2 {
+  font-size: 3.5rem;
+}
+.discover-section .room-card {
+  padding-top: 1rem;
+}
+.discover-section .room-card .image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.discover-section .room-card .image-container img {
+  height: 13.625rem;
+}
+.discover-section .room-card .image-container .room-features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 15rem;
+  height: 2.5rem;
+  position: relative;
+  top: -15rem;
+  left: 0;
+}
+.discover-section .room-card .image-container .room-features img {
+  width: 1rem;
+  height: 1rem;
+  margin: 0 0.5rem;
+}
+.discover-section .room-card .image-description {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  padding: 2rem 1rem;
+}
+.discover-section .room-card .image-description h2 {
+  font-family: "Old Standard TT";
+  font-weight: 400;
+  font-size: 1.5rem;
+  padding: 0rem 0 0.5rem 0;
+}
+.discover-section .room-card .image-description p {
+  font-family: "Roboto";
+  font-size: 0.9rem;
+  color: #777777;
+  padding: 0.5rem 0;
+}
+.discover-section .room-card .image-description div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.discover-section .room-card .image-description .room-price {
+  font-weight: 700;
+  color: #BEAD8E;
+  padding: 0 1rem;
+}
+.discover-section .room-card .image-description .room-status {
+  font-weight: 700;
+  color: #BDBDBD;
+  padding: 0 1rem;
+}
+.discover-section .benefit-cards .benefit-card {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 15%;
+}
+.discover-section .benefit-cards .benefit-card img {
+  width: 100%;
+}
+.discover-section .benefit-cards .benefit-card .benefit-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: right top;
+  padding: 2rem 0;
+}
+.discover-section .benefit-cards .benefit-card .benefit-description img {
+  width: 20%;
+  padding: 0rem 0;
+}
+.discover-section .benefit-cards .benefit-card .benefit-description h2 {
+  font-family: "Old Standard TT";
+  font-weight: 400;
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+.discover-section .benefit-cards .benefit-card .benefit-description p {
+  font-family: "Roboto";
+  line-height: 22px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 0rem 1.4rem;
+}
+.discover-section .benefit-cards .benefit-card--black .benefit-description {
+  background-color: #222222;
+}
+.discover-section .benefit-cards .benefit-card--black .benefit-description h2 {
+  color: #FFFFFF;
+}
+.discover-section .benefit-cards .benefit-card--black .benefit-description P {
+  color: #FFFFFF;
+}
+.discover-section .benefit-cards .benefit-card--light .benefit-card {
+  padding: 3rem 15%;
+}
+.discover-section .benefit-cards .benefit-card--light .benefit-card img {
+  width: 100%;
+}
+.discover-section .benefit-cards .benefit-card--light .benefit-card .benefit-description h2 {
+  color: black;
+}
+.discover-section .benefit-cards .benefit-card--light .benefit-description {
+  background-image: url("./../../Images/bg-team.svg");
+}
+
+.picked-rooms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.picked-rooms h6 {
+  font-family: "Archivo";
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 2.8px;
+  color: #777777;
+}
+.picked-rooms h2 {
+  font-family: "Old Standard TT";
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+  padding: 1rem;
+}
+.picked-rooms .swiper {
+  width: 100%;
+  height: auto;
+}
+.picked-rooms .swiper .rooms-container .room-card {
+  padding-top: 1rem;
+}
+.picked-rooms .swiper .rooms-container .room-card .image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.picked-rooms .swiper .rooms-container .room-card .image-container img {
+  height: 13.625rem;
+}
+.picked-rooms .swiper .rooms-container .room-card .image-container .room-features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 15rem;
+  height: 2.5rem;
+  position: relative;
+  top: -15rem;
+  left: 0;
+}
+.picked-rooms .swiper .rooms-container .room-card .image-container .room-features img {
+  width: 1rem;
+  height: 1rem;
+  margin: 0 0.5rem;
+}
+.picked-rooms .swiper .rooms-container .room-card .image-description {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  padding: 2rem 1rem;
+}
+.picked-rooms .swiper .rooms-container .room-card .image-description h2 {
+  font-family: "Old Standard TT";
+  font-weight: 400;
+  font-size: 1.5rem;
+  padding: 0rem 0 0.5rem 0;
+}
+.picked-rooms .swiper .rooms-container .room-card .image-description p {
+  font-family: "Roboto";
+  font-size: 0.9rem;
+  color: #777777;
+  padding: 0.5rem 0;
+}
+.picked-rooms .swiper .rooms-container .room-card .image-description div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.picked-rooms .swiper .rooms-container .room-card .image-description .room-price {
+  font-weight: 700;
+  color: #BEAD8E;
+  padding: 0 1rem;
+}
+.picked-rooms .swiper .rooms-container .room-card .image-description .room-status {
+  font-weight: 700;
+  color: #BDBDBD;
+  padding: 0 1rem;
+}
+.picked-rooms .swiper .rooms-container .room-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.picked-rooms .swiper .rooms-container .room-card .image-container {
+  width: 100%;
+}
+.picked-rooms .swiper .rooms-container .room-card .image-description {
+  background-color: #FFFFFF;
+  width: 90%;
+  position: relative;
+  top: -4rem;
+  padding: 0.5rem;
+}
+.picked-rooms .swiper .rooms-container .room-card .image-description h2 {
+  font-size: 1.8rem;
+}
+.picked-rooms .swiper .rooms-container .room-card .image-description p {
+  padding: 0 1rem;
+}
+.picked-rooms .swiper .rooms-container .room-card .image-description div .room-price {
+  padding: 1rem;
+  font-size: 2.5rem;
+}
+.picked-rooms .swiper .rooms-container .room-card .image-description div .room-price span {
+  font-size: 1rem;
+}
+.picked-rooms .swiper .swiper-pagination {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.picked-rooms .swiper .swiper-pagination .swiper-pagination-bullet {
+  font-family: "Oswald";
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: white;
+  color: black;
+  font-size: 1rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  opacity: 1;
+  padding-top: 0.5rem;
+}
+.picked-rooms .swiper .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #BEAD8E;
+  color: white;
+}
+.picked-rooms .swiper .swiper-button-next,
+.picked-rooms .swiper .swiper-button-prev {
+  display: hidden;
+  width: 2.5rem;
+  position: relative;
+}
+.picked-rooms .swiper .swiper-button-next {
+  background-color: #BDAC8D;
+  color: #FFFFFF;
+  background-image: none;
+  left: 24rem;
+  top: -22rem;
+}
+.picked-rooms .swiper .swiper-button-prev {
+  background-color: #FFFFFF;
+  color: black;
+  left: 1rem;
+  top: -23.4rem;
+}
+.picked-rooms .swiper .swiper-button-next::after, .picked-rooms .swiper .swiper-button-prev::after {
+  font-size: 0.8rem;
+}
+.picked-rooms .swiper-slide {
+  background: #eee;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.picked-rooms .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.intro-video-container {
+  background-color: #222222;
+}
+.intro-video-container .video-description {
+  padding: 4rem 1rem;
+}
+.intro-video-container .video-description h6 {
+  color: #BDAC8D;
+}
+.intro-video-container .video-description h2 {
+  color: #FFFFFF;
+  font-size: 3rem;
+  padding-right: 4rem;
+}
+.intro-video-container .video-description p {
+  color: #C2C2C2;
+}
+.intro-video-container .video-description iframe {
+  pointer-events: none;
+  margin-bottom: 2rem;
+}
+.intro-video-container .video-description h6 {
+  font-family: "Archivo";
+  letter-spacing: 2.8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 1rem 0;
+}
+.intro-video-container .video-description h2 {
+  font-family: "Old Standard TT";
+  letter-spacing: -1.2px;
+  font-weight: 400;
+  line-height: 60px;
+}
+.intro-video-container .video-description p {
+  font-family: "Archivo";
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 1rem 0;
+}
+.intro-video-container .video-description .btn-book-now {
+  min-width: 60%;
+  height: 3.75rem;
+  font-family: "Archivo";
+  padding: 1rem 2rem;
+  background-color: #BEAD8E;
+  border: none;
+  margin-bottom: 0.7rem;
+  color: #FFFFFF;
+  letter-spacing: 2.8px;
+}
+@media screen and (min-width: 1000px) {
+  .intro-video-container .video-description .btn-book-now {
+    margin: 0 1rem;
+    min-width: 20%;
+  }
+}
+
+.core-features {
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+.core-features h6 {
+  font-family: "Archivo";
+  color: #777777;
+  font-size: 1rem;
+  letter-spacing: 2.8px;
+}
+.core-features h2 {
+  font-family: "Old Standard TT";
+  font-weight: 400;
+  font-size: 3rem;
+  padding: 1rem 0;
+}
+.core-features p {
+  font-family: "Archivo";
+  color: #777777;
+  line-height: 24px;
+  font-size: 1rem;
+}
+.core-features .swiper-core-features {
+  break-inside: avoid;
+  padding-bottom: 2rem;
+  overflow: hidden;
+}
+.core-features .swiper-core-features .swiper-wrapper .swiper-slide .hotel-feature img {
+  padding: 3rem 0 2rem 1rem;
+}
+.core-features .swiper-core-features .swiper-wrapper .swiper-slide .hotel-feature .field-container h2 {
+  font-family: "Old Standard TT";
+  font-size: 1.8rem;
+}
+.core-features .swiper-core-features .swiper-wrapper .swiper-slide .bg-1 {
+  margin-right: 1.5rem;
+  background-image: url("./../../Images/01.svg");
+  background-size: 9rem;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.core-features .swiper-core-features .swiper-wrapper .swiper-slide .bg-2 {
+  margin-right: 1.5rem;
+  background-image: url("./../../Images/02.png");
+  background-size: 9rem;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.core-features .swiper-core-features .swiper-wrapper .swiper-slide .bg-3 {
+  margin-right: 1.5rem;
+  background-image: url("./../../Images/03.svg");
+  background-size: 9rem;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.core-features .swiper-core-features .swiper-wrapper .swiper-slide .bg-4 {
+  margin-right: 1.5rem;
+  background-image: url("./../../Images/04.svg");
+  background-size: 9rem;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.core-features .swiper-core-features .swiper-wrapper .swiper-slide .bg-5 {
+  margin-right: 1.5rem;
+  background-image: url("./../../Images/05.svg");
+  background-size: 9rem;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.core-features .swiper-core-features .swiper-wrapper .swiper-slide .bg-6 {
+  margin-right: 1.5rem;
+  background-image: url("./../../Images/06.svg");
+  background-size: 9rem;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.core-features .swiper-core-features .swiper-pagination-core-facilities {
+  position: relative;
+  top: 2rem;
+  transform: translateX(35%);
+}
+.core-features .swiper-core-features .swiper-pagination-core-facilities .swiper-pagination-bullet-active {
+  background-color: #BEAD8E;
+  color: white;
+}
+
+.menu {
+  flex-direction: column;
+  align-items: center;
+  padding: 6rem 1rem 1rem 1rem;
+  background-image: url("./../../Images/donut.svg");
+  background-size: 5rem;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.menu h6 {
+  font-family: "Archivo";
+  color: #777777;
+  font-size: 1rem;
+  letter-spacing: 2.8px;
+}
+.menu h2 {
+  font-family: "Old Standard TT";
+  font-weight: 400;
+  font-size: 3rem;
+  padding: 1rem 0;
+}
+.menu p {
+  font-family: "Archivo";
+  color: #777777;
+  line-height: 24px;
+  font-size: 1rem;
+}
+.menu .swiper-menu {
+  break-inside: avoid;
+  padding-bottom: 2rem;
+  overflow: hidden;
+  height: auto;
+}
+.menu .swiper-menu .swiper-wrapper {
+  height: auto;
+}
+.menu .swiper-menu .swiper-wrapper .swiper-slide .food-page {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem 0;
+}
+.menu .swiper-menu .swiper-wrapper .swiper-slide .food-page img {
+  padding-right: 1rem;
+  object-fit: cover;
+  width: 8rem;
+  height: 8rem;
+}
+.menu .swiper-menu .swiper-wrapper .swiper-slide .food-page .field-container {
+  padding-right: 1rem;
+}
+.menu .swiper-menu .swiper-wrapper .swiper-slide .food-page .field-container h2 {
+  font-family: "Old Standard TT";
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+}
+.menu .swiper-menu .swiper-wrapper .swiper-slide .food-page .field-container p {
+  color: #222222;
+}
+.menu .swiper-menu .swiper-wrapper .swiper-slide .bg-1 {
+  margin-right: 1.5rem;
+}
+.menu .swiper-menu .swiper-pagination {
+  position: relative;
+  top: 2rem;
+  width: auto;
+}
+.menu .swiper-menu .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #BEAD8E;
+  color: white;
+}
+.menu .swiper-menu .swiper-button-next,
+.menu .swiper-menu .swiper-button-prev {
+  display: hidden;
+  width: 2.5rem;
+  position: relative;
+}
+.menu .swiper-menu .swiper-button-next {
+  background-color: #BDAC8D;
+  color: #FFFFFF;
+  background-image: none;
+  left: 19rem;
+  top: 1rem;
+}
+.menu .swiper-menu .swiper-button-prev {
+  background-color: #F8F8F8;
+  color: black;
+  left: 15.5rem;
+  top: -0.4rem;
+}
+.menu .swiper-menu .swiper-button-next::after, .menu .swiper-menu .swiper-button-prev::after {
+  font-size: 0.8rem;
+}
+
+.images .swiper-images {
+  break-inside: avoid;
+  padding-bottom: 2rem;
+  overflow: hidden;
+}
+.images .swiper-images .swiper-wrapper .swiper-slide img {
+  padding: 1rem;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.images .swiper-images .swiper-pagination-images {
+  position: relative;
+  top: 2rem;
+  transform: translateX(42%);
+}
+.images .swiper-images .swiper-pagination-images .swiper-pagination-bullet-active {
+  background-color: #BEAD8E;
+  color: white;
+}
+
+.achievements {
+  background-color: #222222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4rem 0 0 0;
+  padding: 2rem;
+}
+.achievements .achievement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.achievements .achievement img {
+  padding: 1rem 0;
+  width: 4rem;
+}
+.achievements .achievement .value {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+}
+.achievements .achievement .value h2 {
+  font-family: "Roboto";
+  font-weight: 700;
+  color: #FFFFFF;
+  font-size: 3.5rem;
+}
+.achievements .achievement .value p {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  height: 100%;
+  padding-bottom: 0.5rem;
+}
+.achievements .achievement p {
+  font-family: "Roboto";
+  font-weight: 700;
+  color: #999999;
+}
+
+.hotel-resume {
+  background-image: url("./../../../Images/bg-resume.png");
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 1rem 1rem 1rem;
+}
+.hotel-resume .hotel-info-container .hotel-title-icon-container {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 1rem;
+}
+.hotel-resume .hotel-info-container .hotel-title-icon-container .web-icon-container {
+  padding: 1rem 1.5rem;
+  background-color: #BEAD8E;
+  height: 4.5rem;
+}
+.hotel-resume .hotel-info-container .hotel-title-icon-container .web-icon-container P {
+  color: #FFFFFF;
+  font-family: "Archivo";
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+.hotel-resume .hotel-info-container .web-title-container {
+  padding: 1rem 2rem;
+}
+.hotel-resume .hotel-info-container .web-title-container img {
+  width: 8rem;
+}
+.hotel-resume .hotel-info-container .hotel-description {
+  font-family: "Archivo";
+  font-size: 1rem;
+  font-weight: 400;
+  color: #777777;
+  line-height: 26px;
+  padding: 1rem 1rem 1rem 0;
+}
+.hotel-resume .hotel-info-container .social-links {
+  width: 75%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+.hotel-resume .hotel-info-container .social-links .link-container {
+  background-color: #BEAD8E;
+  padding: 0.5rem;
+}
+.hotel-resume .hotel-info-container .social-links img {
+  width: 1.5rem;
+}
+.hotel-resume .services-container {
+  padding: 2rem 0;
+  width: 10rem;
+}
+.hotel-resume .services-container h2 {
+  font-family: "Old Standard TT";
+  font-weight: 400;
+}
+.hotel-resume .services-container .services-list {
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.hotel-resume .services-container .services-list p {
+  font-family: "Roboto";
+  color: #777777;
+  padding: 1rem 0;
+}
+.hotel-resume .contact-us-container h2 {
+  font-family: "Old Standard TT";
+  font-weight: 400;
+}
+.hotel-resume .contact-us-container .contact-methods .contact-method {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+}
+.hotel-resume .contact-us-container .contact-methods .contact-method img {
+  padding-right: 1rem;
+}
+.hotel-resume .contact-us-container .contact-methods .contact-method .field-container h6 {
+  font-family: "Old Standard TT";
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.hotel-resume .contact-us-container .contact-methods .contact-method .field-container p {
+  font-family: "Old Standard TT";
+  font-size: 0.8rem;
+  color: #777777;
+}
+
+@media screen and (min-width: 1000px) {
+  .hotel-resume {
+    padding: 5rem 5%;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .hotel-resume .hotel-info-container {
+    width: 40%;
+  }
+  .hotel-resume .services-container {
+    width: 20rem;
+  }
+}
+footer {
+  background-color: #F8F8F8;
+  padding: 1rem;
+}
+footer .footer-line p {
+  font-family: "Roboto";
+  font-weight: 700;
+  padding: 0.5rem 0;
+}
+footer .footer-line p span {
+  padding: 0 0.5rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .perfect-base-container {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+  .discover-section {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 10rem 10%;
+  }
+  .discover-section .about-us {
+    width: 50%;
+  }
+  .discover-section .benefit-cards .benefit-card {
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: row;
+  }
+  .discover-section .benefit-cards .benefit-card img {
+    width: 15rem;
+  }
+  .discover-section .benefit-cards .benefit-card .benefit-description {
+    width: 28rem;
+  }
+  .discover-section .benefit-cards .benefit-card--light {
+    flex-direction: row-reverse;
+  }
+  .discover-section .benefit-cards .benefit-card--light .benefit-description {
+    margin-right: 1rem;
+  }
+  .discover-section .benefit-cards .benefit-card--black .benefit-description {
+    margin-top: 1rem;
+    margin-left: 1rem;
+  }
+  .picked-rooms .swiper {
+    width: 100%;
+  }
+  .picked-rooms .swiper .swiper-button-next {
+    background-color: #BDAC8D;
+    color: #FFFFFF;
+    background-image: none;
+    left: 75rem;
+    top: -20rem;
+  }
+  .picked-rooms .swiper .swiper-button-prev {
+    background-color: #FFFFFF;
+    color: black;
+    left: 27.5rem;
+    top: -21.4rem;
+  }
+  .intro-video-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 0 0 10rem;
+    align-items: center;
+    position: relative;
+  }
+  .intro-video-container .video-description {
+    padding: 1rem;
+  }
+  .intro-video-container .video-description p {
+    width: 30rem;
+  }
+  .intro-video-container .background-side {
+    background-color: #BEAD8E;
+    width: 30%;
+    height: 30.5rem;
+    display: flex;
+    align-items: center;
+  }
+  .intro-video-container .background-side iframe {
+    width: 35.625rem;
+    height: 24.75rem;
+    position: relative;
+    right: 15rem;
+  }
+  .core-features h6,
+  .core-features h2 {
+    text-align: center;
+  }
+  .menu {
+    background-image: url("./../../Images/donut2.svg");
+    background-position: top left;
+  }
+}
+
+/*# sourceMappingURL=home.css.map */

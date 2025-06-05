@@ -1,0 +1,138 @@
+@mixin hotel-resume($theme: null) {
+    .hotel-resume {
+        background-image: url('./../../../Images/bg-resume.png');
+        display: flex;
+        flex-direction: column;
+        padding: 3rem 1rem 1rem 1rem;
+
+        & .hotel-info-container {
+            & .hotel-title-icon-container {
+                display: flex;
+                flex-direction: row;
+                padding-bottom: 1rem;
+
+                & .web-icon-container {
+                    padding: 1rem 1.5rem;
+                    background-color: #BEAD8E;
+                    height: 4.5rem;
+
+                    & P {
+                        color: #FFFFFF;
+                        font-family: 'Archivo';
+                        font-weight: 700;
+                        font-size: 2.5rem;
+                    }
+                }
+            }
+
+            & .web-title-container {
+                padding: 1rem 2rem;
+
+                & img {
+                    width: 8rem;
+                }
+            }
+
+            & .hotel-description {
+                font-family: 'Archivo';
+                font-size: 1rem;
+                font-weight: 400;
+                color: #777777;
+                line-height: 26px;
+                padding: 1rem 1rem 1rem 0;
+            }
+
+            & .social-links {
+                width: 75%;
+                display: flex;
+                justify-content: space-evenly;
+                flex-direction: row;
+
+                & .link-container {
+                    background-color: #BEAD8E;
+                    padding: 0.5rem;
+
+                }
+
+                & img {
+                    width: 1.5rem;
+
+                }
+            }
+        }
+
+
+        & .services-container {
+            padding: 2rem 0;
+            width: 10rem;
+
+            & h2 {
+                font-family: 'Old Standard TT';
+                font-weight: 400;
+            }
+
+            & .services-list {
+                height: 20rem;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+
+                & p {
+                    font-family: 'Roboto';
+                    color: #777777;
+                    padding: 1rem 0;
+                }
+
+            }
+        }
+
+        & .contact-us-container {
+            & h2 {
+                font-family: 'Old Standard TT';
+                font-weight: 400;
+            }
+
+            & .contact-methods {
+                & .contact-method {
+                    display: flex;
+                    flex-direction: row;
+                    padding: 1rem;
+
+                    & img {
+                        padding-right: 1rem;
+                    }
+
+                    & .field-container {
+                        & h6 {
+                            font-family: 'Old Standard TT';
+                            font-size: 1.2rem;
+                            font-weight: 400;
+                        }
+
+                        & p {
+                            font-family: 'Old Standard TT';
+                            font-size: 0.8rem;
+                            color: #777777;
+
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    @media screen and (min-width: 1000px) {
+        .hotel-resume {
+            padding: 5rem 5%;
+            flex-direction: row;
+            justify-content: space-evenly;
+            & .hotel-info-container {
+                width: 40%;
+            }
+            & .services-container {
+                width: 20rem;
+            }
+        }
+    }
+}

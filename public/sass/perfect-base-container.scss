@@ -1,0 +1,11 @@
+@import 'commons/btn';
+@import 'commons/page-title';
+@import 'commons/body';
+
+.perfect-base-container {
+    background-color: #333333;
+    display: flex;
+    flex-direction: column;
+    padding: 8rem 1rem 5rem 1rem;
+    @include page-title;
+}

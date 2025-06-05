@@ -1,0 +1,28 @@
+@mixin btn($theme: null) {
+    min-width: 60%;
+    height: 3.75rem;
+    font-family: 'Archivo';
+    padding: 1rem 2rem;
+
+    @if $theme== "light" {
+        background-color: #BEAD8E;
+        border: none;
+        margin-bottom: 0.7rem;
+        color: #FFFFFF;
+        letter-spacing: 2.8px;
+    }
+
+    @if $theme== 'dark' {
+        border: solid;
+        background-color: transparent;
+        border-color: #6e6e6e;
+        margin-top: 0.7rem;
+        color: #FFFFFF;
+        letter-spacing: 2.8px;
+    }
+    @media screen and (min-width: 1000px) {
+        margin: 0 1rem;
+        min-width: 20%; 
+
+    }
+}

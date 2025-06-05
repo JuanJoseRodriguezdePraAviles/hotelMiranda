@@ -22,7 +22,7 @@ class BookingFactory extends Factory
         $checkInDate = $this->faker->dateTimeBetween($orderDate->format('Y-m-d') . ' +1 day', $orderDate->format('Y-m-d') . ' +5 days');
         $checkOutDate = $this->faker->dateTimeBetween($checkInDate->format('Y-m-d') . ' +1 day', $checkInDate->format('Y-m-d') . ' +5 days');
         return [
-            'roomId' => Room::factory(),
+            'roomId' => $this->attributes['roomId'],
             'clientId' => (string) Str::uuid(),
             'clientName' => $this->faker->name(),
             'clientEmail' => $this->faker->email(),

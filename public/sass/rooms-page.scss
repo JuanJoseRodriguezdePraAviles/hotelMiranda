@@ -1,0 +1,87 @@
+@import 'commons/page-title';
+@import 'commons/room-card';
+@import 'commons/hotel-resume';
+@import 'commons/header';
+@import 'commons/body';
+
+@include body;
+@include header;
+
+.rooms-title {
+    background-color: #333333;
+    display: flex;
+    flex-direction: column;
+    padding: 8rem 1rem 0rem 1rem;
+    @include page-title;
+}
+
+
+
+.swiper {
+    width: 100%;
+    height: auto;
+
+    & .rooms-container {
+        @include room-card("bottom");
+    }
+
+    & .swiper-pagination {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & .swiper-pagination-bullet {
+            font-family: 'Oswald';
+            width: 2.5rem;
+            height: 2.5rem;
+            background-color: white;
+            color: black;
+            font-size: 1rem;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0;
+            opacity: 1;
+            padding-top: 0.5rem;
+        }
+
+        & .swiper-pagination-bullet-active {
+            background-color: #BEAD8E;
+            color: white;
+        }
+    }
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@include hotel-resume;
+
+footer {
+    background-color: #F8F8F8;
+    padding: 1rem;
+    & .footer-line {
+        & p {
+            font-family: 'Roboto';
+            font-weight: 700;
+            padding: 0.5rem 0;
+            & span {
+                padding: 0 0.5rem;
+            }
+        }
+    }
+}

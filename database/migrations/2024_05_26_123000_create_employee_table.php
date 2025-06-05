@@ -10,7 +10,7 @@ return new class extends Migration {
             $table->id('dni');
             $table->text('name');
             $table->text('email');
-            $table->text('password');
+            $table->text('password')->nullable();
             $table->text('jobFunctions');
             $table->dateTime('registrationDate');
             $table->text('phone');
