@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Room;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class RoomController extends Controller
 {
@@ -13,7 +15,9 @@ class RoomController extends Controller
     public function index(Request $request)
     {
         $rooms = Room::all();
-        if($request->is('rooms/list')) {
+        if ($request->has('rooms')) {
+            return view('rooms.list', compact('rooms'));
+        } else if ($request->has('offers')) {
             return view('rooms.list', compact('rooms'));
         }
         return view('rooms.index', compact('rooms'));
@@ -63,8 +67,15 @@ class RoomController extends Controller
      */
     public function show(string $id)
     {
-        $room = Room::findOrFail($id);
-        return view('rooms.show', compact('room'));
+        try{
+            $room = Room::findOrFail($id);
+
+            $relatedRooms = Room::where('id', '!=', $room->id)->inRandomOrder()->take(3)->get();
+            return view('rooms.detail', compact('room', 'relatedRooms'));
+        } catch(ModelNotFoundException $ex) {
+            return redirect()->route('rooms.index');
+        }
+        
     }
 
     /**

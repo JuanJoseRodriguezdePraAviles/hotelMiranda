@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
     <link rel="stylesheet" href="{{ asset('css/about-us-page.css') }}">
     <link rel="stylesheet" href="{{ asset('css/rooms-page.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/contact-page.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/room-details-page.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -42,10 +44,10 @@
             </div>
             <div class="title-container">
                 <div class="web-icon-container">
-                    <img src="./Images/web-icon.svg" />
+                    <img src="/Images/web-icon.svg" />
                 </div>
                 <div class="web-title-container">
-                    <img src="./Images/hotel-miranda.svg" />
+                    <img src="/Images/hotel-miranda.svg" />
                 </div>
             </div>
             <div class="links">
@@ -53,21 +55,21 @@
                     <p><a href="./AboutUs/">About Us</a></p>
                 </div>
                 <div class="menu-link">
-                    <p><a href="{{ route('rooms.list') }}">Rooms</a></p>
+                    <p><a href="{{ route('rooms.index', ['rooms' => true]) }}">Rooms</a></p>
                 </div>
                 <div class="menu-link">
-                    <p><a href="./Pages/Offers.html">Offers</a></p>
+                    <p><a href="{{ route('rooms.index', ['offers' => true]) }}">Offers</a></p>
                 </div>
                 <div class="menu-link">
-                    <p><a href="./Pages/Contact.html">Contact</a></p>
+                    <p><a href="./contact/">Contact</a></p>
                 </div>
             </div>
             <div class="account-search-container">
                 <div class="account-container">
-                    <img src="./Images/account-icon.svg" />
+                    <img src="/Images/account-icon.svg" />
                 </div>
                 <div class="search-container">
-                    <img src="./Images/search-icon.svg" />
+                    <img src="/Images/search-icon.svg" />
                 </div>
             </div>
         </div>
@@ -77,13 +79,13 @@
             <p><a href="./AboutUs/">About Us</a></p>
         </div>
         <div class="menu-link">
-            <p><a href="./Pages/Rooms.html">Rooms</a></p>
+            <p><a href="{{ route('rooms.index', ['rooms' => true]) }}">Rooms</a></p>
         </div>
         <div class="menu-link">
-            <p><a href="./Pages/Offers.html">Offers</a></p>
+            <p><a href="{{ route('rooms.index', ['offers' => true]) }}">Offers</a></p>
         </div>
         <div class="menu-link">
-            <p><a href="./Pages/Contact.html">Contact</a></p>
+            <p><a href="./contact/">Contact</a></p>
         </div>
     </div>
 
@@ -98,7 +100,7 @@
                     <p>H</p>
                 </div>
                 <div class="web-title-container">
-                    <img src="./Images/hotel-miranda.svg" />
+                    <img src="/Images/hotel-miranda.svg" />
                 </div>
             </div>
             <p class="hotel-description">
@@ -107,13 +109,13 @@
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat ion ullamco laboris nisi.
             </p>
             <div class="social-links">
-                <img src="./Images/facebook-icon.svg" />
+                <img src="/Images/facebook-icon.svg" />
                 <div class="link-container">
-                    <img src="./Images/twitter-icon.svg" />
+                    <img src="/Images/twitter-icon.svg" />
                 </div>
-                <img src="./Images/be-icon.svg" />
-                <img src="./Images/linkedin-icon.svg" />
-                <img src="./Images/youtube-icon.svg" />
+                <img src="/Images/be-icon.svg" />
+                <img src="/Images/linkedin-icon.svg" />
+                <img src="/Images/youtube-icon.svg" />
             </div>
         </div>
         <div class="services-container">
@@ -135,7 +137,7 @@
             <h2>Contact Us</h2>
             <div class="contact-methods">
                 <div class="contact-method">
-                    <img src="./Images/phone.svg" />
+                    <img src="/Images/phone.svg" />
                     <div class="field-container">
                         <h6>Phone Number</h6>
                         <p>+987 876 765 76 577</p>
@@ -144,7 +146,7 @@
             </div>
             <div class="contact-methods">
                 <div class="contact-method">
-                    <img src="./Images/email.svg" />
+                    <img src="/Images/email.svg" />
                     <div class="field-container">
                         <h6>Email</h6>
                         <p>info@webmail.com</p>
@@ -153,7 +155,7 @@
             </div>
             <div class="contact-methods">
                 <div class="contact-method">
-                    <img src="./Images/location.svg" />
+                    <img src="/Images/location.svg" />
                     <div class="field-container">
                         <h6>Hotel Address</h6>
                         <p>19/A, Cirikon City hall Tower New York, NYC</p>

@@ -88,7 +88,7 @@
             <h1>About Us</h1>
         </div>
         <div class="breadcrumb">
-            <p><a href="./../index.html">Home</a> | <span>About</span></p>
+            <p><a href="{{ route('rooms.index') }}">Home</a> | <span>About</span></p>
         </div>
     </div>
 

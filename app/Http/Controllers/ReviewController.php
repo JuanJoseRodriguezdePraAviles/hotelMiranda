@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Review;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class ReviewController extends Controller
 {
@@ -29,6 +30,7 @@ class ReviewController extends Controller
      */
     public function store(Request $request)
     {
+        
         try {
             $validated = $request->validate([
                 'email' => 'required|string',
@@ -37,14 +39,14 @@ class ReviewController extends Controller
                 'phone' => 'required|string',
                 'subject' => 'required|string',
                 'comment' => 'required|string',
-                'archived' => 'required|boolean'
+                'archived' => 'nullable|boolean'
             ]);
-
+            
             $validated['archived'] = $request->has('archived');
-            \Log::info('Validated: ', $validated);
+            
 
             Review::create($validated);
-            return redirect()->route('reviews.index')->with('success', 'Created review');
+            return redirect()->route('contact')->with('success', 'Created review');
         } catch(\Throwable $err) {
             report($err);
             return back()->withErrors(['error' => $err->getMessage()]);
