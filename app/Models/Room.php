@@ -18,4 +18,9 @@ class Room extends Model
     protected $casts = [
         'roomAmenities' => 'array',
     ];
+
+    public function bookings()
+    {
+        return $this->hasMany(Booking::class, 'roomId');
+    }
 }

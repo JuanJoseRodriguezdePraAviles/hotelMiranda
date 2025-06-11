@@ -15,10 +15,10 @@ Route::get('/activities/create', [ActivityController::class, 'create'])->name('a
 Route::post('/activities', [ActivityController::class, 'store'])->name('activities.store');
 
 
-Route::get('/rooms', [RoomController::class, 'index'])->name('rooms.index');
-Route::get('/rooms/create', [RoomController::class, 'create'])->name('rooms.create');
-Route::post('/rooms', [RoomController::class, 'store'])->name('rooms.store');
-Route::get('/rooms/{id}', [RoomController::class, 'show'])->name('rooms.show');
+Route::get('/', [RoomController::class, 'index'])->name('rooms.index');
+Route::get('/create', [RoomController::class, 'create'])->name('rooms.create');
+Route::post('/', [RoomController::class, 'store'])->name('rooms.store');
+Route::get('/{id}', [RoomController::class, 'show'])->name('rooms.show');
 
 
 Route::get('/bookings', [BookingController::class, 'index'])->name('bookings.index');

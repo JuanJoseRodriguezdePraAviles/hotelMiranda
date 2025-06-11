@@ -52,7 +52,7 @@
             </div>
             <div class="links">
                 <div class="menu-link">
-                    <p><a href="./AboutUs/">About Us</a></p>
+                    <p><a href="{{ route('aboutus') }}">About Us</a></p>
                 </div>
                 <div class="menu-link">
                     <p><a href="{{ route('rooms.index', ['rooms' => true]) }}">Rooms</a></p>
@@ -61,7 +61,7 @@
                     <p><a href="{{ route('rooms.index', ['offers' => true]) }}">Offers</a></p>
                 </div>
                 <div class="menu-link">
-                    <p><a href="./contact/">Contact</a></p>
+                    <p><a href="{{ route('contact') }}">Contact</a></p>
                 </div>
             </div>
             <div class="account-search-container">

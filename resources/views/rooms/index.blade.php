@@ -34,8 +34,8 @@
             </div>
         </div>
     </div>
-    <button class="btn-availability">
-        <a href="./Rooms.html">CHECK AVAILABILITY</a>
+    <button type="button" class="btn-availability" id="check-availability-btn">
+        CHECK AVAILABILITY
     </button>
 </div>
 
@@ -315,6 +315,20 @@
 <script src="{{ asset('js/script.js') }}" type="module"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
+    document.getElementById('check-availability-btn').addEventListener('click', function (event) {
+        event.preventDefault();
+        const arrival = document.getElementById('arrival-date-input').value;
+        const returnDate = document.getElementById('return-date-input').value;
+
+        if(!arrival || !returnDate) {
+            alert('Please select both arrival and return dates.');
+            return;
+        }
+
+        const url = `/?rooms=true&arrival=${encodeURIComponent(arrival)}&return=${encodeURIComponent(returnDate)}`;
+        window.location.href = url;
+    });
+
     window.onload = function () {
         const swiper = new Swiper(".mySwiper", {
             slidesPerView: 1,

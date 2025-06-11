@@ -6,6 +6,7 @@ use App\Models\Room;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Carbon\Carbon;
 
 class RoomController extends Controller
 {
@@ -16,6 +17,25 @@ class RoomController extends Controller
     {
         $rooms = Room::all();
         if ($request->has('rooms')) {
+            $arrival = $request->query('arrival');
+            $return = $request->query('return');
+
+            if ($arrival && $return) {
+                $arrivalDate = Carbon::parse($arrival);
+                $returnDate = Carbon::parse($return);
+
+                $rooms = Room::whereDoesntHave('bookings', function ($query) use ($arrivalDate, $returnDate) {
+                    $query->where(function ($q) use ($arrivalDate, $returnDate) {
+                        $q->whereBetween('checkInDate', [$arrivalDate, $returnDate])
+                        ->orWhereBetween('checkOutDate', [$arrivalDate, $returnDate])
+                        ->orWhere(function ($q2) use ($arrivalDate, $returnDate) {
+                            $q2->where('checkInDate', '<', $arrivalDate)
+                                ->where('checkOutDate', '>', $returnDate);
+                        });
+                    });
+                })->get();
+            }
+
             return view('rooms.list', compact('rooms'));
         } else if ($request->has('offers')) {
             return view('rooms.list', compact('rooms'));
