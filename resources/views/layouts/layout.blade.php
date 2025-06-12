@@ -52,7 +52,7 @@
             </div>
             <div class="links">
                 <div class="menu-link">
-                    <p><a href="{{ route('aboutus') }}">About Us</a></p>
+                    <p><a href="{{ route('aboutus.index') }}">About Us</a></p>
                 </div>
                 <div class="menu-link">
                     <p><a href="{{ route('rooms.index', ['rooms' => true]) }}">Rooms</a></p>

@@ -11,6 +11,6 @@ class AboutUsController extends Controller
     {
         $rooms = Room::all();
         
-        return view('rooms.index', compact('rooms'));
+        return view('aboutus.index');
     }
 }

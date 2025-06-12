@@ -33,7 +33,7 @@
                     <p>{{ $room->description }}</p>
                     <div>
                         <p class="room-price">{{ $room->price }}/Night</p>
-                        <p class="room-status"><a href="{{ url('rooms/' . $room->id) }}">Booking Now</a></p>
+                        <p class="room-status"><a href="{{ url('/' . $room->id) }}">Booking Now</a></p>
                     </div>
                 </div>
             </div>
