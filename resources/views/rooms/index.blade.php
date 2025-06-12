@@ -129,7 +129,7 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="hotel-feature bg-1">
-                    <img src="/Images/rating.svg" />
+                    <img src="/Images/high-rating.svg" />
                     <div class="field-container">
                         <h2>Have High Rating</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
