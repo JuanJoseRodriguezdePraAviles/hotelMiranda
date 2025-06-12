@@ -837,6 +837,7 @@ a {
 }
 .core-features .swiper-core-features .swiper-wrapper .swiper-slide .hotel-feature img {
   padding: 3rem 0 2rem 1rem;
+  width: 4.5rem;
 }
 .core-features .swiper-core-features .swiper-wrapper .swiper-slide .hotel-feature .field-container h2 {
   font-family: "Old Standard TT";
