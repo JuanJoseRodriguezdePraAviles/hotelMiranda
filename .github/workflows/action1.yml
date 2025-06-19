@@ -1,0 +1,35 @@
+name: Deploy to AWS
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Execute remote SSH commands using password
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.HOST }}
+          username: linuxserver.io
+          password: ${{ secrets.PASSWORD }}
+          port: 22
+          script: whoami
+  deploy:
+    name: deploy
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+    steps:
+      - name: Update instance git
+        run: git pull
+      - name: Install composer
+        run: composer install
+      - name: Migration
+        run: artisan migrate
+      - name: Restart Apache
+        run: systemctl restart apache2
