@@ -25,8 +25,10 @@ jobs:
       matrix:
         node-version: [18.x]
     steps:
-      - name: Update instance git
-        run: sudo git pull
+      - name: Pull latest code
+        run: |
+          cd /var/www/Miranda-Website
+          sudo git pull
       - name: Install composer
         run: sudo composer install
       - name: Migration
