@@ -3,7 +3,7 @@ name: Deploy to AWS
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
@@ -26,10 +26,10 @@ jobs:
         node-version: [18.x]
     steps:
       - name: Update instance git
-        run: git pull
+        run: sudo git pull
       - name: Install composer
-        run: composer install
+        run: sudo composer install
       - name: Migration
-        run: artisan migrate
+        run: sudo artisan migrate
       - name: Restart Apache
-        run: systemctl restart apache2
+        run: sudo systemctl restart apache2
