@@ -57,13 +57,13 @@
         <button class="btn-book-now">TAKE A TOUR</button>
 </div>
 
-<div class="core-features">
+<div class="core-features core-features--dark">
     <h6>FACILITIES</h6>
     <h2>Core Features</h2>
     <div class="swiper-core-features mySwiper-core-facilities sliderWrapper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="hotel-feature bg-1">
+            <div class="swiper-slide swiper-slide--dark">
+                <div class="hotel-feature bg-1 bg-1--dark">
                     <img src="./../Images/rating.svg" />
                     <div class="field-container">
                         <h2>Have High Rating</h2>

@@ -188,51 +188,51 @@ a {
     margin: 0 0.5rem;
   }
 }
-.about-us-title {
+.offers {
   background-color: #333333;
   display: flex;
   flex-direction: column;
   padding: 8rem 1rem 0rem 1rem;
 }
-.about-us-title .ultimate-luxury-container {
+.offers .ultimate-luxury-container {
   width: 70%;
   height: 2rem;
   margin: 0.6rem 0;
 }
-.about-us-title .ultimate-luxury-container h2 {
+.offers .ultimate-luxury-container h2 {
   font-family: "Archivo";
   font-size: 0.75rem;
   color: #FFFFFF;
   letter-spacing: 2.8px;
 }
-.about-us-title .luxury-title-container {
+.offers .luxury-title-container {
   width: 95%;
   height: 7.5rem;
   margin: 1rem 0;
 }
-.about-us-title .luxury-title-container h1 {
+.offers .luxury-title-container h1 {
   color: #FFFFFF;
   font-family: "Old Standard TT";
   font-size: 3.4rem;
   font-weight: 400;
   letter-spacing: -1.2px;
 }
-.about-us-title .tour-learn-btn-container {
+.offers .tour-learn-btn-container {
   margin: 2rem 0 0 0;
 }
-.about-us-title .tour-learn-btn-container button {
+.offers .tour-learn-btn-container button {
   min-width: 60%;
   height: 3.75rem;
   font-family: "Archivo";
   padding: 1rem 2rem;
 }
 @media screen and (min-width: 1000px) {
-  .about-us-title .tour-learn-btn-container button {
+  .offers .tour-learn-btn-container button {
     margin: 0 1rem;
     min-width: 20%;
   }
 }
-.about-us-title .tour-learn-btn-container button.btn--light {
+.offers .tour-learn-btn-container button.btn--light {
   min-width: 60%;
   height: 3.75rem;
   font-family: "Archivo";
@@ -244,12 +244,12 @@ a {
   letter-spacing: 2.8px;
 }
 @media screen and (min-width: 1000px) {
-  .about-us-title .tour-learn-btn-container button.btn--light {
+  .offers .tour-learn-btn-container button.btn--light {
     margin: 0 1rem;
     min-width: 20%;
   }
 }
-.about-us-title .tour-learn-btn-container button.btn--dark {
+.offers .tour-learn-btn-container button.btn--dark {
   min-width: 60%;
   height: 3.75rem;
   font-family: "Archivo";
@@ -262,12 +262,12 @@ a {
   letter-spacing: 2.8px;
 }
 @media screen and (min-width: 1000px) {
-  .about-us-title .tour-learn-btn-container button.btn--dark {
+  .offers .tour-learn-btn-container button.btn--dark {
     margin: 0 1rem;
     min-width: 20%;
   }
 }
-.about-us-title .breadcrumb {
+.offers .breadcrumb {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -276,95 +276,115 @@ a {
   height: 3rem;
   margin: 0 1rem 0 50%;
 }
-.about-us-title .breadcrumb p {
+.offers .breadcrumb p {
   font-family: "Archivo";
   font-weight: 700;
 }
-.about-us-title .breadcrumb p span {
+.offers .breadcrumb p span {
   color: #BEAD8E;
   padding-left: 0 0.5rem;
 }
 @media screen and (min-width: 1000px) {
-  .about-us-title .ultimate-luxury-container h2 {
+  .offers .ultimate-luxury-container h2 {
     font-size: 1rem;
   }
-  .about-us-title .luxury-title-container {
+  .offers .luxury-title-container {
     height: auto;
   }
-  .about-us-title .luxury-title-container h1 {
+  .offers .luxury-title-container h1 {
     font-size: 7.5rem;
   }
 }
 
-.video-presentation {
-  padding: 1rem;
-  margin: 2rem 0;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+.room-offers {
+  padding: 2rem;
 }
-.video-presentation p {
-  font-family: "Old Standard TT";
-  font-weight: 400;
-  font-size: 2rem;
-}
-
-.hotel-benefits {
-  display: flex;
+.room-offers .offer-card .offer-image-container {
   width: 100%;
-  flex-wrap: wrap;
 }
-.hotel-benefits .benefit {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-}
-.hotel-benefits .benefit img {
-  width: 4rem;
-  fill: #BEAD8E;
-}
-.hotel-benefits .benefit svg {
-  fill: #BEAD8E;
-}
-.hotel-benefits .benefit h6 {
-  font-family: "Archivo";
-  letter-spacing: 2.4px;
-  padding: 1rem;
-  font-size: 0.9rem;
-}
-
-.restaurant {
-  padding: 4rem 1rem;
-}
-.restaurant .restaurant-photo {
+.room-offers .offer-card .offer-image-container img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.restaurant h6 {
+.room-offers .offer-card .offer-image-container .prices {
+  position: relative;
+  top: -5rem;
+  right: 1rem;
+}
+.room-offers .offer-card .offer-image-container .prices .price-container--old, .room-offers .offer-card .offer-image-container .prices .price-container--new {
+  display: flex;
+  justify-content: right;
   font-family: "Archivo";
-  letter-spacing: 2.8px;
-  font-size: 0.8rem;
+  color: #BEAD8E;
   font-weight: 700;
-  padding: 1rem 0;
+  display: flex;
+  flex-direction: row;
 }
-.restaurant h2 {
-  font-family: "Old Standard TT";
-  letter-spacing: -1.2px;
-  font-weight: 400;
-  line-height: 60px;
+.room-offers .offer-card .offer-image-container .prices .price-container--old .price-value, .room-offers .offer-card .offer-image-container .prices .price-container--new .price-value {
+  font-size: 1.8rem;
 }
-.restaurant p {
+.room-offers .offer-card .offer-image-container .prices .price-container--old .price-unit, .room-offers .offer-card .offer-image-container .prices .price-container--new .price-unit {
+  padding-top: 0.8rem;
+}
+.room-offers .offer-card .offer-image-container .prices .price-container--old .price-value {
+  text-decoration-line: line-through;
+}
+.room-offers .offer-card .offer-image-container .prices .price-container--old .price-unit {
+  text-decoration-line: line-through;
+}
+.room-offers .offer-card .offer-image-container .prices .price-container--new {
+  color: #DE5777;
+}
+.room-offers .offer-card .offer-image-container .prices .price-container--new .price-value {
+  font-size: 2.2rem;
+}
+.room-offers .offer-card .offer-image-container .prices .price-container--new .price-unit {
+  padding-top: 1.1rem;
+}
+.room-offers .offer-card .offer-description h6 {
   font-family: "Archivo";
-  font-size: 0.9rem;
-  font-weight: 400;
-  line-height: 24px;
+  color: #777777;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 2.8px;
   padding: 1rem 0;
 }
-.restaurant .btn-book-now {
+.room-offers .offer-card .offer-description h2 {
+  font-family: "Old Standard TT";
+  font-weight: 400;
+  font-size: 2.5rem;
+  padding-right: 1rem;
+}
+.room-offers .offer-card .offer-description .offer-text {
+  font-family: "Roboto";
+  color: #777777;
+  line-height: 24px;
+  font-size: 0.9rem;
+  padding: 1rem 0;
+}
+.room-offers .offer-card .offer-description .list-amenities {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1rem 0 2rem 0;
+}
+.room-offers .offer-card .offer-description .list-amenities .amenity {
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+}
+.room-offers .offer-card .offer-description .list-amenities .amenity img {
+  display: block;
+  padding: 0 0.5rem;
+}
+.room-offers .offer-card .offer-description .list-amenities .amenity p {
+  font-family: "Roboto";
+  font-size: 0.5rem;
+}
+.room-offers .offer-card .offer-description .btn-book-now {
   min-width: 60%;
   height: 3.75rem;
   font-family: "Archivo";
@@ -380,190 +400,191 @@ a {
   letter-spacing: 2.8px;
 }
 @media screen and (min-width: 1000px) {
-  .restaurant .btn-book-now {
+  .room-offers .offer-card .offer-description .btn-book-now {
     margin: 0 1rem;
     min-width: 20%;
   }
 }
 @media screen and (min-width: 1000px) {
-  .restaurant .btn-book-now {
+  .room-offers .offer-card .offer-description .btn-book-now {
     margin: 0 1rem;
     min-width: 20%;
   }
 }
-.restaurant h2 {
-  font-size: 2.5rem;
-}
-.restaurant p {
-  padding-right: 2.5rem;
-}
 
-.core-features {
+.popular-list {
+  padding: 3rem 1rem;
+  display: flex;
   flex-direction: column;
-  align-items: center;
   text-align: center;
-}
-.core-features--dark {
   background-color: #222222;
 }
-.core-features h6 {
+.popular-list h6 {
+  color: #BDAC8D;
   font-family: "Archivo";
-  color: #777777;
-  font-size: 1rem;
   letter-spacing: 2.8px;
+}
+.popular-list h2 {
+  font-family: "Old Standard TT";
+  font-size: 2rem;
+  font-weight: 400;
+  padding: 1rem;
   color: #FFFFFF;
 }
-.core-features h2 {
-  font-family: "Old Standard TT";
-  font-weight: 400;
-  font-size: 3rem;
-  padding: 1rem 0;
-  color: #FFFFFF;
-}
-.core-features p {
-  font-family: "Archivo";
-  color: #777777;
-  line-height: 24px;
-  font-size: 1rem;
-}
-.core-features .swiper-core-features {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  break-inside: avoid;
-  padding-bottom: 2rem;
-  overflow: hidden;
-}
-.core-features .swiper-core-features .swiper-wrapper .swiper-slide {
-  padding: 1rem;
-}
-.core-features .swiper-core-features .swiper-wrapper .swiper-slide--dark {
-  background-color: #292929;
-}
-.core-features .swiper-core-features .swiper-wrapper .swiper-slide .hotel-feature img {
-  padding: 3rem 0 2rem 1rem;
-}
-.core-features .swiper-core-features .swiper-wrapper .swiper-slide .hotel-feature .field-container h2 {
-  font-family: "Old Standard TT";
-  font-size: 1.8rem;
-}
-.core-features .swiper-core-features .swiper-wrapper .swiper-slide .bg-1 {
-  margin-right: 1.5rem;
-  background-size: 9rem;
-  background-repeat: no-repeat;
-  background-position: top right;
-}
-.core-features .swiper-core-features .swiper-wrapper .swiper-slide .bg-1--dark {
-  background-image: url("./../../Images/01-dark.svg");
-}
-.core-features .swiper-core-features .swiper-wrapper .swiper-slide .bg-2 {
-  margin-right: 1.5rem;
-  background-size: 9rem;
-  background-repeat: no-repeat;
-  background-position: top right;
-}
-.core-features .swiper-core-features .swiper-wrapper .swiper-slide .bg-2--dark {
-  background-image: url("./../../Images/02-dark.svg");
-}
-.core-features .swiper-core-features .swiper-wrapper .swiper-slide .bg-3 {
-  margin-right: 1.5rem;
-  background-size: 9rem;
-  background-repeat: no-repeat;
-  background-position: top right;
-}
-.core-features .swiper-core-features .swiper-wrapper .swiper-slide .bg-3--dark {
-  background-image: url("./../../Images/03-dark.svg");
-}
-.core-features .swiper-core-features .swiper-wrapper .swiper-slide .bg-4 {
-  margin-right: 1.5rem;
-  background-size: 9rem;
-  background-repeat: no-repeat;
-  background-position: top right;
-}
-.core-features .swiper-core-features .swiper-wrapper .swiper-slide .bg-4--dark {
-  background-image: url("./../../Images/04-dark.svg");
-}
-.core-features .swiper-core-features .swiper-wrapper .swiper-slide .bg-5 {
-  margin-right: 1.5rem;
-  background-size: 9rem;
-  background-repeat: no-repeat;
-  background-position: top right;
-}
-.core-features .swiper-core-features .swiper-wrapper .swiper-slide .bg-5--dark {
-  background-image: url("./../../Images/05-dark.svg");
-}
-.core-features .swiper-core-features .swiper-wrapper .swiper-slide .bg-6 {
-  margin-right: 1.5rem;
-  background-size: 9rem;
-  background-repeat: no-repeat;
-  background-position: top right;
-}
-.core-features .swiper-core-features .swiper-wrapper .swiper-slide .bg-6--dark {
-  background-image: url("./../../Images/06-dark.svg");
-}
-.core-features .swiper-core-features .swiper-pagination-core-facilities {
-  position: relative;
-  top: 2rem;
-  transform: translateX(35%);
-}
-.core-features .swiper-core-features .swiper-pagination-core-facilities .swiper-pagination-bullet-active {
-  background-color: #BEAD8E;
-  color: white;
-}
-
-.fun-facts-container {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  padding: 1rem;
-}
-.fun-facts-container h6 {
-  font-family: "Archivo";
-}
-.fun-facts-container h2 {
-  font-family: "Old Standqard TT";
-  font-weight: 400;
-  font-size: 3rem;
-  padding-right: 3rem;
-}
-.fun-facts-container .fun-facts .fun-fact {
-  display: flex;
-  flex-direction: row;
-  padding: 1rem;
-  justify-content: space-evenly;
-}
-.fun-facts-container .fun-facts .fun-fact img {
+.popular-list .swiper {
+  width: 100%;
+  height: auto;
   padding: 0 1rem;
 }
-.fun-facts-container .fun-facts .fun-fact .fun-fact-data {
-  width: 50%;
+.popular-list .swiper .rooms-container .room-card .image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.fun-facts-container .fun-facts .fun-fact .fun-fact-data h2 {
-  font-family: "Old Standard TT";
+.popular-list .swiper .rooms-container .room-card .image-container img {
+  height: 13.625rem;
 }
-.fun-facts-container .fun-facts .fun-fact .fun-fact-data P {
-  font-family: "Roboto";
-  color: #777777;
-}
-.fun-facts-container .images .swiper-images {
-  break-inside: avoid;
-  padding-bottom: 2rem;
-  overflow: hidden;
-}
-.fun-facts-container .images .swiper-images .swiper-wrapper .swiper-slide img {
-  padding: 1rem;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-.fun-facts-container .images .swiper-images .swiper-pagination-images {
+.popular-list .swiper .rooms-container .room-card .image-container .room-features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 15rem;
+  height: 2.5rem;
   position: relative;
-  top: 2rem;
-  transform: translateX(35%);
+  left: 0rem;
+  top: -1.5rem;
 }
-.fun-facts-container .images .swiper-images .swiper-pagination-images .swiper-pagination-bullet-active {
+.popular-list .swiper .rooms-container .room-card .image-container .room-features img {
+  width: 1rem;
+  height: 1rem;
+  margin: 0 0.5rem;
+}
+.popular-list .swiper .rooms-container .room-card .image-description {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  padding: 2rem 1rem;
+}
+.popular-list .swiper .rooms-container .room-card .image-description h2 {
+  font-family: "Old Standard TT";
+  font-weight: 400;
+  font-size: 1.5rem;
+  padding: 0rem 0 0.5rem 0;
+}
+.popular-list .swiper .rooms-container .room-card .image-description p {
+  font-family: "Roboto";
+  font-size: 0.9rem;
+  color: #777777;
+  padding: 0.5rem 0;
+}
+.popular-list .swiper .rooms-container .room-card .image-description div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.popular-list .swiper .rooms-container .room-card .image-description .room-price {
+  font-weight: 700;
+  color: #BEAD8E;
+  padding: 0 1rem;
+}
+.popular-list .swiper .rooms-container .room-card .image-description .room-status {
+  font-weight: 700;
+  color: #BDBDBD;
+  padding: 0 1rem;
+}
+.popular-list .swiper .rooms-container .room-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.popular-list .swiper .rooms-container .room-card .image-container {
+  width: 100%;
+}
+.popular-list .swiper .rooms-container .room-card .image-description {
+  background-color: #FFFFFF;
+  width: 90%;
+  position: relative;
+  top: 0rem;
+  padding: 0.5rem;
+}
+.popular-list .swiper .rooms-container .room-card .image-description h2 {
+  font-size: 1.6rem;
+  color: black;
+}
+.popular-list .swiper .rooms-container .room-card .image-description p {
+  padding: 0 1rem;
+}
+.popular-list .swiper .rooms-container .room-card .image-description div .room-price {
+  padding: 1rem;
+  font-size: 1rem;
+}
+.popular-list .swiper .rooms-container .room-card .image-description div .room-price span {
+  font-size: 1rem;
+}
+.popular-list .swiper .rooms-container .room-card .image-description div .room-status {
+  padding: 1rem;
+}
+.popular-list .swiper .swiper-pagination {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popular-list .swiper .swiper-pagination .swiper-pagination-bullet {
+  font-family: "Oswald";
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: white;
+  color: black;
+  font-size: 1rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  opacity: 1;
+  padding-top: 1rem;
+}
+.popular-list .swiper .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #BEAD8E;
   color: white;
+}
+.popular-list .swiper .swiper-button-next,
+.popular-list .swiper .swiper-button-prev {
+  display: hidden;
+  width: 2.5rem;
+  position: relative;
+}
+.popular-list .swiper .swiper-button-next {
+  background-color: #BDAC8D;
+  color: #FFFFFF;
+  background-image: none;
+  left: 17.5rem;
+  top: -22rem;
+}
+.popular-list .swiper .swiper-button-prev {
+  background-color: #FFFFFF;
+  color: black;
+  left: -0.5rem;
+  top: -23.4rem;
+}
+.popular-list .swiper .swiper-button-next::after, .popular-list .swiper .swiper-button-prev::after {
+  font-size: 0.8rem;
+}
+.popular-list .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+.popular-list .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hotel-resume {
@@ -683,4 +704,4 @@ footer .footer-line p span {
   padding: 0 0.5rem;
 }
 
-/*# sourceMappingURL=about-us-page.css.map */
+/*# sourceMappingURL=offers-page.css.map */

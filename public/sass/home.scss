@@ -305,9 +305,13 @@
 .core-features {
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 24%;
 
-    h6 {
+    &--light {
+        background-color: #FFFFFF;
+    }
+
+    & h6 {
         font-family: 'Archivo';
         color: #777777;
         font-size: 1rem;
@@ -352,50 +356,62 @@
 
                 & .bg-1 {
                     margin-right: 1.5rem;
-                    background-image: url('./../../Images/01.svg');
                     background-size: 9rem;
                     background-repeat: no-repeat;
                     background-position: top right;
+                    &--light {
+                        background-image: url('./../../Images/01.svg');
+                    }
                 }
 
                 & .bg-2 {
                     margin-right: 1.5rem;
-                    background-image: url('./../../Images/02.png');
                     background-size: 9rem;
                     background-repeat: no-repeat;
                     background-position: top right;
+                    &--light {
+                        background-image: url('./../../Images/02.png');
+                    }
                 }
 
                 & .bg-3 {
                     margin-right: 1.5rem;
-                    background-image: url('./../../Images/03.svg');
                     background-size: 9rem;
                     background-repeat: no-repeat;
                     background-position: top right;
+                    &--light {
+                        background-image: url('./../../Images/03.svg');
+                    }
                 }
 
                 & .bg-4 {
                     margin-right: 1.5rem;
-                    background-image: url('./../../Images/04.svg');
                     background-size: 9rem;
                     background-repeat: no-repeat;
                     background-position: top right;
+                    &--light {
+                        background-image: url('./../../Images/04.svg');
+                    }
                 }
 
                 & .bg-5 {
                     margin-right: 1.5rem;
-                    background-image: url('./../../Images/05.svg');
                     background-size: 9rem;
                     background-repeat: no-repeat;
                     background-position: top right;
+                    &--light {
+                        background-image: url('./../../Images/05.svg');
+                    }
                 }
 
                 & .bg-6 {
                     margin-right: 1.5rem;
-                    background-image: url('./../../Images/06.svg');
                     background-size: 9rem;
                     background-repeat: no-repeat;
                     background-position: top right;
+                    &--light {
+                        background-image: url('./../../Images/06.svg');
+                    }
                 }
             }
         }
@@ -740,6 +756,24 @@ footer {
     .menu {
         background-image: url('./../../Images/donut2.svg');
         background-position: top left;
+        background-size: 15rem;
+        padding: 6rem 19% 1rem 19%;
+        margin: 0 5%;
+    }
+
+    .images {
+        margin: 0 24%;
+        & .swiper-images {
+            & .swiper-wrapper {
+                height: 23rem;
+            }
+        }
+    }
+
+    .achievements {
+        margin: 5rem 24%;
+        flex-direction: row;
+        justify-content: space-evenly;
     }
 
 }

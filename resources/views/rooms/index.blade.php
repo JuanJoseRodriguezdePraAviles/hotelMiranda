@@ -122,13 +122,13 @@
     </div>
 </div>
 
-<div class="core-features">
+<div class="core-features core-features--light">
     <h6>FACILITIES</h6>
     <h2>Core Features</h2>
     <div class="swiper-core-features mySwiper-core-facilities sliderWrapper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <div class="hotel-feature bg-1">
+                <div class="hotel-feature bg-1 bg-1--light">
                     <img src="/Images/high-rating.svg" />
                     <div class="field-container">
                         <h2>Have High Rating</h2>
@@ -138,7 +138,7 @@
                 </div>
             </div>
             <div class="swiper-slide">
-                <div class="hotel-feature bg-2">
+                <div class="hotel-feature bg-2 bg-2--light">
                     <img src="/Images/hour.svg" />
                     <div class="field-container">
                         <h2>Quiet Hours</h2>
@@ -148,7 +148,7 @@
                 </div>
             </div>
             <div class="swiper-slide">
-                <div class="hotel-feature bg-3">
+                <div class="hotel-feature bg-3 bg-3--light">
                     <img src="/Images/location-icon.svg" />
                     <div class="field-container">
                         <h2>Best Locations</h2>
@@ -158,7 +158,7 @@
                 </div>
             </div>
             <div class="swiper-slide">
-                <div class="hotel-feature bg-4">
+                <div class="hotel-feature bg-4 bg-4--light">
                     <img src="/Images/no-hour.svg" />
                     <div class="field-container">
                         <h2>Free Cancellation</h2>
@@ -168,7 +168,7 @@
                 </div>
             </div>
             <div class="swiper-slide">
-                <div class="hotel-feature bg-5">
+                <div class="hotel-feature bg-5 bg-5--light">
                     <img src="/Images/credit-card.svg" />
                     <div class="field-container">
                         <h2>Payment Options</h2>
@@ -178,7 +178,7 @@
                 </div>
             </div>
             <div class="swiper-slide">
-                <div class="hotel-feature bg-6">
+                <div class="hotel-feature bg-6 bg-6--light">
                     <img src="/Images/percent.svg" />
                     <div class="field-container">
                         <h2>Special Offers</h2>
@@ -387,6 +387,12 @@
 
         const swiperMenu = new Swiper(".mySwiper-menu", {
             spaceBetween: 30,
+            slidesPerView: 1,
+            slidesPerGroup: 3,
+            grid: {
+                rows: 3,
+                fill: "row"
+            },
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
@@ -408,12 +414,20 @@
         });
         const swiperImages = new Swiper(".mySwiper-images", {
             spaceBetween: 30,
+            slidesPerView: 1,
+            slidesPerGroup: 1,
             pagination: {
                 el: ".swiper-pagination-images",
                 clickable: true,
                 renderBullet: function (index, className) {
                     return `<span class="${className}"></span>`;
                 },
+            },
+            breakpoints: {
+                1000: {
+                    slidesPerView: 3,
+                    slidesPerGroup: 3
+                }
             }
         });
     }
