@@ -349,8 +349,6 @@ a {
   display: flex;
   flex-direction: row;
   padding: 0.5rem;
-  background-color: #F8F8F8;
-  padding: 1rem;
 }
 .calendar-container .calendar-label-icon-input-container #icon-arrival-input-container input, .calendar-container .calendar-label-icon-input-container #icon-return-input-container input {
   appearance: none;

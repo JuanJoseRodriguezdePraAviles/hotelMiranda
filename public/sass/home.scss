@@ -18,7 +18,7 @@
     @include page-title;
 }
 
-@include calendar("dark");
+@include calendar('dark');
 
 .discover-section {
     .about-us {
@@ -698,7 +698,7 @@ footer {
                 background-color: #BDAC8D;
                 color: #FFFFFF;
                 background-image: none;
-                left: 75rem;
+                left: 70%;
                 top: -20rem;
 
             }
@@ -706,7 +706,7 @@ footer {
             & .swiper-button-prev {
                 background-color: #FFFFFF;
                 color: black;
-                left: 27.5rem;
+                left: 28%;
                 top: -21.4rem;
             }
         }

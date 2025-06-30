@@ -313,6 +313,7 @@ a {
   display: flex;
   flex-direction: row;
   padding: 0.5rem;
+  background-color: #222222;
   border-bottom: 2px solid #BEAD8E;
 }
 .calendar-container .calendar-label-icon-input-container #icon-arrival-input-container input, .calendar-container .calendar-label-icon-input-container #icon-return-input-container input {
@@ -1224,13 +1225,13 @@ footer .footer-line p span {
     background-color: #BDAC8D;
     color: #FFFFFF;
     background-image: none;
-    left: 75rem;
+    left: 70%;
     top: -20rem;
   }
   .picked-rooms .swiper .swiper-button-prev {
     background-color: #FFFFFF;
     color: black;
-    left: 27.5rem;
+    left: 28%;
     top: -21.4rem;
   }
   .intro-video-container {

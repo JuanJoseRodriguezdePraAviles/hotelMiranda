@@ -1,4 +1,4 @@
-@mixin calendar($theme: null) {
+@mixin calendar($theme) {
     .calendar-container {
         @if $theme== 'dark' {
             background-color: #222222;
@@ -15,17 +15,16 @@
                 color: #FFFFFF;
             }
 
-            & #icon-arrival-input-container, #icon-return-input-container {
+            & #icon-arrival-input-container, & #icon-return-input-container {
                 display: flex;
                 flex-direction: row;
                 padding: 0.5rem;
-                @if $theme== 'dark' {
+                
+                @if $theme == 'dark' {
+                    background-color: #222222;
                     border-bottom: 2px solid #BEAD8E;
                 }
-                @if $theme== 'light' {
-                    background-color: #F8F8F8;
-                    padding: 1rem;
-                }
+                
 
                 & input {
                     appearance: none;
