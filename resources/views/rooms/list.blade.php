@@ -1,4 +1,8 @@
 @extends('../layouts/layout')
+
+@push('styles')
+    <link rel="stylesheet" href="{{ asset('css/rooms-page.css') }}">
+@endpush
 <div class="rooms-title">
     <div class="ultimate-luxury-container">
         <h2>THE ULTIMATE LUXURY</h2>

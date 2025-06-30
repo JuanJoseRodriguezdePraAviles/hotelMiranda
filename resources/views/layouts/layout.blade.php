@@ -11,11 +11,7 @@
 
     <title>Hotel Miranda</title>
 
-    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/about-us-page.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/rooms-page.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/contact-page.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/room-details-page.css') }}">
+    @stack('styles')
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
