@@ -310,3 +310,67 @@ footer {
         }
     }
 }
+
+@media screen and (min-width: 1000px) {
+    .about-us-title {
+        padding: 10rem 30.5% 0 30.5%;
+    }
+    .video-presentation {
+        margin: 5rem 30.5%;
+
+        & iframe {
+            height: 32rem;
+        }
+
+        & p {
+            font-size: 3.6rem;
+            margin: 5rem 0;
+        }
+    }
+    .hotel-benefits {
+        justify-content: center;
+        flex-wrap: nowrap;
+        
+        & .benefit {
+            width: 9.75%;
+        }
+    }
+    .restaurant {
+        padding: 3rem 0;
+        margin: 5rem 30.5%;
+        display: flex;
+        flex-direction: row;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        & .restaurant-photo {
+            margin: 1rem;
+            width: 50%;
+            padding: 0rem;
+        }
+        & div {
+            padding: 0rem;
+        }
+    }
+
+    .core-features {
+        padding: 5rem 30.5%;
+        
+    }
+
+    .fun-facts-container {
+        padding: 5rem 30.5%;
+        & .fun-facts {
+            display: flex;
+            flex-direction: row;
+            & .fun-fact {
+                padding: 0;
+                & .fun-fact-icon {
+                    width: 6rem;
+                }
+                & .arrow {
+                    width: 4rem;
+                }
+
+            }
+        }
+    }
+}
