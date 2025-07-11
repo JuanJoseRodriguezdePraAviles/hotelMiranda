@@ -205,6 +205,7 @@
             }
         });
         const swiperImages = new Swiper(".mySwiper-images", {
+            slidesPerView: 1,
             spaceBetween: 30,
             pagination: {
                 el: ".swiper-pagination-images",
@@ -212,6 +213,14 @@
                 renderBullet: function (index, className) {
                     return `<span class="${className}"></span>`;
                 },
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1
+                },
+                1000: {
+                    slidesPerView: 2
+                }
             }
         });
     }

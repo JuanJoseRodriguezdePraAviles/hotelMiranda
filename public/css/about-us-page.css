@@ -690,10 +690,10 @@ footer .footer-line p span {
 
 @media screen and (min-width: 1000px) {
   .about-us-title {
-    padding: 10rem 30.5% 0 30.5%;
+    padding: 10rem 19.38% 0 19.38%;
   }
   .video-presentation {
-    margin: 5rem 30.5%;
+    margin: 5rem 19.38%;
   }
   .video-presentation iframe {
     height: 32rem;
@@ -711,7 +711,7 @@ footer .footer-line p span {
   }
   .restaurant {
     padding: 3rem 0;
-    margin: 5rem 30.5%;
+    margin: 5rem 19.38%;
     display: flex;
     flex-direction: row;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -725,10 +725,10 @@ footer .footer-line p span {
     padding: 0rem;
   }
   .core-features {
-    padding: 5rem 30.5%;
+    padding: 5rem 19.38%;
   }
   .fun-facts-container {
-    padding: 5rem 30.5%;
+    padding: 5rem 19.38%;
   }
   .fun-facts-container .fun-facts {
     display: flex;
