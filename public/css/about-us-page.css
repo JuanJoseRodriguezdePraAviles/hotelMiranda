@@ -703,7 +703,8 @@ footer .footer-line p span {
     margin: 5rem 0;
   }
   .hotel-benefits {
-    justify-content: center;
+    padding: 0 19.38%;
+    justify-content: space-between;
     flex-wrap: nowrap;
   }
   .hotel-benefits .benefit {
@@ -730,9 +731,17 @@ footer .footer-line p span {
   .fun-facts-container {
     padding: 5rem 19.38%;
   }
+  .fun-facts-container h6 {
+    font-size: 1rem;
+  }
+  .fun-facts-container .fun-fact-title {
+    font-size: 6rem;
+  }
   .fun-facts-container .fun-facts {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    margin: 2rem 0;
   }
   .fun-facts-container .fun-facts .fun-fact {
     padding: 0;
@@ -742,6 +751,9 @@ footer .footer-line p span {
   }
   .fun-facts-container .fun-facts .fun-fact .arrow {
     width: 4rem;
+  }
+  .images {
+    height: 30rem;
   }
 }
 

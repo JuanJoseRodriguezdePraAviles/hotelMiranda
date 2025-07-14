@@ -328,7 +328,8 @@ footer {
         }
     }
     .hotel-benefits {
-        justify-content: center;
+        padding: 0 19.38%;
+        justify-content: space-between;
         flex-wrap: nowrap;
         
         & .benefit {
@@ -357,9 +358,17 @@ footer {
 
     .fun-facts-container {
         padding: 5rem 19.38%;
+        & h6 {
+            font-size: 1rem;
+        }
+        & .fun-fact-title {
+            font-size: 6rem;
+        }
         & .fun-facts {
             display: flex;
             flex-direction: row;
+            justify-content: space-evenly;
+            margin: 2rem 0;
             & .fun-fact {
                 padding: 0;
                 & .fun-fact-icon {
@@ -371,5 +380,9 @@ footer {
 
             }
         }
+    }
+
+    .images {
+        height: 30rem;
     }
 }

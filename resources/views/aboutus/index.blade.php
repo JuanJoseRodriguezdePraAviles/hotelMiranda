@@ -126,7 +126,7 @@
 
 <div class="fun-facts-container">
     <h6>COUNTER</h6>
-    <h2>Some Fun Facts</h2>
+    <h2 class="fun-fact-title">Some Fun Facts</h2>
     <div class="fun-facts">
         <div class="fun-fact">
             <img class="fun-fact-icon" src="./../Images/happy-user.svg">
