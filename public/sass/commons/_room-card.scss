@@ -12,6 +12,7 @@
             
             & img {
                 height: 13.625rem;
+                overflow: hidden;
             }
 
             & .room-features {
@@ -21,6 +22,7 @@
                 background-color: white;
                 width: 15rem;
                 height: 2.5rem;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
                 & img {
                     width: 1rem;
@@ -47,7 +49,8 @@
             display: flex;
             text-align: center;
             flex-direction: column;
-            padding: 2rem 1rem;
+            padding: 0 1rem;
+            height: 18.16rem;
 
             & h2 {
                 font-family: 'Old Standard TT';
@@ -61,6 +64,8 @@
                 font-size: 0.9rem;
                 color: #777777;
                 padding: 0.5rem 0;
+
+                overflow: hidden;
             }
 
             & div {

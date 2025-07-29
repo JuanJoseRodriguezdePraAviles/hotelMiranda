@@ -47,3 +47,31 @@
     </div>
     <div class="swiper-pagination"></div>
 </div>
+
+<script src="{{ asset('js/script.js') }}" type="module"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    window.onload = function () {
+        const swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            centeredSlides: true,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return `<span class="${className}">${index + 1}</span>`;
+                },
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                1000: {
+                    slidesPerView: 2.5
+                }
+            }
+        });
+    }
+</script>

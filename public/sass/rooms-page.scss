@@ -15,14 +15,14 @@
     @include page-title;
 }
 
-
-
 .swiper {
     width: 100%;
     height: auto;
 
     & .rooms-container {
         @include room-card("bottom");
+
+        height: auto;
     }
 
     & .swiper-pagination {
