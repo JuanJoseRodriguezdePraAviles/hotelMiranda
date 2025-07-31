@@ -306,6 +306,10 @@ a {
 .swiper .rooms-container {
   height: auto;
 }
+.swiper .rooms-container .room-card {
+  width: 100%;
+  max-width: 100%;
+}
 .swiper .rooms-container .room-card .image-container {
   display: flex;
   flex-direction: column;
@@ -395,10 +399,15 @@ a {
   text-align: center;
   font-size: 18px;
   background: #fff;
-  display: flex;
+  padding: 1rem;
   justify-content: center;
   align-items: center;
   height: auto;
+}
+.swiper-slide .room-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
 }
 
 .swiper-slide img {
@@ -524,6 +533,14 @@ footer .footer-line p {
 }
 footer .footer-line p span {
   padding: 0 0.5rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .swiper-slide .room-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
 }
 
 /*# sourceMappingURL=rooms-page.css.map */

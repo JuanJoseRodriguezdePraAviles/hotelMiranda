@@ -1,5 +1,7 @@
 @mixin room-card($theme: null) {
     .room-card {
+        width: 100%;
+        max-width: 100%;
         @if $theme == 'top' {
             padding-top: 1rem;
         }
