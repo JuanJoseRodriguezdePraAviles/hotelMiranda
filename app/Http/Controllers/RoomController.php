@@ -38,7 +38,7 @@ class RoomController extends Controller
 
             return view('rooms.list', compact('rooms'));
         } else if ($request->has('offers')) {
-            return view('rooms.list', compact('rooms'));
+            return view('rooms.offers', compact('rooms'));
         }
         return view('rooms.index', compact('rooms'));
     }

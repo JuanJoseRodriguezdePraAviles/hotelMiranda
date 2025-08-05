@@ -93,7 +93,11 @@ footer {
 }
 
 @media screen and (min-width: 1000px) {
+    .rooms-title {
+        padding: 8rem 20% 0rem 20%;
+    }
     .swiper-slide {
+        padding: 5rem 20%;
         & .room-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
