@@ -1,9 +1,9 @@
 @extends('../layouts/layout')
 
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('css/rooms-page.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/offers-page.css') }}">
 @endpush
-<div class="rooms-title">
+<div class="offers">
     <div class="ultimate-luxury-container">
         <h2>THE ULTIMATE LUXURY</h2>
     </div>
@@ -11,68 +11,66 @@
         <h1>Our offers</h1>
     </div>
     <div class="breadcrumb">
-        <p><a href="{{ route('rooms.index') }}">Home</a> | <span>Rooms</span></p>
+        <p><a href="{{ route('rooms.index') }}">Home</a> | <span>Offers</span></p>
     </div>
 </div>
-<div class="swiper mySwiper sliderWrapper">
-    <div class="rooms-container swiper-wrapper">
-        @foreach($rooms->chunk(12) as $roomGroup)
-        <div class="swiper-slide">
-            <div class="room-grid">
-                @foreach($roomGroup as $room)
-                <div class="room-card">
-                    <div class="image-container">
-                        <img src="{{ json_decode($room->photos)[0] }}" />
-                        <div class="room-features">
-                            <img src="./Images/icon1.svg" />
-                            <img src="./../Images/icon2.svg" />
-                            <img src="./../Images/icon3.svg" />
-                            <img src="./../Images/icon4.svg" />
-                            <img src="./../Images/icon5.svg" />
-                            <img src="./../Images/icon6.svg" />
-                            <img src="./../Images/icon7.svg" />
-                        </div>
+<div class="room-offers">
+    @foreach($rooms as $room)
+        <div class="offer-card">
+            <div class="offer-image-container">
+                <img src="{{ json_decode($room->photos)[0] }}" />
+                <div class="prices">
+                    <div class="price-container--old">
+                        <p><span class="room-value">{{ $room->price }}</span><span class="price-unit">/Night</span></p>
                     </div>
-                    <div class="image-description">
-                        <h2>{{ $room->roomName }}</h2>
-                        <p>{{ $room->description }}</p>
-                        <div>
-                            <p class="room-price">{{ $room->price }}/Night</p>
-                            <p class="room-status"><a href="{{ url('/' . $room->id) }}">Booking Now</a></p>
-                        </div>
+                    <div class="price-container--new">
+                        <p><span class="room-value">{{ $room->price }}</span><span class="price-unit">/Night</span></p>
                     </div>
                 </div>
-                @endforeach
             </div>
+            <div class="offer-description">
+                <h6>{{ $room->roomType }}</h6>
+                <h2>{{ $room->roomName }}</h2>
+                <p class="offer-text">{{ $room->description }}</p>
+                <div class="list-amenities">
+                    <div class="amenity">
+                        <img src="./Images/icon1.svg" />
+                        <p></p>
+                    </div>
+                    <div class="amenity">
+                        <img src="./../Images/icon2.svg" />
+                        <p></p>
+                    </div>
+                    <div class="amenity">
+                        <img src="./../Images/icon3.svg" />
+                        <p></p>
+                    </div>
+                    <div class="amenity">
+                        <img src="./../Images/icon4.svg" />
+                        <p></p>
+                    </div>
+                    <div class="amenity">
+                        <img src="./../Images/icon5.svg" />
+                        <p></p>
+                    </div>
+                    <div class="amenity">
+                        <img src="./../Images/icon6.svg" />
+                        <p></p>
+                    </div>
+                    <div class="amenity">
+                        <img src="./../Images/icon7.svg" />
+                        <p></p>
+                    </div>
+                </div>
+                <div class="btn-book-now">
+                    <p class="room-status"><a href="{{ url('/' . $room->id) }}">Booking Now</a></p>
+                </div>
+            </div>
+            
+            
+            
         </div>
-        @endforeach
-    </div>
-    <div class="swiper-pagination"></div>
+    @endforeach
 </div>
 
 <script src="{{ asset('js/script.js') }}" type="module"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-    window.onload = function () {
-        const swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-                renderBullet: function (index, className) {
-                    return `<span class="${className}">${index + 1}</span>`;
-                },
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            breakpoints: {
-                1000: {
-                    slidesPerView: 1
-                }
-            }
-        });
-    }
-</script>
