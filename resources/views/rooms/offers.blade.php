@@ -33,10 +33,12 @@
                 <h2>{{ $room->roomName }}</h2>
                 <p class="offer-text">{{ $room->description }}</p>
                 <div class="list-amenities">
+                    @foreach($room->roomAmenities as $amenity)
                     <div class="amenity">
                         <img src="./Images/icon1.svg" />
-                        <p></p>
+                        <p>{{ $amenity }}</p>
                     </div>
+                    @endforeach
                     <div class="amenity">
                         <img src="./../Images/icon2.svg" />
                         <p></p>
