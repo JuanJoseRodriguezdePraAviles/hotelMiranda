@@ -35,34 +35,24 @@
                 <div class="list-amenities">
                     @foreach($room->roomAmenities as $amenity)
                     <div class="amenity">
-                        <img src="./Images/icon1.svg" />
+                        @if($amenity == "AC")
+                            <img src="./Images/air-conditioner.svg" />
+                        @elseif($amenity == "Shower")
+                            <img src="./Images/shower.svg" />
+                        @elseif($amenity == "Towel")
+                            <img src="./Images/towels.svg" />
+                        @elseif($amenity == "Bathup")
+                            <img src="./Images/shower.svg" />
+                        @elseif($amenity == "Coffee Set")
+                            <img src="./Images/grocery.svg" />
+                        @elseif($amenity == "LED TV" || $amenity == "Wifi")
+                            <img src="./Images/wifi.svg" />
+                        @else
+                            <img src="./Images/bed.svg" />
+                        @endif
                         <p>{{ $amenity }}</p>
                     </div>
                     @endforeach
-                    <div class="amenity">
-                        <img src="./../Images/icon2.svg" />
-                        <p></p>
-                    </div>
-                    <div class="amenity">
-                        <img src="./../Images/icon3.svg" />
-                        <p></p>
-                    </div>
-                    <div class="amenity">
-                        <img src="./../Images/icon4.svg" />
-                        <p></p>
-                    </div>
-                    <div class="amenity">
-                        <img src="./../Images/icon5.svg" />
-                        <p></p>
-                    </div>
-                    <div class="amenity">
-                        <img src="./../Images/icon6.svg" />
-                        <p></p>
-                    </div>
-                    <div class="amenity">
-                        <img src="./../Images/icon7.svg" />
-                        <p></p>
-                    </div>
                 </div>
                 <div class="btn-book-now">
                     <p class="room-status"><a href="{{ url('/' . $room->id) }}">Booking Now</a></p>
