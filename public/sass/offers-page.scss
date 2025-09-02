@@ -16,21 +16,29 @@
 }
 
 .room-offers {
-    padding: 2rem;
+    padding: 0rem 1rem;
+
     & .offer-card {
+        box-shadow: 4px 6px 12px 0px rgba(0, 0, 0, 0.2);
+        margin: 2rem 0;
+        padding: 0 0rem 1rem 0rem;
+
         & .offer-image-container {
             width: 100%;
+            height: 10.13rem;
+
             & img {
                 display: block;
                 width: 100%;
-                height: 100%;
+                height: 10.13rem;
                 object-fit: cover;
             }
+
             & .prices {
                 position: relative;
-                top: -5rem;
-                right: 1rem;
-                & .price-container--old, .price-container--new {
+
+                & .price-container--old,
+                .price-container--new {
                     display: flex;
                     justify-content: right;
                     font-family: 'Archivo';
@@ -38,49 +46,110 @@
                     font-weight: 700;
                     display: flex;
                     flex-direction: row;
+
                     & .price-value {
                         font-size: 1.8rem;
                     }
+
                     & .price-unit {
                         padding-top: 0.8rem;
                     }
                 }
+
                 & .price-container--old {
                     & .price-value {
                         text-decoration-line: line-through;
                     }
+
                     & .price-unit {
                         text-decoration-line: line-through;
                     }
                 }
+
                 & .price-container--new {
                     color: #DE5777;
+
                     & .price-value {
                         font-size: 2.2rem;
                     }
+
                     & .price-unit {
                         padding-top: 1.1rem;
                     }
                 }
             }
-            
+
         }
 
         & .offer-description {
-            & h6 {
-                font-family: 'Archivo';
-                color: #777777;
-                font-weight: 700;
-                font-size: 1rem;
-                letter-spacing: 2.8px;
-                padding: 1rem 0;
+            padding: 0 1rem;
+
+            & .room-header {
+                & .room-titles {
+                    & h6 {
+                        font-family: 'Archivo';
+                        color: #777777;
+                        font-weight: 700;
+                        font-size: 1rem;
+                        letter-spacing: 2.8px;
+                        padding: 1rem 0;
+                    }
+
+                    & h2 {
+                        font-family: 'Old Standard TT';
+                        font-weight: 400;
+                        font-size: 2.5rem;
+                        padding-right: 1rem;
+                    }
+                }
+
+                & .prices-extended {
+                    position: relative;
+
+                    & .price-container--old,
+                    .price-container--new {
+                        display: flex;
+                        justify-content: right;
+                        font-family: 'Archivo';
+                        color: #BEAD8E;
+                        font-weight: 700;
+                        display: flex;
+                        flex-direction: row;
+
+                        & .price-value {
+                            font-size: 1.8rem;
+                        }
+
+                        & .price-unit {
+                            padding-top: 0.8rem;
+                        }
+                    }
+
+                    & .price-container--old {
+                        & .price-value {
+                            text-decoration-line: line-through;
+                        }
+
+                        & .price-unit {
+                            text-decoration-line: line-through;
+                        }
+                    }
+
+                    & .price-container--new {
+                        color: #DE5777;
+
+                        & .price-value {
+                            font-size: 2.2rem;
+                        }
+
+                        & .price-unit {
+                            padding-top: 1.1rem;
+                        }
+                    }
+                }
+
             }
-            & h2 {
-                font-family: 'Old Standard TT';
-                font-weight: 400;
-                font-size: 2.5rem;
-                padding-right: 1rem;
-            }
+
             & .offer-text {
                 font-family: 'Roboto';
                 color: #777777;
@@ -88,38 +157,45 @@
                 font-size: 0.9rem;
                 padding: 1rem 0;
             }
+
             & .list-amenities {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
                 padding: 1rem 0 2rem 0;
+
                 & .amenity {
                     padding: 0.5rem 0;
                     display: flex;
                     flex-direction: row;
                     width: 50%;
-        
+
                     & img {
                         display: block;
                         padding: 0 0.5rem;
                     }
-        
+
                     & p {
                         font-family: 'Roboto';
                         font-size: 0.5rem;
                     }
                 }
             }
+
             .btn-book-now {
                 @include btn;
                 @include btn("light");
+                width: 70%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
         }
     }
 }
 
 .popular-list {
-    padding: 3rem  1rem;
+    padding: 3rem 1rem;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -130,6 +206,7 @@
         font-family: 'Archivo';
         letter-spacing: 2.8px;
     }
+
     & h2 {
         font-family: 'Old Standard TT';
         font-size: 2rem;
@@ -138,7 +215,7 @@
         color: #FFFFFF;
     }
 
-    
+
 
     & .rooms-container {
         @include room-card("bottom");
@@ -178,6 +255,7 @@
                             font-size: 1rem;
                         }
                     }
+
                     & .room-status {
                         padding: 1rem;
                     }
@@ -186,7 +264,7 @@
         }
     }
 
-        
+
 
     .swiper-slide {
         text-align: center;
@@ -221,6 +299,100 @@ footer {
             & span {
                 padding: 0 0.5rem;
             }
+        }
+    }
+}
+@media screen and (max-width: 1000px) {
+    .room-offers {
+        & .offer-card {
+            & .room-header {
+                & .prices-extended {
+                    display: block;
+                    top: -5rem;
+                    right: 1rem;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 1000px) {
+    .offers {
+        padding: 10rem 19.38% 0rem 19.38%;
+    }
+
+    .room-offers {
+        margin: 5rem 19.38%;
+
+        & .offer-card {
+            box-shadow: none;
+
+            & .offer-image-container {
+                height: 35.63rem;
+
+                & img {
+                    height: 35.63rem;
+                }
+
+                & .prices {
+                    display: none;
+                }
+            }
+            & .offer-description {
+                display: flex;
+                background-color: white;
+                position: relative;
+                bottom: 5rem;
+                margin: 0 2rem 0 2rem;
+                border-top: solid #BDAC8D;
+                padding-top: 2rem;
+                margin: 0 2rem 0 2rem;
+                flex-wrap: wrap;
+                flex-direction: row;
+
+
+                & .room-header {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    border-bottom: solid #ECECEC;
+                    width: 90%;
+                    margin-left: 5%;
+
+                    & .prices-extended {
+                        display: flex;
+                        flex-direction: column;
+                        top: 0;
+                        padding-top: 1rem;
+                    }
+                }
+
+                & .offer-text {
+                    width: 50%;
+                    margin-left: 5%;
+                }
+
+                & .list-amenities {
+                    width: 40%;
+                    margin-left: auto;
+
+                    & .amenity {
+                        align-items: center;
+                        & img {
+                            width: 3rem;
+                        }
+                        & p {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+
+                & .btn-book-now {
+                    width: 10rem;
+                    margin: 0 0 0 5%;
+                }
+            }
+
+            
         }
     }
 }

@@ -21,16 +21,28 @@
                 <img src="{{ json_decode($room->photos)[0] }}" />
                 <div class="prices">
                     <div class="price-container--old">
-                        <p><span class="room-value">{{ $room->price }}</span><span class="price-unit">/Night</span></p>
+                        <p><span class="price-value">${{ $room->price }}</span><span class="price-unit">/Night</span></p>
                     </div>
                     <div class="price-container--new">
-                        <p><span class="room-value">{{ $room->price }}</span><span class="price-unit">/Night</span></p>
+                        <p><span class="price-value">${{ number_format(($room->price)*(100-$room->discount)/100, 2) }}</span><span class="price-unit">/Night</span></p>
                     </div>
                 </div>
             </div>
             <div class="offer-description">
-                <h6>{{ $room->roomType }}</h6>
-                <h2>{{ $room->roomName }}</h2>
+                <div class="room-header">
+                    <div class="room-titles">
+                        <h6>{{ $room->roomType }}</h6>
+                        <h2>{{ $room->roomName }}</h2>
+                    </div>
+                    <div class="prices-extended">
+                        <div class="price-container--old">
+                            <p><span class="price-value">${{ $room->price }}</span><span class="price-unit">/Night</span></p>
+                        </div>
+                        <div class="price-container--new">
+                            <p><span class="price-value">${{ number_format(($room->price)*(100-$room->discount)/100, 2) }}</span><span class="price-unit">/Night</span></p>
+                        </div>
+                    </div>
+                </div>
                 <p class="offer-text">{{ $room->description }}</p>
                 <div class="list-amenities">
                     @foreach($room->roomAmenities as $amenity)
@@ -44,8 +56,10 @@
                         @elseif($amenity == "Bathup")
                             <img src="./Images/shower.svg" />
                         @elseif($amenity == "Coffee Set")
-                            <img src="./Images/grocery.svg" />
-                        @elseif($amenity == "LED TV" || $amenity == "Wifi")
+                            <img src="./Images/coffee-cup.svg" />
+                        @elseif($amenity == "LED TV")
+                            <img src="./Images/tv.svg" />
+                        @elseif($amenity == "Wifi")
                             <img src="./Images/wifi.svg" />
                         @else
                             <img src="./Images/bed.svg" />
@@ -55,7 +69,7 @@
                     @endforeach
                 </div>
                 <div class="btn-book-now">
-                    <p class="room-status"><a href="{{ url('/' . $room->id) }}">Booking Now</a></p>
+                    <p class="room-status"><a href="{{ url('/' . $room->id) }}">BOOK NOW</a></p>
                 </div>
             </div>
             

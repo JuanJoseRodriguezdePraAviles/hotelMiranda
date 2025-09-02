@@ -300,23 +300,28 @@ a {
 }
 
 .room-offers {
-  padding: 2rem;
+  padding: 0rem 1rem;
+}
+.room-offers .offer-card {
+  box-shadow: 4px 6px 12px 0px rgba(0, 0, 0, 0.2);
+  margin: 2rem 0;
+  padding: 0 0rem 1rem 0rem;
 }
 .room-offers .offer-card .offer-image-container {
   width: 100%;
+  height: 10.13rem;
 }
 .room-offers .offer-card .offer-image-container img {
   display: block;
   width: 100%;
-  height: 100%;
+  height: 10.13rem;
   object-fit: cover;
 }
 .room-offers .offer-card .offer-image-container .prices {
   position: relative;
-  top: -5rem;
-  right: 1rem;
 }
-.room-offers .offer-card .offer-image-container .prices .price-container--old, .room-offers .offer-card .offer-image-container .prices .price-container--new {
+.room-offers .offer-card .offer-image-container .prices .price-container--old,
+.room-offers .offer-card .offer-image-container .prices .price-container--new {
   display: flex;
   justify-content: right;
   font-family: "Archivo";
@@ -325,10 +330,12 @@ a {
   display: flex;
   flex-direction: row;
 }
-.room-offers .offer-card .offer-image-container .prices .price-container--old .price-value, .room-offers .offer-card .offer-image-container .prices .price-container--new .price-value {
+.room-offers .offer-card .offer-image-container .prices .price-container--old .price-value,
+.room-offers .offer-card .offer-image-container .prices .price-container--new .price-value {
   font-size: 1.8rem;
 }
-.room-offers .offer-card .offer-image-container .prices .price-container--old .price-unit, .room-offers .offer-card .offer-image-container .prices .price-container--new .price-unit {
+.room-offers .offer-card .offer-image-container .prices .price-container--old .price-unit,
+.room-offers .offer-card .offer-image-container .prices .price-container--new .price-unit {
   padding-top: 0.8rem;
 }
 .room-offers .offer-card .offer-image-container .prices .price-container--old .price-value {
@@ -346,7 +353,10 @@ a {
 .room-offers .offer-card .offer-image-container .prices .price-container--new .price-unit {
   padding-top: 1.1rem;
 }
-.room-offers .offer-card .offer-description h6 {
+.room-offers .offer-card .offer-description {
+  padding: 0 1rem;
+}
+.room-offers .offer-card .offer-description .room-header .room-titles h6 {
   font-family: "Archivo";
   color: #777777;
   font-weight: 700;
@@ -354,11 +364,47 @@ a {
   letter-spacing: 2.8px;
   padding: 1rem 0;
 }
-.room-offers .offer-card .offer-description h2 {
+.room-offers .offer-card .offer-description .room-header .room-titles h2 {
   font-family: "Old Standard TT";
   font-weight: 400;
   font-size: 2.5rem;
   padding-right: 1rem;
+}
+.room-offers .offer-card .offer-description .room-header .prices-extended {
+  position: relative;
+}
+.room-offers .offer-card .offer-description .room-header .prices-extended .price-container--old,
+.room-offers .offer-card .offer-description .room-header .prices-extended .price-container--new {
+  display: flex;
+  justify-content: right;
+  font-family: "Archivo";
+  color: #BEAD8E;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+}
+.room-offers .offer-card .offer-description .room-header .prices-extended .price-container--old .price-value,
+.room-offers .offer-card .offer-description .room-header .prices-extended .price-container--new .price-value {
+  font-size: 1.8rem;
+}
+.room-offers .offer-card .offer-description .room-header .prices-extended .price-container--old .price-unit,
+.room-offers .offer-card .offer-description .room-header .prices-extended .price-container--new .price-unit {
+  padding-top: 0.8rem;
+}
+.room-offers .offer-card .offer-description .room-header .prices-extended .price-container--old .price-value {
+  text-decoration-line: line-through;
+}
+.room-offers .offer-card .offer-description .room-header .prices-extended .price-container--old .price-unit {
+  text-decoration-line: line-through;
+}
+.room-offers .offer-card .offer-description .room-header .prices-extended .price-container--new {
+  color: #DE5777;
+}
+.room-offers .offer-card .offer-description .room-header .prices-extended .price-container--new .price-value {
+  font-size: 2.2rem;
+}
+.room-offers .offer-card .offer-description .room-header .prices-extended .price-container--new .price-unit {
+  padding-top: 1.1rem;
 }
 .room-offers .offer-card .offer-description .offer-text {
   font-family: "Roboto";
@@ -401,6 +447,10 @@ a {
   margin-bottom: 0.7rem;
   color: #FFFFFF;
   letter-spacing: 2.8px;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media screen and (min-width: 1000px) {
   .room-offers .offer-card .offer-description .btn-book-now {
@@ -664,6 +714,81 @@ footer .footer-line p {
 }
 footer .footer-line p span {
   padding: 0 0.5rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .room-offers .offer-card .room-header .prices-extended {
+    display: block;
+    top: -5rem;
+    right: 1rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .offers {
+    padding: 10rem 19.38% 0rem 19.38%;
+  }
+  .room-offers {
+    margin: 5rem 19.38%;
+  }
+  .room-offers .offer-card {
+    box-shadow: none;
+  }
+  .room-offers .offer-card .offer-image-container {
+    height: 35.63rem;
+  }
+  .room-offers .offer-card .offer-image-container img {
+    height: 35.63rem;
+  }
+  .room-offers .offer-card .offer-image-container .prices {
+    display: none;
+  }
+  .room-offers .offer-card .offer-description {
+    display: flex;
+    background-color: white;
+    position: relative;
+    bottom: 5rem;
+    margin: 0 2rem 0 2rem;
+    border-top: solid #BDAC8D;
+    padding-top: 2rem;
+    margin: 0 2rem 0 2rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .room-offers .offer-card .offer-description .room-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: solid #ECECEC;
+    width: 90%;
+    margin-left: 5%;
+  }
+  .room-offers .offer-card .offer-description .room-header .prices-extended {
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    padding-top: 1rem;
+  }
+  .room-offers .offer-card .offer-description .offer-text {
+    width: 50%;
+    margin-left: 5%;
+  }
+  .room-offers .offer-card .offer-description .list-amenities {
+    width: 40%;
+    margin-left: auto;
+  }
+  .room-offers .offer-card .offer-description .list-amenities .amenity {
+    align-items: center;
+  }
+  .room-offers .offer-card .offer-description .list-amenities .amenity img {
+    width: 3rem;
+  }
+  .room-offers .offer-card .offer-description .list-amenities .amenity p {
+    font-size: 1rem;
+  }
+  .room-offers .offer-card .offer-description .btn-book-now {
+    width: 10rem;
+    margin: 0 0 0 5%;
+  }
 }
 
 /*# sourceMappingURL=offers-page.css.map */
