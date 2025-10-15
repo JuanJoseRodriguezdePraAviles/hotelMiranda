@@ -36,6 +36,8 @@
 
             & .prices {
                 position: relative;
+                bottom: 5rem;
+                right: 1rem;
 
                 & .price-container--old,
                 .price-container--new {
@@ -216,55 +218,112 @@
     }
 
 
+    & .swiper {
+        width: 100%;
+        height: auto;
+        padding: 0 1rem;
 
-    & .rooms-container {
-        @include room-card("bottom");
+        & .rooms-container {
+            @include room-card("bottom");
 
-        & .room-card {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            & .image-container {
+            & .room-card {
                 width: 100%;
-            }
+                display: flex;
+                flex-direction: column;
+                align-items: center;
 
-            & .image-description {
-                background-color: #FFFFFF;
-                width: 90%;
-                position: relative;
-                top: 0rem;
-                padding: 0.5rem;
-
-                & h2 {
-                    font-size: 1.6rem;
-                    color: black;
+                & .image-container {
+                    width: 100%;
                 }
 
-                & p {
-                    padding: 0 1rem;
-                }
+                & .image-description {
+                    background-color: #FFFFFF;
+                    width: 90%;
+                    position: relative;
+                    top: 0rem;
+                    padding: 0.5rem;
 
-                & div {
-                    & .room-price {
-                        padding: 1rem;
-                        font-size: 1rem;
-
-                        & span {
-                            font-size: 1rem;
-                        }
+                    & h2 {
+                        font-size: 1.6rem;
+                        color: black;
                     }
 
-                    & .room-status {
-                        padding: 1rem;
+                    & p {
+                        padding: 0 1rem;
+                    }
+
+                    & div {
+                        & .room-price {
+                            padding: 1rem;
+                            font-size: 1rem;
+
+                            & span {
+                                font-size: 1rem;
+                            }
+                        }
+
+                        & .room-status {
+                            padding: 1rem;
+                        }
                     }
                 }
             }
         }
+
+        & .swiper-pagination {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & .swiper-pagination-bullet {
+                font-family: 'Oswald';
+                width: 2.5rem;
+                height: 2.5rem;
+                background-color: white;
+                color: black;
+                font-size: 1rem;
+                align-items: center;
+                justify-content: center;
+                border-radius: 0;
+                opacity: 1;
+                padding-top: 1rem;
+            }
+
+            & .swiper-pagination-bullet-active {
+                background-color: #BEAD8E;
+                color: white;
+            }
+        }
+
+        & .swiper-button-next,
+        .swiper-button-prev {
+            display: hidden;
+            width: 2.5rem;
+            position: relative;
+        }
+
+        & .swiper-button-next {
+            background-color: #BDAC8D;
+            color: #FFFFFF;
+            background-image: none;
+            left: 17.5rem;
+            top: -27.5rem;
+
+        }
+
+        & .swiper-button-prev {
+            background-color: #FFFFFF;
+            color: black;
+            left: -0.5rem;
+            top: -28.9rem;
+        }
+
+        & .swiper-button-next::after,
+        & .swiper-button-prev::after {
+            font-size: 0.8rem;
+        }
     }
-
-
 
     .swiper-slide {
         text-align: center;
@@ -307,7 +366,7 @@ footer {
         & .offer-card {
             & .room-header {
                 & .prices-extended {
-                    display: block;
+                    display: none;
                     top: -5rem;
                     right: 1rem;
                 }

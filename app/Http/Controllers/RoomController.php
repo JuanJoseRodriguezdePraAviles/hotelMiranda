@@ -16,6 +16,8 @@ class RoomController extends Controller
     public function index(Request $request)
     {
         $rooms = Room::all();
+        $popularRooms = $rooms;
+        
         if ($request->has('rooms')) {
             $arrival = $request->query('arrival');
             $return = $request->query('return');
@@ -38,7 +40,7 @@ class RoomController extends Controller
 
             return view('rooms.list', compact('rooms'));
         } else if ($request->has('offers')) {
-            return view('rooms.offers', compact('rooms'));
+            return view('rooms.offers', compact('rooms', 'popularRooms'));
         }
         return view('rooms.index', compact('rooms'));
     }
